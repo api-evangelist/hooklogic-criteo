@@ -1,0 +1,22 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/hooklogic-criteo-retailmedia-openapi-original.json
+summary:
+  types:
+  - oauth2
+  oauth2_flows:
+  - authorizationCode
+  - clientCredentials
+schemes:
+- name: oauth
+  type: oauth2
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://api.criteo.com/oauth2/token
+    scopes: 0
+  - flow: authorizationCode
+    authorizationUrl: https://api.criteo.com/oauth2
+    tokenUrl: https://api.criteo.com/oauth2/token
+    scopes: 0
+  sources:
+  - openapi/hooklogic-criteo-retailmedia-openapi-original.json
