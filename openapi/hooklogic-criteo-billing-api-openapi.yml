@@ -1,0 +1,276 @@
+openapi: 3.0.1
+info:
+  title: Criteo Accounts Billing API
+  description: Criteo API - RetailMedia
+  version: 2026-07
+servers:
+- url: https://api.criteo.com
+security:
+- oauth: []
+tags:
+- name: Billing
+paths:
+  /2026-07/retail-media/billing/partner-report:
+    post:
+      tags:
+      - Billing
+      summary: /2026-07/retail-media/billing/partner-report
+      description: Create a Partner Billing Report request.
+      operationId: CreatePartnerBillingReportRequestV1
+      requestBody:
+        description: Partner Billing Report request object.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ValueResourceInputPartnerBillingReportRequestV1'
+        required: true
+      responses:
+        '201':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EntityResourceOutcomePartnerBillingReportStatusV1'
+      security:
+      - oauth:
+        - RetailMedia_Billing_Read
+  /2026-07/retail-media/billing/partner-report/{requestId}/output:
+    get:
+      tags:
+      - Billing
+      summary: /2026-07/retail-media/billing/partner-report/{requestId}/output
+      description: Get the output of an existing Partner Billing Report.
+      operationId: GetPartnerBillingReportOutputV1
+      parameters:
+      - name: requestId
+        in: path
+        description: The id of a Partner Billing Report request.
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            application/csv:
+              schema:
+                type: string
+                format: binary
+            application/json:
+              schema:
+                type: string
+                format: binary
+      security:
+      - oauth:
+        - RetailMedia_Billing_Read
+  /2026-07/retail-media/billing/partner-report/{requestId}/status:
+    get:
+      tags:
+      - Billing
+      summary: /2026-07/retail-media/billing/partner-report/{requestId}/status
+      description: Get the status of an existing Partner Billing Report.
+      operationId: GetPartnerBillingReportStatusV1
+      parameters:
+      - name: requestId
+        in: path
+        description: The id of a Partner Billing Report request.
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EntityResourceOutcomePartnerBillingReportStatusV1'
+      security:
+      - oauth:
+        - RetailMedia_Billing_Read
+components:
+  schemas:
+    PartnerBillingReportRequestV1:
+      required:
+      - endDate
+      - startDate
+      type: object
+      properties:
+        accountIds:
+          minItems: 1
+          type: array
+          items:
+            type: string
+          description: On which accounts the report is created.
+          nullable: true
+        endDate:
+          type: string
+          description: End date of the report (ISO 8601 format, e.g. YYYY-MM-DD).
+          format: date
+        format:
+          enum:
+          - json
+          - csv
+          type: string
+          description: Format type of the report.
+          default: json
+        retailerIds:
+          minItems: 1
+          type: array
+          items:
+            type: integer
+            format: int32
+          description: On which retailers the report is created.
+          nullable: true
+        startDate:
+          type: string
+          description: Start date of the report (ISO 8601 format, e.g. YYYY-MM-DD).
+          format: date
+      additionalProperties: false
+      description: The request object of a Partner Billing Report.
+    EntityResourceOutcomePartnerBillingReportStatusV1:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/EntityResourcePartnerBillingReportStatusV1'
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/SdkApiRestCommonProblem'
+          description: Errors that occured during this call.
+          nullable: true
+          readOnly: true
+        warnings:
+          type: array
+          items:
+            $ref: '#/components/schemas/SdkApiRestCommonProblem'
+          description: Warnings that occured during this call.
+          nullable: true
+          readOnly: true
+      additionalProperties: false
+      description: A top-level object that encapsulates a Criteo API response for a single entity.
+    SdkApiRestCommonProblem:
+      type: object
+      properties:
+        code:
+          type: string
+          description: A machine-readable error code, expressed as a string value.
+          nullable: true
+        detail:
+          type: string
+          description: A human-readable explanation specific to this occurrence of the problem.
+          nullable: true
+        instance:
+          type: string
+          description: A URI that identifies the specific occurrence of the problem.
+          nullable: true
+        source:
+          type: object
+          additionalProperties:
+            type: string
+          description: A machine-readable structure to reference to the exact location(s) causing the error(s).
+          nullable: true
+        stackTrace:
+          type: string
+          description: ''
+          nullable: true
+        title:
+          type: string
+          description: A short human-readable description of the problem type.
+          nullable: true
+        traceId:
+          type: string
+          description: The request correlation ID this problem comes from.
+          nullable: true
+        type:
+          enum:
+          - unknown
+          - access-control
+          - authentication
+          - authorization
+          - availability
+          - deprecation
+          - quota
+          - validation
+          type: string
+          description: The problem's category.
+          nullable: true
+      additionalProperties: false
+      description: Common problem object.
+    ValueResourcePartnerBillingReportRequestV1:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/PartnerBillingReportRequestV1'
+        type:
+          type: string
+          description: Type of the resource.
+          nullable: true
+      additionalProperties: false
+      description: A value resource exposed by the API.
+    EntityResourcePartnerBillingReportStatusV1:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/PartnerBillingReportStatusV1'
+        id:
+          type: string
+          description: Unique id of the entity.
+          nullable: true
+        type:
+          type: string
+          description: Type of the resource.
+          nullable: true
+      additionalProperties: false
+      description: A domain entity exposed by the API, identified by a unique id.
+      nullable: true
+    PartnerBillingReportStatusV1:
+      required:
+      - createdAt
+      - status
+      type: object
+      properties:
+        createdAt:
+          type: string
+          description: The date when the report request is created.
+          format: date-time
+        errorMessage:
+          type: string
+          description: Possible error message along with the status.
+          nullable: true
+        status:
+          enum:
+          - pending
+          - success
+          - failed
+          - expired
+          type: string
+          description: Status of the report.
+      additionalProperties: false
+      description: Status info of a Partner Billing Report.
+      nullable: true
+    ValueResourceInputPartnerBillingReportRequestV1:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/ValueResourcePartnerBillingReportRequestV1'
+      additionalProperties: false
+      description: A top-level object that encapsulates a Criteo API request for a single value object.
+  securitySchemes:
+    oauth:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: https://api.criteo.com/oauth2/token
+          scopes: {}
+        authorizationCode:
+          authorizationUrl: https://api.criteo.com/oauth2
+          tokenUrl: https://api.criteo.com/oauth2/token
+          scopes: {}
+x-samples-languages:
+- java
+- python
+- php
+- csharp
+- javascript
+- curl
+- ruby

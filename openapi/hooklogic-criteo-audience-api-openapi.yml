@@ -1,0 +1,1317 @@
+openapi: 3.0.1
+info:
+  title: Criteo Accounts Audience API
+  description: Criteo API - RetailMedia
+  version: 2026-07
+servers:
+- url: https://api.criteo.com
+security:
+- oauth: []
+tags:
+- name: Audience
+paths:
+  /2026-07/retail-media/accounts/{account-id}/audience-segments:
+    patch:
+      tags:
+      - Audience
+      summary: /2026-07/retail-media/accounts/{account-id}/audience-segments
+      description: Updates the properties of all segments with a valid configuration, and returns the full segments. For those that cannot be updated, one or multiple errors are returned.
+      operationId: bulkUpdateAudienceSegments
+      parameters:
+      - name: account-id
+        in: path
+        description: Account id
+        required: true
+        schema:
+          type: string
+      requestBody:
+        description: Segment Update request
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RmAudienceSegmentBulkUpdateInputV1'
+        required: true
+        x-bodyName: request
+      responses:
+        '200':
+          description: Success or partial success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RmAudienceSegmentEntityV1ListResponse'
+      security:
+      - oauth:
+        - RetailMedia_Audience_Manage
+  /2026-07/retail-media/accounts/{account-id}/audience-segments/{audience-segment-id}/contact-list:
+    get:
+      tags:
+      - Audience
+      summary: /2026-07/retail-media/accounts/{account-id}/audience-segments/{audience-segment-id}/contact-list
+      description: Returns the statistics of a contact list segment.
+      operationId: getAudienceSegmentContactListStatistics
+      parameters:
+      - name: account-id
+        in: path
+        description: Account Id
+        required: true
+        schema:
+          type: string
+      - name: audience-segment-id
+        in: path
+        description: Segment Id.
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success or partial success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RmContactListStatisticsEntityV1Response'
+      security:
+      - oauth:
+        - RetailMedia_Audience_Read
+  /2026-07/retail-media/accounts/{account-id}/audience-segments/create:
+    post:
+      tags:
+      - Audience
+      summary: /2026-07/retail-media/accounts/{account-id}/audience-segments/create
+      description: Creates all segments with a valid configuration, and returns the full segments. For those that cannot be created, one or multiple errors are returned.
+      operationId: bulkCreateAudienceSegments
+      parameters:
+      - name: account-id
+        in: path
+        description: Account Id
+        required: true
+        schema:
+          type: string
+      requestBody:
+        description: Segment creation parameter
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RmAudienceSegmentBulkCreateInputV1'
+        required: true
+        x-bodyName: request
+      responses:
+        '200':
+          description: Success or partial success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RmAudienceSegmentEntityV1ListResponse'
+      security:
+      - oauth:
+        - RetailMedia_Audience_Manage
+  /2026-07/retail-media/accounts/{account-id}/audience-segments/delete:
+    post:
+      tags:
+      - Audience
+      summary: /2026-07/retail-media/accounts/{account-id}/audience-segments/delete
+      description: Delete the segments associated to the given IDs.
+      operationId: bulkDeleteAudienceSegments
+      parameters:
+      - name: account-id
+        in: path
+        description: Account id
+        required: true
+        schema:
+          type: string
+      requestBody:
+        description: Segment delete request.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RmAudienceSegmentBulkDeleteInputV1'
+        required: true
+        x-bodyName: request
+      responses:
+        '200':
+          description: Success or partial success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RmAudienceSegmentIdEntityV1ListResponse'
+      security:
+      - oauth:
+        - RetailMedia_Audience_Manage
+  /2026-07/retail-media/accounts/{account-id}/audience-segments/search:
+    post:
+      tags:
+      - Audience
+      summary: /2026-07/retail-media/accounts/{account-id}/audience-segments/search
+      description: Returns a list of segments that match the provided filters. If present, the filters are AND'ed together when applied.
+      operationId: searchAudienceSegments
+      parameters:
+      - name: account-id
+        in: path
+        description: Account Id
+        required: true
+        schema:
+          type: string
+      - name: limit
+        in: query
+        description: The number of elements to be returned. The default is 50 and the maximum is 500.
+        schema:
+          maximum: 500
+          minimum: 0
+          type: integer
+          format: int32
+          default: 50
+      - name: offset
+        in: query
+        description: The (zero-based) offset into the collection. The default is 0.
+        schema:
+          type: integer
+          format: int32
+          default: 0
+      requestBody:
+        description: Segment search filters.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RmAudienceSegmentSearchInputV1'
+        required: true
+        x-bodyName: request
+      responses:
+        '200':
+          description: Success or partial success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RmAudienceSegmentEntityV1RmAudienceSegmentSearchMetadataV1ListResponse'
+      security:
+      - oauth:
+        - RetailMedia_Audience_Read
+  /2026-07/retail-media/accounts/{account-id}/audiences/search:
+    post:
+      tags:
+      - Audience
+      summary: /2026-07/retail-media/accounts/{account-id}/audiences/search
+      description: Returns a list of audiences that match the provided filters. If present, the filters are AND'ed together when applied.
+      operationId: searchAudiences
+      parameters:
+      - name: account-id
+        in: path
+        description: Account Id
+        required: true
+        schema:
+          type: string
+      - name: limit
+        in: query
+        description: The number of elements to be returned. The default is 50 and the maximum is 500.
+        schema:
+          maximum: 500
+          minimum: 0
+          type: integer
+          format: int32
+          default: 50
+      - name: offset
+        in: query
+        description: The (zero-based) offset into the collection. The default is 0.
+        schema:
+          type: integer
+          format: int32
+          default: 0
+      requestBody:
+        description: Audience search filters.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RmAudienceSearchInputV1'
+        required: true
+        x-bodyName: request
+      responses:
+        '200':
+          description: Success or partial success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RmAudienceEntityV1RmAudienceSearchMetadataV1ListResponse'
+      security:
+      - oauth:
+        - RetailMedia_Audience_Read
+  /2026-07/retail-media/audience-segments/{audience-segment-id}/contact-list/add-remove:
+    post:
+      tags:
+      - Audience
+      summary: /2026-07/retail-media/audience-segments/{audience-segment-id}/contact-list/add-remove
+      description: Add/remove identifiers to or from a retail-media contact list audience-segment, with external audience segment id.
+      operationId: AddRemoveContactListByAudienceSegment
+      parameters:
+      - name: audience-segment-id
+        in: path
+        description: The id of the contact list audience-segment to amend, we only accept external Id here
+        required: true
+        schema:
+          type: string
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RetailMediaContactlistAmendmentRequest'
+        required: true
+        x-bodyName: body
+      responses:
+        '200':
+          description: Summary of created request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetailMediaContactlistOperation'
+              example:
+                type: AddRemoveContactlistResult
+                data:
+                  contactListId: 568708742535471104
+                  operation: add
+                  requestDate: '2018-12-10T10:00:50.0000000+00:00'
+                  identifierType: madid
+                  nbValidIdentifiers: 7343
+                  nbInvalidIdentifiers: 13
+                  sampleInvalidIdentifiers:
+                  - InvalidIdentifier
+                errors:
+                - traceId: 667ac683ac797284.667ac683ac797284<:667ac683ac797284
+                  type: availability
+                  code: internal-error
+                  instance: ''
+                  title: Internal error
+                warnings:
+                - traceId: 56ed4096-f96a-4944-8881-05468efe0ec9
+                  type: deprecation
+                  code: deprecated-field
+                  instance: /audiences/314195
+                  title: '''nbValidIds'' is deprecated'
+                  detail: The field 'nbValidIds' is deprecated please use 'nbValidIdentifiers'
+      security:
+      - oauth:
+        - RetailMedia_Audience_Manage
+  /2026-07/retail-media/audience-segments/{audience-segment-id}/contact-list/clear:
+    post:
+      tags:
+      - Audience
+      summary: /2026-07/retail-media/audience-segments/{audience-segment-id}/contact-list/clear
+      description: Delete all identifiers from a retail-media contact list audience-segment, with external audience segment id.
+      operationId: ClearContactListByAudienceSegment
+      parameters:
+      - name: audience-segment-id
+        in: path
+        description: The id of the contact list audience-segment to amend, we only accept external Id here
+        required: true
+        schema:
+          type: string
+          format: int64
+      responses:
+        '204':
+          description: The Contact List identifiers were deleted
+          content:
+            application/json: {}
+      security:
+      - oauth:
+        - RetailMedia_Audience_Manage
+components:
+  schemas:
+    RmAudienceSegmentSearchEntityV1:
+      type: object
+      properties:
+        audienceSegmentIds:
+          type: array
+          items:
+            type: string
+          description: List of segment ids
+        audienceSegmentTypes:
+          type: array
+          items:
+            enum:
+            - Unknown
+            - ContactList
+            - Events
+            type: string
+          description: List of segment types
+        retailerIds:
+          type: array
+          items:
+            type: string
+          description: List of retailer ids
+      description: Available filters to perform a search on audience segments. If present, the filters are AND'ed together when applied.
+    RmAudienceSearchInputV1:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/RmAudienceSearchEntityV1Resource'
+      description: A top-level object that encapsulates a Criteo API request for a single value.
+    RmAudienceSegmentUpdateEntityV1:
+      type: object
+      properties:
+        contactList:
+          $ref: '#/components/schemas/RmContactListUpdateV1'
+        description:
+          $ref: '#/components/schemas/NillableString'
+        events:
+          $ref: '#/components/schemas/RmEventsUpdateV1'
+        name:
+          type: string
+          description: Name of the segment
+      description: Set of rules that defines specific people to target.
+      x-criteo-canonical:
+        infoType: entity
+        name: RetailMediaAudienceSegment
+        version: v1
+    RetailMediaContactlistOperationResponseAttributes:
+      required:
+      - contactListId
+      - operation
+      - requestDate
+      type: object
+      properties:
+        contactListId:
+          type: integer
+          description: The affected user list id
+          format: int64
+        identifierType:
+          type: string
+          description: The schema specified for of the identifiers
+          nullable: true
+        nbInvalidIdentifiers:
+          type: integer
+          description: How many identifiers were invalid for the specified schema
+          format: int32
+          nullable: true
+        nbValidIdentifiers:
+          type: integer
+          description: How many identifiers were valid for the specified schema
+          format: int32
+          nullable: true
+        operation:
+          type: string
+          description: The action recorded
+        requestDate:
+          type: string
+          description: When the action was recorded
+          format: date-time
+        sampleInvalidIdentifiers:
+          type: array
+          items:
+            type: string
+          description: A sample of invalid identifiers if there is some
+          nullable: true
+      description: The attributes of Retail Media contact list operation
+    RmAudienceSegmentBulkDeleteInputV1:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/RmAudienceSegmentDeleteEntityV1Resource'
+      description: A top-level object that encapsulates a Criteo API request for several entities.
+    RmAudienceSegmentBulkCreateInputV1:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/RmAudienceSegmentCreateEntityV1Resource'
+      description: A top-level object that encapsulates a Criteo API request for several values.
+    RmAudienceSearchEntityV1Resource:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/RmAudienceSearchEntityV1'
+        type:
+          type: string
+      description: A top-level object that encapsulates a Criteo API response for a single value
+    CommonProblem:
+      type: object
+      properties:
+        code:
+          type: string
+          description: A machine-readable error code, expressed as a string value.
+          nullable: true
+        detail:
+          type: string
+          description: A human-readable explanation specific to this occurrence of the problem
+          nullable: true
+        instance:
+          type: string
+          description: A URI that identifies the specific occurrence of the problem.
+          nullable: true
+        source:
+          type: object
+          additionalProperties:
+            type: string
+          description: A machine-readable structure to reference to the exact location(s) causing the error(s)
+          nullable: true
+        stackTrace:
+          type: string
+          nullable: true
+        title:
+          type: string
+          description: A short human-readable description of the problem type
+          nullable: true
+        traceId:
+          type: string
+          description: The request correlation ID this problem comes from.
+          nullable: true
+        traceIdentifier:
+          type: string
+          description: The request correlation ID this problem comes from. (deprecated, use traceId instead)
+          nullable: true
+        type:
+          enum:
+          - unknown
+          - access-control
+          - authentication
+          - authorization
+          - availability
+          - deprecation
+          - quota
+          - validation
+          type: string
+          description: The problem's category.
+          nullable: true
+      description: Common problem object.
+    RmAudienceSegmentCreateEntityV1:
+      required:
+      - name
+      - retailerId
+      type: object
+      properties:
+        contactList:
+          $ref: '#/components/schemas/RmContactListCreateV1'
+        description:
+          type: string
+          description: Description of the segment
+        events:
+          $ref: '#/components/schemas/RmEventsCreateV1'
+        name:
+          type: string
+          description: Name of the segment
+        retailerId:
+          type: string
+          description: Retailer  associated to the segment
+      description: Set of rules that defines specific people to target.
+    RmContactListV1:
+      type: object
+      properties:
+        identifierType:
+          enum:
+          - Unknown
+          - Email
+          - UserIdentifier
+          - IdentityLink
+          - CustomerId
+          - PhoneNumber
+          type: string
+          description: Indicates contact list identifier's type
+          nullable: true
+        isReadOnly:
+          type: boolean
+          description: Is the segment read-only
+          nullable: true
+        sharingStatus:
+          enum:
+          - Unknown
+          - NotShared
+          - SharedWithAll
+          - SharedWithDemandAccounts
+          type: string
+          description: Indicates if the contact list is shared with other accounts
+          nullable: true
+      description: Settings to target users with your contact lists.
+      nullable: true
+    RmAudienceSegmentIdEntityV1Resource:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/RmAudienceSegmentIdEntityV1'
+        id:
+          type: string
+          description: Id of the entity
+          nullable: true
+        type:
+          type: string
+          nullable: true
+      description: A class that represents a domain entity exposed by an API
+    RmAudienceSegmentSearchEntityV1Resource:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/RmAudienceSegmentSearchEntityV1'
+        type:
+          type: string
+      description: A top-level object that encapsulates a Criteo API response for a single value
+    RmAudienceSegmentDeleteEntityV1:
+      type: object
+      description: Segment to delete
+      x-criteo-canonical:
+        infoType: entity
+        name: RetailMediaAudienceSegment
+        version: v1
+    RmAudienceSearchMetadataV1:
+      type: object
+      properties:
+        limit:
+          type: integer
+          description: Max item of the current page
+          format: int32
+          nullable: true
+        offset:
+          type: integer
+          description: Number of item to skip
+          format: int32
+          nullable: true
+        totalItems:
+          type: integer
+          description: Total number of items
+          format: int32
+          nullable: true
+      description: Metadata for the audience search response.
+      nullable: true
+    RmAudienceSearchEntityV1:
+      type: object
+      properties:
+        audienceIds:
+          type: array
+          items:
+            type: string
+          description: List of audience ids
+        audienceSegmentIds:
+          type: array
+          items:
+            type: string
+          description: List of segment ids (linked to the result audiences)
+        retailerIds:
+          type: array
+          items:
+            type: string
+          description: List of retailer ids
+      description: Available filters to perform a search on audiences. If present, the filters are AND'ed together when applied.
+    RmEventsCreateV1:
+      required:
+      - lookbackDays
+      - shopperActivity
+      type: object
+      properties:
+        brandIds:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+          description: Choose the brands your segment might be interested in
+        categoryIds:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+          description: Choose the categories your segment might be interested in
+        lookbackDays:
+          enum:
+          - Last7Days
+          - Last14Days
+          - Last30Days
+          - Last45Days
+          - Last60Days
+          - Last90Days
+          - Last120Days
+          - Last150Days
+          - Last180Days
+          type: string
+          description: Number of days of the lookback windows
+        maxPrice:
+          type: number
+          description: Reach people who’ve shown interest in products with a maximum price
+          format: double
+        minPrice:
+          type: number
+          description: Reach people who’ve shown interest in products with a minimum price
+          format: double
+        shopperActivity:
+          enum:
+          - View
+          - Buy
+          - AddToCart
+          type: string
+          description: Types of shopper activity.
+      description: Settings to target users based on their behavior
+    RmAudienceSegmentCreateEntityV1Resource:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/RmAudienceSegmentCreateEntityV1'
+        type:
+          type: string
+      description: A top-level object that encapsulates a Criteo API response for a single value
+    NillableDecimal:
+      type: object
+      properties:
+        value:
+          type: number
+          description: The value. If missing or null the value is set to "null"
+          format: double
+          nullable: true
+      description: Placeholder object for value for which "null" is a valid business value
+      nullable: true
+    RmEventsUpdateV1:
+      type: object
+      properties:
+        brandIds:
+          type: array
+          items:
+            type: string
+          description: Choose the brands your segment might be interested in
+        categoryIds:
+          type: array
+          items:
+            type: string
+          description: Choose the categories your segment might be interested in
+        lookbackDays:
+          enum:
+          - Last7Days
+          - Last14Days
+          - Last30Days
+          - Last45Days
+          - Last60Days
+          - Last90Days
+          - Last120Days
+          - Last150Days
+          - Last180Days
+          type: string
+          description: Number of days of the lookback windows
+        maxPrice:
+          $ref: '#/components/schemas/NillableDecimal'
+        minPrice:
+          $ref: '#/components/schemas/NillableDecimal'
+        shopperActivity:
+          enum:
+          - View
+          - Buy
+          - AddToCart
+          type: string
+          description: Types of shopper activity.
+      description: Settings to target users based on their behavior
+    RmAudienceEntityV1RmAudienceSearchMetadataV1ListResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/RmAudienceEntityV1Resource'
+          nullable: true
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          nullable: true
+          readOnly: true
+        meta:
+          $ref: '#/components/schemas/RmAudienceSearchMetadataV1'
+        warnings:
+          type: array
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          nullable: true
+          readOnly: true
+      description: A top-level object that encapsulates a Criteo API response for several entities and metadata
+    RmContactListStatisticsEntityV1Resource:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/RmContactListStatisticsEntityV1'
+        id:
+          type: string
+          description: Id of the entity
+          nullable: true
+        type:
+          type: string
+          nullable: true
+      description: A class that represents a domain entity exposed by an API
+      nullable: true
+    RmContactListStatisticsEntityV1:
+      type: object
+      properties:
+        matchRate:
+          type: number
+          description: "Percentage of matched identifiers in the contact list.\r\nCan differ from matches/identifiers depending on the contact list type."
+          format: double
+          nullable: true
+        numberOfIdentifiers:
+          type: integer
+          description: Number of identifiers in the contact list.
+          format: int32
+          nullable: true
+        numberOfMatches:
+          type: integer
+          description: Number of matched identifiers in the contact list.
+          format: int32
+          nullable: true
+      description: Contact list statistics.
+      nullable: true
+      x-criteo-canonical:
+        infoType: entity
+        name: ContactListStatistics
+        version: v1
+    RetailMediaContactlistOperation:
+      required:
+      - data
+      - errors
+      - warnings
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/RetailMediaContactlistOperationResponseAttributes'
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/AudienceError'
+        type:
+          type: string
+          description: the name of the entity type
+          nullable: true
+          example: AddRemoveContactlistResult
+        warnings:
+          type: array
+          items:
+            $ref: '#/components/schemas/AudienceWarning'
+      description: Operation on Retail Media contact list
+    AudienceWarning:
+      required:
+      - code
+      - detail
+      - instance
+      - type
+      type: object
+      properties:
+        code:
+          type: string
+          description: (REQUIRED) A machine-readable unique error code, expressed as a string value. The format used must be kebab-case.
+        detail:
+          type: string
+          description: (REQUIRED) A human-readable explanation specific to this occurrence of the problem
+        instance:
+          type: string
+          description: (REQUIRED) A URI reference that identifies the specific occurrence of the problem
+        source:
+          type: object
+          description: (OPTIONAL) A machine-readable structure to reference to the exact location(s) causing the error(s)
+          nullable: true
+        stackTrace:
+          type: array
+          items:
+            type: string
+          description: (NEVER IN PRODUCTION) A human-readable stacktrace produced by the implementation technology
+          nullable: true
+        title:
+          type: string
+          description: (RECOMMENDED) A short, human-readable summary of the problem type
+          nullable: true
+        traceId:
+          type: string
+          description: (REQUIRED) The Correlation ID provided by the Gateway. It is also a unique identifier for this particular occurrence of the problem.
+          nullable: true
+        type:
+          enum:
+          - access-control
+          - authentication
+          - authorization
+          - availability
+          - deprecation
+          - quota
+          - validation
+          type: string
+          description: (REQUIRED) The classification of the error
+      description: Definition of the warning
+    RmAudienceSegmentSearchInputV1:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/RmAudienceSegmentSearchEntityV1Resource'
+      description: A top-level object that encapsulates a Criteo API request for a single value.
+    RmAudienceSegmentEntityV1Resource:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/RmAudienceSegmentEntityV1'
+        id:
+          type: string
+          description: Id of the entity
+          nullable: true
+        type:
+          type: string
+          nullable: true
+      description: A class that represents a domain entity exposed by an API
+    RmAlgebraNodeV1:
+      type: object
+      properties:
+        and:
+          type: array
+          items:
+            $ref: '#/components/schemas/RmAlgebraNodeV1'
+          nullable: true
+        audienceSegmentId:
+          type: string
+          nullable: true
+        not:
+          $ref: '#/components/schemas/RmAlgebraNodeV1'
+        or:
+          type: array
+          items:
+            $ref: '#/components/schemas/RmAlgebraNodeV1'
+          nullable: true
+      description: Node in the audience algebra definition.
+      nullable: true
+    AudienceError:
+      required:
+      - code
+      - instance
+      - type
+      type: object
+      properties:
+        code:
+          type: string
+          description: (REQUIRED) A machine-readable unique error code, expressed as a string value. The format used must be kebab-case.
+        detail:
+          type: string
+          description: (RECOMMENDED) A human-readable explanation specific to this occurrence of the problem
+          nullable: true
+        instance:
+          type: string
+          description: (REQUIRED) A URI reference that identifies the specific occurrence of the problem
+        source:
+          type: object
+          description: (OPTIONAL) A machine-readable structure to reference to the exact location(s) causing the error(s)
+          nullable: true
+        stackTrace:
+          type: array
+          items:
+            type: string
+          description: (NEVER IN PRODUCTION) A human-readable stacktrace produced by the implementation technology
+          nullable: true
+        title:
+          type: string
+          description: (RECOMMENDED) A short, human-readable summary of the problem type
+          nullable: true
+        traceId:
+          type: string
+          description: (REQUIRED) The Correlation ID provided by the Gateway. It is also a unique identifier for this particular occurrence of the problem.
+          nullable: true
+        type:
+          enum:
+          - access-control
+          - authentication
+          - authorization
+          - availability
+          - deprecation
+          - quota
+          - validation
+          type: string
+          description: (REQUIRED) The classification of the error
+      description: Definition of an audience error
+    RmAudienceSegmentIdEntityV1ListResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/RmAudienceSegmentIdEntityV1Resource'
+          nullable: true
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          nullable: true
+          readOnly: true
+        warnings:
+          type: array
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          nullable: true
+          readOnly: true
+      description: A top-level object that encapsulates a Criteo API response for several entities
+    RmAudienceSegmentIdEntityV1:
+      type: object
+      description: Audience Segment entity only with its ID
+      nullable: true
+      x-criteo-canonical:
+        infoType: entity
+        name: RetailMediaAudienceSegment
+        version: v1
+    RetailMediaContactlistAmendment:
+      required:
+      - attributes
+      type: object
+      properties:
+        attributes:
+          required:
+          - identifiers
+          - operation
+          type: object
+          properties:
+            identifiers:
+              type: array
+              items:
+                type: string
+              description: The users to add or remove, each in the schema specified
+            identifierType:
+              enum:
+              - Email
+              - UserIdentifier
+              - IdentityLink
+              - Gum
+              - CustomerId
+              - PhoneNumber
+              type: string
+              description: What type of identifiers are used
+            operation:
+              enum:
+              - add
+              - remove
+              type: string
+              description: Whether to add or remove users
+          description: Attributes of retail media contact list amendment
+        type:
+          type: string
+          description: User List
+          example: AddRemoveContactlist
+      description: Request data of retail media contact list amendment
+    NillableString:
+      type: object
+      properties:
+        value:
+          type: string
+          description: The string's value. If missing or null the string's value is set to "null"
+          nullable: true
+      description: Placeholder object for string value  for which "null" is a valid business value
+      nullable: true
+    RmAudienceEntityV1Resource:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/RmAudienceEntityV1'
+        id:
+          type: string
+          description: Id of the entity
+          nullable: true
+        type:
+          type: string
+          nullable: true
+      description: A class that represents a domain entity exposed by an API
+    RmAudienceSegmentDeleteEntityV1Resource:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/RmAudienceSegmentDeleteEntityV1'
+        id:
+          type: string
+          description: Id of the entity
+        type:
+          type: string
+      description: A class that represents a domain entity exposed by an API
+    RmAudienceSegmentEntityV1RmAudienceSegmentSearchMetadataV1ListResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/RmAudienceSegmentEntityV1Resource'
+          nullable: true
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          nullable: true
+          readOnly: true
+        meta:
+          $ref: '#/components/schemas/RmAudienceSegmentSearchMetadataV1'
+        warnings:
+          type: array
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          nullable: true
+          readOnly: true
+      description: A top-level object that encapsulates a Criteo API response for several entities and metadata
+    RmContactListUpdateV1:
+      type: object
+      description: Settings to update the contact list of the segment
+    RmContactListCreateV1:
+      type: object
+      properties:
+        identifierType:
+          enum:
+          - Email
+          - UserIdentifier
+          - IdentityLink
+          - CustomerId
+          - PhoneNumber
+          type: string
+          description: Indicates contact list type
+      description: Settings to target users with your contact lists.
+    RmAudienceSegmentEntityV1ListResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/RmAudienceSegmentEntityV1Resource'
+          nullable: true
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          nullable: true
+          readOnly: true
+        warnings:
+          type: array
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          nullable: true
+          readOnly: true
+      description: A top-level object that encapsulates a Criteo API response for several entities
+    RmAudienceSegmentEntityV1:
+      type: object
+      properties:
+        accountId:
+          type: string
+          description: Account associated to the segment
+          nullable: true
+        channels:
+          type: array
+          items:
+            enum:
+            - Unknown
+            - Onsite
+            - Offsite
+            type: string
+          description: Channels associated to the segment (read-only)
+          nullable: true
+        contactList:
+          $ref: '#/components/schemas/RmContactListV1'
+        createdAt:
+          type: string
+          description: ISO-8601 timestamp in UTC of segment creation (read-only)
+          format: date-time
+          nullable: true
+        createdById:
+          type: string
+          description: User that created the segment
+          nullable: true
+        description:
+          type: string
+          description: Description of the segment
+          nullable: true
+        events:
+          $ref: '#/components/schemas/RmEventsV1'
+        name:
+          type: string
+          description: Name of the segment
+          nullable: true
+        retailerId:
+          type: string
+          description: Retailer  associated to the segment
+          nullable: true
+        type:
+          enum:
+          - Unknown
+          - ContactList
+          - Events
+          type: string
+          description: Type of segment (read-only)
+          nullable: true
+        updatedAt:
+          type: string
+          description: ISO-8601 timestamp in UTC of segment update (read-only)
+          format: date-time
+          nullable: true
+      description: Set of rules that defines specific people to target.
+      nullable: true
+      x-criteo-canonical:
+        infoType: entity
+        name: RetailMediaAudienceSegment
+        version: v1
+    RmContactListStatisticsEntityV1Response:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/RmContactListStatisticsEntityV1Resource'
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          nullable: true
+          readOnly: true
+        warnings:
+          type: array
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          nullable: true
+          readOnly: true
+      description: A top-level object that encapsulates a Criteo API response for a single entity
+    RmAudienceSegmentUpdateEntityV1Resource:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/RmAudienceSegmentUpdateEntityV1'
+        id:
+          type: string
+          description: Id of the entity
+        type:
+          type: string
+      description: A class that represents a domain entity exposed by an API
+    RmEventsV1:
+      type: object
+      properties:
+        brandIds:
+          type: array
+          items:
+            type: string
+          description: The list of brand ids
+          nullable: true
+        categoryIds:
+          type: array
+          items:
+            type: string
+          description: The list of category ids
+          nullable: true
+        lookbackDays:
+          enum:
+          - Unknown
+          - Last7Days
+          - Last14Days
+          - Last30Days
+          - Last45Days
+          - Last60Days
+          - Last90Days
+          - Last120Days
+          - Last150Days
+          - Last180Days
+          type: string
+          description: The number of days to look back
+          nullable: true
+        maxPrice:
+          type: number
+          description: Maximum price of the products
+          format: double
+          nullable: true
+        minPrice:
+          type: number
+          description: Minimum price of the products
+          format: double
+          nullable: true
+        shopperActivity:
+          enum:
+          - Unknown
+          - View
+          - Buy
+          - AddToCart
+          type: string
+          description: Reach people who performed specific action
+          nullable: true
+      description: Settings to target users based on their behavior
+      nullable: true
+    RetailMediaContactlistAmendmentRequest:
+      required:
+      - data
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/RetailMediaContactlistAmendment'
+      description: Request of Retail Media contactlist
+    RmAudienceSegmentSearchMetadataV1:
+      type: object
+      properties:
+        limit:
+          type: integer
+          description: Max item of the current page
+          format: int32
+          nullable: true
+        offset:
+          type: integer
+          description: Number of item to skip
+          format: int32
+          nullable: true
+        totalItems:
+          type: integer
+          description: Total number of items
+          format: int32
+          nullable: true
+      description: Metadata for the audience segment search response.
+      nullable: true
+    RmAudienceSegmentBulkUpdateInputV1:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/RmAudienceSegmentUpdateEntityV1Resource'
+      description: A top-level object that encapsulates a Criteo API request for several entities.
+    RmAudienceEntityV1:
+      type: object
+      properties:
+        accountId:
+          type: string
+          description: Account associated to the audience
+          nullable: true
+        algebra:
+          $ref: '#/components/schemas/RmAlgebraNodeV1'
+        channels:
+          type: array
+          items:
+            enum:
+            - Unknown
+            - Onsite
+            - Offsite
+            type: string
+          description: Channels associated to the audience (read-only)
+          nullable: true
+        createdAt:
+          type: string
+          description: ISO-8601 timestamp in UTC of audience creation (read-only)
+          format: date-time
+          nullable: true
+        createdById:
+          type: string
+          description: User that created the audience
+          nullable: true
+        description:
+          type: string
+          description: Description of the audience
+          nullable: true
+        name:
+          type: string
+          description: Name of the audience
+          nullable: true
+        retailerId:
+          type: string
+          description: Retailer  associated to the audience
+          nullable: true
+        updatedAt:
+          type: string
+          description: ISO-8601 timestamp in UTC of audience update (read-only)
+          format: date-time
+          nullable: true
+      description: Audience of people of interest for a marketer.
+      nullable: true
+      x-criteo-canonical:
+        infoType: entity
+        name: RetailMediaAudience
+        version: v1
+  securitySchemes:
+    oauth:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: https://api.criteo.com/oauth2/token
+          scopes: {}
+        authorizationCode:
+          authorizationUrl: https://api.criteo.com/oauth2
+          tokenUrl: https://api.criteo.com/oauth2/token
+          scopes: {}
+x-samples-languages:
+- java
+- python
+- php
+- csharp
+- javascript
+- curl
+- ruby

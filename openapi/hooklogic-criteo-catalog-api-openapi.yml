@@ -1,0 +1,187 @@
+openapi: 3.0.1
+info:
+  title: Criteo Accounts Catalog API
+  description: Criteo API - RetailMedia
+  version: 2026-07
+servers:
+- url: https://api.criteo.com
+security:
+- oauth: []
+tags:
+- name: Catalog
+paths:
+  /2026-07/retail-media/catalog/merchants/{merchantId}/store-inventory/delete:
+    post:
+      tags:
+      - Catalog
+      summary: /2026-07/retail-media/catalog/merchants/{merchantId}/store-inventory/delete
+      description: Used to publish a batch of store inventories to delete. The batch is processed asynchronously.
+      operationId: DeleteStoreInventoryPerMerchantId
+      parameters:
+      - name: merchantId
+        in: path
+        description: Identifies the merchant, can also be called partnerId
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BatchStoreInventoryDeleteRequest'
+        required: true
+        x-bodyName: body
+      responses:
+        '204':
+          description: Batch accepted.
+          content:
+            application/json: {}
+      security:
+      - oauth:
+        - RetailMedia_Catalog_Manage
+  /2026-07/retail-media/catalog/merchants/{merchantId}/store-inventory/upsert:
+    post:
+      tags:
+      - Catalog
+      summary: /2026-07/retail-media/catalog/merchants/{merchantId}/store-inventory/upsert
+      description: Used to publish a batch of store inventories to upsert. The batch is processed asynchronously.
+      operationId: UpsertStoreInventoryPerMerchantId
+      parameters:
+      - name: merchantId
+        in: path
+        description: Identifies the merchant, can also be called partnerId
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BatchStoreInventoryRequest'
+        required: true
+        x-bodyName: body
+      responses:
+        '204':
+          description: Batch accepted.
+          content:
+            application/json: {}
+      security:
+      - oauth:
+        - RetailMedia_Catalog_Manage
+components:
+  schemas:
+    StoreInventoryDelete:
+      required:
+      - batchId
+      - productId
+      - storeId
+      type: object
+      properties:
+        batchId:
+          type: string
+          description: Identifies this array entry
+        productId:
+          type: string
+          description: ' Identifies a product'
+        storeId:
+          type: string
+          description: Identifies the store, for the customer
+      description: References a store inventory to be deleted. See StoreInventoryUpsert
+    BatchStoreInventoryDeleteRequest:
+      required:
+      - data
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/DeleteEntry'
+      description: Batch to plan removals in Store inventory
+    BatchStoreInventoryRequest:
+      required:
+      - data
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/InsertEntry'
+      description: Batch to be stored in Store inventories
+    DeleteEntry:
+      required:
+      - attributes
+      - type
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/StoreInventoryDelete'
+        type:
+          enum:
+          - Delete
+          type: string
+      description: Defines a reference to inventory
+    StoreInventoryUpsert:
+      required:
+      - availability
+      - batchId
+      - price
+      - productId
+      - storeId
+      type: object
+      properties:
+        availability:
+          enum:
+          - backorder
+          - in_stock
+          - out_of_stock
+          - preorder
+          type: string
+          description: 'Might be: In stock, Out of stock, Preorder, Backorder'
+        batchId:
+          type: string
+          description: Identifies this array entry
+        price:
+          type: string
+          description: Product's price at this store
+        productId:
+          type: string
+          description: ' Identifies a product'
+        salePrice:
+          type: string
+          description: The sale price of the product.
+        storeId:
+          type: string
+          description: Identifies the store, for the customer
+      description: Defines a store inventory to be upserted. Inspired from google spec.See https://developers.google.com/shopping-content/reference/rest/v2.1/localinventory/custombatch#LocalinventoryCustomBatchRequestEntry
+    InsertEntry:
+      required:
+      - attributes
+      - type
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/StoreInventoryUpsert'
+        type:
+          enum:
+          - Upsert
+          type: string
+      description: Defines a pack of inventories
+  securitySchemes:
+    oauth:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: https://api.criteo.com/oauth2/token
+          scopes: {}
+        authorizationCode:
+          authorizationUrl: https://api.criteo.com/oauth2
+          tokenUrl: https://api.criteo.com/oauth2/token
+          scopes: {}
+x-samples-languages:
+- java
+- python
+- php
+- csharp
+- javascript
+- curl
+- ruby
