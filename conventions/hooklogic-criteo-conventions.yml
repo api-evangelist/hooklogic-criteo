@@ -1,0 +1,52 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.criteo.com/criteo-apis/docs/overview
+note: >-
+  Cross-cutting request/response semantics for the Criteo Retail Media API
+  (the HookLogic product line). Captured from the shared platform guides and
+  derived from the OpenAPI.
+authentication:
+  style: oauth2 bearer
+  token_endpoint: https://api.criteo.com/oauth2/token
+  token_lifetime_seconds: 900
+  header: 'Authorization: Bearer <access_token>'
+  see: authentication/hooklogic-criteo-authentication.yml
+envelope:
+  request: '{ "data": { "type": "...", "attributes": {...} } }'
+  response_blocks: [data, errors, metadata]
+  note: >-
+    Responses carry data, errors, and meta/metadata blocks. Resources use a
+    JSON:API-style { id, type, attributes } shape. The request `type` field is
+    optional.
+pagination:
+  style: page-based with metadata
+  response_fields:
+  - metadata.totalItemsAcrossAllPages
+  - metadata.currentPageSize
+  - metadata.currentPageIndex
+  note: metadata block appears only for paginated responses
+request_tracing:
+  field: errors[].traceId
+  note: each error object carries a traceId for support escalation
+error_envelope:
+  format: rfc7807
+  fields: [traceId, type, code, instance, title, detail, source]
+  see: errors/hooklogic-criteo-problem-types.yml
+bulk:
+  supported: true
+  endpoints:
+  - POST /reports/campaigns
+  - POST /reports/line-items
+  docs: https://developers.criteo.com/criteo-apis/docs/bulk-calls
+async_reporting:
+  pattern: generate -> poll status -> fetch output
+  operations: [GenerateAsyncPerformanceReport, GetAsyncExportStatus, GetAsyncExportOutput]
+versioning:
+  style: date-based url path
+  see: lifecycle/hooklogic-criteo-lifecycle.yml
+rate_limit_signaling:
+  status_code: 429
+  see: rate-limits/hooklogic-criteo-rate-limits.yml
+idempotency:
+  documented: false
+  note: Criteo does not publish a dedicated idempotency-key contract.

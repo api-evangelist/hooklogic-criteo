@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.criteo.com/criteo-apis/docs/criteo-api-swagger
+note: >-
+  Criteo Retail Media ships two dated stable OpenAPI versions per year (January
+  and July). Each entry below corresponds to a published, live OpenAPI
+  specification version. See the versioning policy for the deprecation window.
+scheme: date-based
+current_version: '2026-07'
+changelog_urls:
+- https://developers.criteo.com/marketing-solutions/changelog/index.md
+entries:
+- version: '2026-07'
+  status: stable
+  spec: https://api.criteo.com/2026-07/retailmedia/open-api-specifications.json
+- version: '2026-01'
+  status: superseded
+  spec: https://api.criteo.com/2026-01/retailmedia/open-api-specifications.json
+- version: '2025-10'
+  status: superseded
+  spec: https://api.criteo.com/2025-10/retailmedia/open-api-specifications.json
+- version: '2025-07'
+  status: superseded
+  spec: https://api.criteo.com/2025-07/retailmedia/open-api-specifications.json
+- version: '2025-04'
+  status: superseded
+  spec: https://api.criteo.com/2025-04/retailmedia/open-api-specifications.json
+- version: '2025-01'
+  status: superseded
+  spec: https://api.criteo.com/2025-01/retailmedia/open-api-specifications.json

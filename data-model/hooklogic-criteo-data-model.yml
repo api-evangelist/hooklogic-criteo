@@ -1,0 +1,82 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/hooklogic-criteo-retailmedia-openapi-original.json
+note: Entity relationships derived from *Id reference fields in Criteo Retail Media OpenAPI schemas.
+entities:
+- name: CommonLineItem
+  relationships:
+  - field: campaignId
+    references: Campaign
+    kind: belongs_to
+  - field: targetRetailerId
+    references: TargetRetailer
+    kind: belongs_to
+- name: Creative2
+  relationships:
+  - field: brandId
+    references: Brand
+    kind: belongs_to
+  - field: formatId
+    references: Format
+    kind: belongs_to
+  - field: retailerId
+    references: Retailer
+    kind: belongs_to
+  - field: templateId
+    references: Template
+    kind: belongs_to
+- name: Creative202110
+  relationships:
+  - field: brandId
+    references: Brand
+    kind: belongs_to
+  - field: retailerId
+    references: Retailer
+    kind: belongs_to
+- name: Creative202210
+  relationships:
+  - field: brandId
+    references: Brand
+    kind: belongs_to
+  - field: formatId
+    references: Format
+    kind: belongs_to
+  - field: retailerId
+    references: Retailer
+    kind: belongs_to
+  - field: templateId
+    references: Template
+    kind: belongs_to
+- name: CreativeCreateModel202207
+  relationships:
+  - field: brandId
+    references: Brand
+    kind: belongs_to
+  - field: retailerId
+    references: Retailer
+    kind: belongs_to
+  - field: templateId
+    references: Template
+    kind: belongs_to
+- name: CreativeUpdateModel202207
+  relationships:
+  - field: brandId
+    references: Brand
+    kind: belongs_to
+  - field: retailerId
+    references: Retailer
+    kind: belongs_to
+  - field: templateId
+    references: Template
+    kind: belongs_to
+- name: PreferredLineItemV2
+  relationships:
+  - field: campaignId
+    references: Campaign
+    kind: belongs_to
+  - field: creativeId
+    references: Creative
+    kind: belongs_to
+  - field: targetRetailerId
+    references: TargetRetailer
+    kind: belongs_to

@@ -1,0 +1,40 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.criteo.com/criteo-apis/docs/api-error-codes
+format: rfc7807
+note: >-
+  The Criteo Retail Media API returns problem details per RFC 7807 in an
+  `errors[]` block. Each error carries traceId, type, code, instance, title,
+  detail and source. Below are the documented error categories and the HTTP
+  status codes the API uses.
+envelope_field: errors
+envelope_fields: [traceId, type, code, instance, title, detail, source]
+error_categories:
+- category: authorization-authentication
+  http: [401, 403]
+  description: >-
+    Missing/expired token, or token lacking permission for the endpoint;
+    403 when an account admin has revoked application access.
+- category: user-input-validation
+  http: [400]
+  description: Input supplied by the user is not valid; surface title/detail to the user.
+- category: business-logic-validation
+  http: [400, 409]
+  description: >-
+    Action not possible due to account configuration state (e.g. launching a
+    campaign without positive balance).
+- category: technical-validation
+  http: [400, 409]
+  description: >-
+    Validation failure for technical reasons; e.g. cannot activate an archived
+    ad set (code campaign--ad-set-start-check--cannot-activate-archived-ad-set).
+- category: dependency-failure
+  http: [503]
+  description: Temporary unavailability of an internal dependency or data persistence failure.
+- category: internal-server-error
+  http: [500]
+  description: Generic server-side error; retry with exponential back-off.
+- category: rate-limit
+  http: [429]
+  description: Application access token exceeded the rate limit.
+  see: rate-limits/hooklogic-criteo-rate-limits.yml

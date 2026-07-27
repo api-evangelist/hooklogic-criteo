@@ -1,0 +1,35 @@
+generated: '2026-07-19'
+method: searched
+note: >-
+  Probed the /.well-known/ discovery surface on the Criteo API and website hosts.
+  A valid RFC 9116 security.txt is served on both api.criteo.com and www.criteo.com.
+hosts:
+- host: https://api.criteo.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: hooklogic-criteo-security.txt
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://www.criteo.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+- host: https://developers.criteo.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404

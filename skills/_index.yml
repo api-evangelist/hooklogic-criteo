@@ -1,0 +1,12 @@
+generated: '2026-07-19'
+method: generated
+source: openapi/hooklogic-criteo-retailmedia-openapi-original.json
+skills:
+- file: hooklogic-criteo-launch-campaign.md
+  name: Launch a Criteo Retail Media campaign
+  api: openapi/hooklogic-criteo-retailmedia-openapi-original.json
+  operations: [GetCurrentApplication, GetAccounts, GetCampaignsByAccountId, CreateCampaignsByAccountId, GetAccountCreatives, CreateCreative]
+- file: hooklogic-criteo-run-report.md
+  name: Run a Criteo Retail Media async performance report
+  api: openapi/hooklogic-criteo-retailmedia-openapi-original.json
+  operations: [GenerateAsyncPerformanceReport, GetAsyncExportStatus, GetAsyncExportOutput]

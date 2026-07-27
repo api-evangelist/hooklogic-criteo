@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.criteo.com/criteo-apis/docs/versioning-policy
+versioning:
+  scheme: date-based
+  pattern: 'https://api.criteo.com/{version}/{criteo-service}/...'
+  current: '2026-07'
+  cadence: two stable versions per year (January and July)
+  support_window: 12 months per stable version
+  docs: https://developers.criteo.com/criteo-apis/docs/versioning-policy
+  version_types:
+  - name: experimental
+    url_pattern: api.criteo.com/experimental/...
+    note: brand-new features, contracts may change, not for production
+  - name: release-candidate
+    note: production-ready, up to 6 months, rolls into next stable using same URL
+  - name: stable
+    note: fully supported 12 months, no breaking changes
+deprecation:
+  policy_url: https://developers.criteo.com/criteo-apis/docs/versioning-policy
+  sunset_header: true
+  deprecation_header: true
+  note: >-
+    In the final 3 months (months 9-12) of a stable version, a `Deprecation: true`
+    response header appears and a `Sunset` header shows the exact decommission date
+    (RFC 8594). Fall-forward automatically routes unchanged endpoints to the current
+    stable version on decommission.
+status_page: https://status.criteo.com

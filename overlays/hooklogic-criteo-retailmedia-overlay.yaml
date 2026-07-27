@@ -1,0 +1,32 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Criteo Retail Media (HookLogic)
+  version: 1.0.0
+extends: openapi/hooklogic-criteo-retailmedia-openapi-original.json
+actions:
+- target: $.info
+  update:
+    x-apievangelist-lineage: HookLogic (acquired by Criteo, 2016) — now the Criteo Retail Media API
+    x-apievangelist-enriched: '2026-07-19'
+    x-apievangelist-artifacts:
+    - authentication
+    - conventions
+    - errors
+    - lifecycle
+    - rate-limits
+    - changelog
+    - packages
+    - well-known
+    - security
+    - conformance
+    - data-model
+    - mcp
+    - skills
+    - agentic-access
+- target: $.components.securitySchemes.oauth
+  update:
+    x-token-lifetime-seconds: 900
+    x-flows-documented:
+    - clientCredentials
+    - authorizationCode
+    - authorizationCodePkce

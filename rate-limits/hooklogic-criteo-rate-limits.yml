@@ -1,0 +1,26 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.criteo.com/criteo-apis/docs/rate-limits
+note: >-
+  Criteo enforces rate limits that vary by OAuth method. Authorization Code apps
+  auto-scale with the number of consented accounts. A 429 is returned on breach.
+signal:
+  status_code: 429
+  headers:
+  - Retry-After
+rate_limits:
+- oauth_method: client_credentials
+  applies_at: application
+  limit_count: 250
+  window: 1m
+  scope: default endpoints
+- oauth_method: client_credentials
+  applies_at: application
+  limit_count: 40
+  window: 1m
+  scope: reporting endpoints
+- oauth_method: authorization_code
+  applies_at: account
+  limit_count: 10
+  window: 1m
+  scope: base limit per account per user (auto-scales with consented accounts)

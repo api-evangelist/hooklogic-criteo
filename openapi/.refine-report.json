@@ -1,0 +1,28 @@
+{
+  "provider": "hooklogic-criteo",
+  "sources": [
+    "hooklogic-criteo-accounts-api-openapi.yml",
+    "hooklogic-criteo-analytics-api-openapi.yml",
+    "hooklogic-criteo-audience-api-openapi.yml",
+    "hooklogic-criteo-balance-api-openapi.yml",
+    "hooklogic-criteo-billing-api-openapi.yml",
+    "hooklogic-criteo-campaign-api-openapi.yml",
+    "hooklogic-criteo-catalog-api-openapi.yml",
+    "hooklogic-criteo-gateway-api-openapi.yml"
+  ],
+  "outputs": [
+    "hooklogic-criteo-accounts-api-openapi.yml",
+    "hooklogic-criteo-analytics-api-openapi.yml",
+    "hooklogic-criteo-audience-api-openapi.yml",
+    "hooklogic-criteo-balance-api-openapi.yml",
+    "hooklogic-criteo-billing-api-openapi.yml",
+    "hooklogic-criteo-campaign-api-openapi.yml",
+    "hooklogic-criteo-catalog-api-openapi.yml",
+    "hooklogic-criteo-gateway-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

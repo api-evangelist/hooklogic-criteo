@@ -1,0 +1,33 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.criteo.com/criteo-apis/docs/api-client-libraries
+note: >-
+  HookLogic is now the Criteo Retail Media API. Criteo publishes officially
+  supported client libraries for Retail Media (Python, PHP, Java) plus a
+  community-supported Node.js client.
+packages:
+- language: python
+  registry: pypi
+  name: criteo-api-retailmedia-sdk
+  url: https://pypi.org/project/criteo-api-retailmedia-sdk/
+  install: pip install criteo-api-retailmedia-sdk
+  repo: https://github.com/criteo/criteo-api-python-sdk
+  official: true
+- language: php
+  registry: packagist
+  name: criteo/criteo-api-retailmedia-sdk
+  url: https://packagist.org/packages/criteo/criteo-api-retailmedia-sdk
+  install: composer require criteo/criteo-api-retailmedia-sdk
+  official: true
+- language: java
+  registry: maven
+  name: com.criteo:criteo-api-retailmedia-sdk
+  url: https://search.maven.org/search?q=a:criteo-api-retailmedia-sdk
+  repo: https://github.com/criteo/criteo-api-java-sdk
+  official: true
+- language: javascript
+  registry: github
+  name: criteo-api-nodejs-client
+  url: https://github.com/joepikowski/criteo-api-nodejs-client
+  official: false
+  support: community

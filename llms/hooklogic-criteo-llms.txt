@@ -1,0 +1,477 @@
+# Criteo Docs
+
+## Docs
+
+- [API Authorization](https://developers.criteo.com/criteo-apis/docs/api-authorization.md)
+- [API Client Libraries](https://developers.criteo.com/criteo-apis/docs/api-client-libraries.md): Officially supported client libraries for the Criteo Marketing Solutions, Retail Media, and Commerce Grid APIs.
+- [API Error Codes](https://developers.criteo.com/criteo-apis/docs/api-error-codes.md)
+- [API Error Types](https://developers.criteo.com/criteo-apis/docs/api-error-types.md)
+- [API Pattern](https://developers.criteo.com/criteo-apis/docs/api-pattern.md)
+- [API Response](https://developers.criteo.com/criteo-apis/docs/api-response.md)
+- [Troubleshooting Guide](https://developers.criteo.com/criteo-apis/docs/api-troubleshooting-guide.md)
+- [Authentication](https://developers.criteo.com/criteo-apis/docs/authentication.md)
+- [Authorization Requests](https://developers.criteo.com/criteo-apis/docs/authorization-requests.md): Advertisers must grant access to apps or integrations built with the API through an authorization request, with different permission levels available such as read-only or manage access. Advertisers can manage and revoke access through the consent dashboard.
+- [Bulk Calls](https://developers.criteo.com/criteo-apis/docs/bulk-calls.md): This page describes how to perform bulk calls towards Criteo Retail Media API
+- [Get connected to the API](https://developers.criteo.com/criteo-apis/docs/connect-to-the-api.md)
+- [Consent URL Generation](https://developers.criteo.com/criteo-apis/docs/consent-url-generation.md)
+- [Create Your API Application](https://developers.criteo.com/criteo-apis/docs/create-your-app.md)
+- [Create Your Organization](https://developers.criteo.com/criteo-apis/docs/create-your-organization.md)
+- [Create Your Partner Account](https://developers.criteo.com/criteo-apis/docs/create-your-partner-account.md)
+- [OpenAPI Specifications](https://developers.criteo.com/criteo-apis/docs/criteo-api-swagger.md)
+- [Criteo API Terms and Conditions](https://developers.criteo.com/criteo-apis/docs/criteo-api-terms-and-conditions.md): Version 2.0, March 2025
+- [Manage Your Account, Organization and Apps](https://developers.criteo.com/criteo-apis/docs/developer-accounts-organizations-apps.md): This section provides guidance on managing your Developer Account, Organization, and Apps once created.
+- [Escalation Guidelines](https://developers.criteo.com/criteo-apis/docs/escalation-guidelines.md): This page indicates which information to provide if you need to contact Criteo for assistance regarding the Retail Media API
+- [Get Your Credentials](https://developers.criteo.com/criteo-apis/docs/get-credentials.md)
+- [OAuth App - Authorization Code Setup](https://developers.criteo.com/criteo-apis/docs/oauth-app-authorization-code.md): This guide provides step-by-step instructions on setting up an API application using the authorization code workflow
+- [OAuth App – Authorization Code & PKCE Setup](https://developers.criteo.com/criteo-apis/docs/oauth-app-authorization-code-pkce-setup.md): This guide provides step-by-step instructions for implementing OAuth 2.0 Authorization Code with PKCE, including authorization requests and token exchange.
+- [OAuth App - Client Credentials Setup](https://developers.criteo.com/criteo-apis/docs/oauth-app-client-credentials.md): This guide provides step-by-step instructions on setting up an API application using the client credentials workflow
+- [OAuth App Implementation](https://developers.criteo.com/criteo-apis/docs/oauth-app-implementation.md)
+- [Welcome to our API Resources](https://developers.criteo.com/criteo-apis/docs/overview.md): Shared platform guides for the Marketing Solutions API and Retail Media API — authentication, versioning, rate limits, and more.
+- [Postman Collection](https://developers.criteo.com/criteo-apis/docs/postman-collection.md)
+- [Rate Limits](https://developers.criteo.com/criteo-apis/docs/rate-limits.md): This page describes the Criteo API rate limit policy, and provides some best practices to help manage rate limits
+- [API Versioning Policy](https://developers.criteo.com/criteo-apis/docs/versioning-policy.md): How Criteo API versions work, what the different version types mean, and how to know when you need to take action.
+- [[Action Required] Check your API authentication](https://developers.criteo.com/marketing-solutions/changelog/action-required-check-your-api-authentication.md)
+- [[Action required]: Validating your organization details](https://developers.criteo.com/marketing-solutions/changelog/action-required-validating-your-organization-details.md)
+- [Content-type mandatory in authentication header](https://developers.criteo.com/marketing-solutions/changelog/content-type-mandatory-in-authentication-header.md)
+- [Criteo API SDKs now available](https://developers.criteo.com/marketing-solutions/changelog/criteo-api-sdks-now-available.md)
+- [[Developer Dashboard] Invite your teammates to collaborate with you](https://developers.criteo.com/marketing-solutions/changelog/developer-dashboard-invite-your-teammates-to-collaborate-with-you.md)
+- [Device and OS dimensions are now available in Statistics v2020-10 (Preview)!](https://developers.criteo.com/marketing-solutions/changelog/device-and-os-dimensions-are-now-available-in-statistics-v2020-10.md)
+- [Final deprecation of MAPI endpoints](https://developers.criteo.com/marketing-solutions/changelog/final-deprecation-of-mapi-endpoints.md)
+- [Changelog](https://developers.criteo.com/marketing-solutions/changelog/index.md): Recent updates to the Marketing Solutions API.
+- [UPDATE: MAPI and PAPI deprecation delayed to June 15th, 2021](https://developers.criteo.com/marketing-solutions/changelog/mapi-deprecation-delay.md)
+- [New: A way for partners to manage authorization requests directly](https://developers.criteo.com/marketing-solutions/changelog/new-a-way-for-partners-to-manage-authorization-requests-directly.md)
+- [Rate limits for the Criteo Marketing API](https://developers.criteo.com/marketing-solutions/changelog/rate-limits-for-the-criteo-marketing-api.md)
+- [Scheduled maintenance on February 21st, 2022](https://developers.criteo.com/marketing-solutions/changelog/scheduled-maintenance-on-february-21st-2022.md)
+- [The Criteo API is live, featuring an all-new developer experience](https://developers.criteo.com/marketing-solutions/changelog/the-criteo-api-is-live-featuring-an-all-new-developer-experience.md)
+- [The Criteo API is now in GA, featuring new ad set, audience, and targeting controls](https://developers.criteo.com/marketing-solutions/changelog/the-criteo-api-is-now-in-ga-featuring-new-ad-set-audience-and-targeting-controls.md)
+- [Upgrading to Statistics v2](https://developers.criteo.com/marketing-solutions/changelog/upgrading-to-statistics-v2.md)
+- [Version 2021.04 release notes](https://developers.criteo.com/marketing-solutions/changelog/version-202104-release-notes.md)
+- [Version 2021.07 release notes](https://developers.criteo.com/marketing-solutions/changelog/version-202107-release-notes.md)
+- [Version 2021.10 Release notes](https://developers.criteo.com/marketing-solutions/changelog/version-202110-release-notes.md)
+- [Version 2022.01 release notes](https://developers.criteo.com/marketing-solutions/changelog/version-202201-release-notes.md)
+- [Version 2022.04 release notes](https://developers.criteo.com/marketing-solutions/changelog/version-202204-release-notes.md)
+- [Version 2022.07 release notes](https://developers.criteo.com/marketing-solutions/changelog/version-202207-release-notes.md)
+- [Version 2022.10 release notes](https://developers.criteo.com/marketing-solutions/changelog/version-202210-release-notes.md)
+- [Version 2023.01 release notes](https://developers.criteo.com/marketing-solutions/changelog/version-202301-release-notes.md)
+- [Version 2023.04 release notes](https://developers.criteo.com/marketing-solutions/changelog/version-202304-release-notes.md)
+- [Version 2023.07 release notes](https://developers.criteo.com/marketing-solutions/changelog/version-202307-release-notes.md)
+- [Version 2023.10 release notes](https://developers.criteo.com/marketing-solutions/changelog/version-202310-release-notes.md)
+- [Version 2024.07 release notes](https://developers.criteo.com/marketing-solutions/changelog/version-202407-release-notes.md)
+- [Version 2024.10 release notes](https://developers.criteo.com/marketing-solutions/changelog/version-202407-release-notes-1.md)
+- [Version 2025.01 Release Notes](https://developers.criteo.com/marketing-solutions/changelog/version-202501-release-notes.md)
+- [Version 2025.04 Release Notes](https://developers.criteo.com/marketing-solutions/changelog/version-202504-release-notes.md)
+- [Version 2025.07 Release Notes](https://developers.criteo.com/marketing-solutions/changelog/version-202507-release-notes.md)
+- [Version 2025.10 Release Notes](https://developers.criteo.com/marketing-solutions/changelog/version-202510-release-notes.md)
+- [Version 2026.01 Release Note](https://developers.criteo.com/marketing-solutions/changelog/version-202601-release-note.md)
+- [Welcome to Criteo Changelog](https://developers.criteo.com/marketing-solutions/changelog/welcome-to-testblanche.md)
+- [Ad Set](https://developers.criteo.com/marketing-solutions/docs/ad-set.md)
+- [Ads](https://developers.criteo.com/marketing-solutions/docs/ads.md)
+- [Advertisers](https://developers.criteo.com/marketing-solutions/docs/advertisers.md)
+- [Algebra Nodes](https://developers.criteo.com/marketing-solutions/docs/algebra-nodes.md)
+- [Analytics](https://developers.criteo.com/marketing-solutions/docs/analytics.md)
+- [Audience](https://developers.criteo.com/marketing-solutions/docs/audience.md)
+- [Audience Segments](https://developers.criteo.com/marketing-solutions/docs/audience-segments.md)
+- [Audiences](https://developers.criteo.com/marketing-solutions/docs/audiences.md)
+- [Authentication](https://developers.criteo.com/marketing-solutions/docs/authentication.md)
+- [Campaign](https://developers.criteo.com/marketing-solutions/docs/campaign.md)
+- [Campaign Statistics](https://developers.criteo.com/marketing-solutions/docs/campaign-statistics.md)
+- [Campaigns](https://developers.criteo.com/marketing-solutions/docs/campaigns.md)
+- [Campaigns- Concept Guide](https://developers.criteo.com/marketing-solutions/docs/campaigns-concept-guide.md)
+- [Campaigns- Concept Guide](https://developers.criteo.com/marketing-solutions/docs/campaigns-concept-guide-1.md)
+- [Catalog](https://developers.criteo.com/marketing-solutions/docs/catalog.md)
+- [Category Bids](https://developers.criteo.com/marketing-solutions/docs/category-bids.md)
+- [Commerce Grid](https://developers.criteo.com/marketing-solutions/docs/commerce-grid.md): This section documents the Commerce Grid API
+- [Commerce Grid Audience Segments Endpoints](https://developers.criteo.com/marketing-solutions/docs/commerce-grid-audience-segments-endpoints.md)
+- [Coupon](https://developers.criteo.com/marketing-solutions/docs/coupon.md)
+- [Creatives](https://developers.criteo.com/marketing-solutions/docs/creative.md)
+- [Creatives](https://developers.criteo.com/marketing-solutions/docs/creatives.md)
+- [Display Multipliers](https://developers.criteo.com/marketing-solutions/docs/display-multipliers.md)
+- [Get Advertiser Portfolio](https://developers.criteo.com/marketing-solutions/docs/get-advertiser-portfolio.md)
+- [MPO Real-Time Asynchronous API](https://developers.criteo.com/marketing-solutions/docs/getting-realtime-mpo-statistics.md)
+- [Getting Statistics](https://developers.criteo.com/marketing-solutions/docs/getting-statistics.md)
+- [Is Criteo API for you?](https://developers.criteo.com/marketing-solutions/docs/is-criteo-api-for-you.md)
+- [Log-Level](https://developers.criteo.com/marketing-solutions/docs/log-level.md)
+- [Managing Budgets](https://developers.criteo.com/marketing-solutions/docs/managing-budgets.md)
+- [Managing Campaigns](https://developers.criteo.com/marketing-solutions/docs/managing-campaigns.md)
+- [Managing Sellers](https://developers.criteo.com/marketing-solutions/docs/managing-sellers.md)
+- [Marketplace Performance Outcomes](https://developers.criteo.com/marketing-solutions/docs/marketplace-performance-outcomes.md)
+- [Best Practices for MPO API Integration](https://developers.criteo.com/marketing-solutions/docs/mpo-api-integration-best-practices.md): Recommended patterns and key considerations for integrating with the Marketplace Performance Outcomes (MPO) API, covering activation model, entity mapping, budgets, bids, error handling, reporting, and seller lifecycle.
+- [MPO Attribution](https://developers.criteo.com/marketing-solutions/docs/mpo-attribution.md): How MPO attributes post-click outcomes in reporting, which metrics are affected, supported attribution windows, and same-seller vs. any-seller logic.
+- [MPO Integration Design Template (PRD)](https://developers.criteo.com/marketing-solutions/docs/mpo-integration-design-template.md): Reusable PRD template to align on activation model, entity mapping, campaign, budget, tracking, and reporting design before starting an MPO API integration.
+- [Latency in MPO](https://developers.criteo.com/marketing-solutions/docs/mpo-latency.md): What latency means in MPO, why it exists, and what delays to expect across catalog ingestion, delivery, and reporting workflows.
+- [MPO Standard Reporting API](https://developers.criteo.com/marketing-solutions/docs/mpo-standard-reporting-api.md)
+- [MPO Standard Reporting API Metric Definitions](https://developers.criteo.com/marketing-solutions/docs/mpo-standard-reporting-api-metric-definitions.md): Definitions for all metrics returned by the MPO Standard Reporting API, including displays, impressions, clicks, cost, and attribution-sensitive metrics.
+- [Multi-Seller](https://developers.criteo.com/marketing-solutions/docs/multiseller.md)
+- [Getting Statistics](https://developers.criteo.com/marketing-solutions/docs/multiseller-getting-statistics.md)
+- [Managing Budgets](https://developers.criteo.com/marketing-solutions/docs/multiseller-managing-budgets.md)
+- [Managing Campaigns](https://developers.criteo.com/marketing-solutions/docs/multiseller-managing-campaigns.md)
+- [Managing Sellers](https://developers.criteo.com/marketing-solutions/docs/multiseller-managing-sellers.md)
+- [Onboarding to MPO](https://developers.criteo.com/marketing-solutions/docs/onboarding-to-mpo.md)
+- [Placement](https://developers.criteo.com/marketing-solutions/docs/placement.md)
+- [Placement Category](https://developers.criteo.com/marketing-solutions/docs/placement-category.md)
+- [Product Sets](https://developers.criteo.com/marketing-solutions/docs/product-sets.md)
+- [Quick Start – Launch a Multi-Seller Campaign via MPO](https://developers.criteo.com/marketing-solutions/docs/quick-start-launch-a-multi-seller-campaign-via-mpo.md)
+- [Quick Start – Launch a Single-Seller Campaign via MPO](https://developers.criteo.com/marketing-solutions/docs/quick-start-launch-a-single-seller-campaign-via-mpo.md)
+- [Reporting](https://developers.criteo.com/marketing-solutions/docs/reporting.md)
+- [Single-Seller](https://developers.criteo.com/marketing-solutions/docs/singleseller.md)
+- [Transaction IDs](https://developers.criteo.com/marketing-solutions/docs/transaction-ids.md)
+- [Troubleshooting & FAQ](https://developers.criteo.com/marketing-solutions/docs/troubleshooting-faq.md)
+- [Troubleshooting & FAQ](https://developers.criteo.com/marketing-solutions/docs/troubleshooting-faq-1.md)
+- [Welcome to Criteo](https://developers.criteo.com/marketing-solutions/docs/welcome-to-criteo.md)
+- [/2026-01/advertisers/me](https://developers.criteo.com/marketing-solutions/reference/advertiser/2026-01advertisersme.md): Fetch the portfolio of Advertisers for this account
+- [/2026-01/log-level/advertisers/{advertiser-id}/report](https://developers.criteo.com/marketing-solutions/reference/analytics/2026-01log-leveladvertisers-report.md): This Statistics endpoint provides publisher data.
+- [/2026-01/placements/report](https://developers.criteo.com/marketing-solutions/reference/analytics/2026-01placementsreport.md): Your ads are placed in different domains (publishers) and environments (websites and apps). Thanks to the placements endpoint, you can analyse the performances for each publisher, comparing displays, clicks and sales generated. <br/><br/> This endpoint supports data retrieval for up to three month…
+- [/2026-01/statistics/report](https://developers.criteo.com/marketing-solutions/reference/analytics/2026-01statisticsreport.md): This Statistics endpoint provides ad set related data. It is an upgrade of our previous Statistics endpoint, and includes new metrics and customization capabilities. <br/><br/> This endpoint supports data retrieval for up to two years in the past.
+- [/2026-01/transactions/report](https://developers.criteo.com/marketing-solutions/reference/analytics/2026-01transactionsreport.md): This Transactions endpoint provides transactions id related data. <br/><br/> This endpoint supports data retrieval for up to two years in the past.
+- [/2026-01/marketing-solutions/audience-segments](https://developers.criteo.com/marketing-solutions/reference/audience/2026-01marketing-solutionsaudience-segments.md): Updates the properties of all segments with a valid configuration, and returns their IDs. For those that cannot be updated, one or multiple errors are returned.
+- [/2026-01/marketing-solutions/audience-segments/{audience-segment-id}/contact-list](https://developers.criteo.com/marketing-solutions/reference/audience/2026-01marketing-solutionsaudience-segments-contact-list.md): Delete all identifiers from a contact list audience-segment.
+- [/2026-01/marketing-solutions/audience-segments/{audience-segment-id}/contact-list](https://developers.criteo.com/marketing-solutions/reference/audience/2026-01marketing-solutionsaudience-segments-contact-list-1.md): Add/remove identifiers to or from a contact list audience-segment.
+- [/2026-01/marketing-solutions/audience-segments/{audience-segment-id}/contact-list/statistics](https://developers.criteo.com/marketing-solutions/reference/audience/2026-01marketing-solutionsaudience-segments-contact-liststatistics.md): Returns the statistics of a contact list segment.
+- [/2026-01/marketing-solutions/audience-segments/compute-sizes](https://developers.criteo.com/marketing-solutions/reference/audience/2026-01marketing-solutionsaudience-segmentscompute-sizes.md): Gets the size of all segments. An error is returned for those whose size calculation is not supported.
+- [/2026-01/marketing-solutions/audience-segments/create](https://developers.criteo.com/marketing-solutions/reference/audience/2026-01marketing-solutionsaudience-segmentscreate.md): Creates all segments with a valid configuration, and returns their IDs. For those that cannot be created, one or multiple errors are returned.
+- [/2026-01/marketing-solutions/audience-segments/delete](https://developers.criteo.com/marketing-solutions/reference/audience/2026-01marketing-solutionsaudience-segmentsdelete.md): Delete the segments associated to the given audience IDs.
+- [/2026-01/marketing-solutions/audience-segments/estimate-size](https://developers.criteo.com/marketing-solutions/reference/audience/2026-01marketing-solutionsaudience-segmentsestimate-size.md): Gets the size estimation of a non existent segment. An error is returned when size calculation is not supported.
+- [/2026-01/marketing-solutions/audience-segments/in-market-brands](https://developers.criteo.com/marketing-solutions/reference/audience/2026-01marketing-solutionsaudience-segmentsin-market-brands.md): Returns a list with all available in-market brands that can be used to define an in-market segment.
+- [/2026-01/marketing-solutions/audience-segments/in-market-interests](https://developers.criteo.com/marketing-solutions/reference/audience/2026-01marketing-solutionsaudience-segmentsin-market-interests.md): Returns a list with all available in-market interests that can be used to define an in-market segment. These in-market interests correspond to the Google product taxonomy.
+- [/2026-01/marketing-solutions/audience-segments/search](https://developers.criteo.com/marketing-solutions/reference/audience/2026-01marketing-solutionsaudience-segmentssearch.md): Returns a list of segments that match the provided filters. If present, the filters are AND'ed together when applied.
+- [/2026-01/marketing-solutions/audiences](https://developers.criteo.com/marketing-solutions/reference/audience/2026-01marketing-solutionsaudiences.md): Updates the properties of all audiences with a valid configuration, and returns their IDs. For those that cannot be updated, one or multiple errors are returned.
+- [/2026-01/marketing-solutions/audiences/compute-sizes](https://developers.criteo.com/marketing-solutions/reference/audience/2026-01marketing-solutionsaudiencescompute-sizes.md): Gets the size of all audiences. An error is returned for those whose size calculation is not supported.
+- [/2026-01/marketing-solutions/audiences/create](https://developers.criteo.com/marketing-solutions/reference/audience/2026-01marketing-solutionsaudiencescreate.md): Creates all audiences with a valid configuration, and returns their IDs. For those that cannot be created, one or multiple errors are returned.
+- [/2026-01/marketing-solutions/audiences/delete](https://developers.criteo.com/marketing-solutions/reference/audience/2026-01marketing-solutionsaudiencesdelete.md): Deletes the audiences associated to the given audience IDs.
+- [/2026-01/marketing-solutions/audiences/estimate-size](https://developers.criteo.com/marketing-solutions/reference/audience/2026-01marketing-solutionsaudiencesestimate-size.md): Gets the size estimation of a non existent audience. An error is returned when size calculation is not supported.
+- [/2026-01/marketing-solutions/audiences/search](https://developers.criteo.com/marketing-solutions/reference/audience/2026-01marketing-solutionsaudiencessearch.md): Returns a list of audiences that match the provided filters. If present, the filters are AND'ed together when applied.
+- [/2026-01/marketing-solutions/ad-sets](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsad-sets.md): Create the specified ad set
+- [/2026-01/marketing-solutions/ad-sets](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsad-sets-1.md): Patch a list of AdSets.
+- [/2026-01/marketing-solutions/ad-sets/{ad-set-id}](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsad-sets-2.md): Get the data for the specified ad set
+- [/2026-01/marketing-solutions/ad-sets/{ad-set-id}/audience](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsad-sets-audience.md): Link or unlink an audience with an ad set
+- [/2026-01/marketing-solutions/ad-sets/{ad-set-id}/category-bids](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsad-sets-category-bids.md): Get the Category Bids for all valid Categories associated to an Ad Set
+- [/2026-01/marketing-solutions/ad-sets/{ad-set-id}/category-bids](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsad-sets-category-bids-1.md): Update the Category Bids for given Categories associated to an Ad Set Patch Category Bids for one or more Categories in a single request. Partial success policy is followed.
+- [/2026-01/marketing-solutions/ad-sets/{ad-set-id}/display-multipliers](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsad-sets-display-multipliers.md): Get the Display Multipliers for all valid Categories associated to an Ad Set
+- [/2026-01/marketing-solutions/ad-sets/{ad-set-id}/display-multipliers](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsad-sets-display-multipliers-1.md): Update the Display Multipliers for given Categories associated to an Ad Set Patch Display Multipliers for one or more Categories in a single request. Partial success policy is followed.
+- [/2026-01/marketing-solutions/ad-sets/search](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsad-setssearch.md): Search for ad sets
+- [/2026-01/marketing-solutions/ad-sets/start](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsad-setsstart.md): Start the specified list of ad sets
+- [/2026-01/marketing-solutions/ad-sets/stop](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsad-setsstop.md): Stop the specified list of ad sets
+- [/2026-01/marketing-solutions/campaigns](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionscampaigns.md): Create the specified campaign              A campaign, or in other words a marketing campaign, is an entity that defines advertising objectives and success criteria.
+- [/2026-01/marketing-solutions/campaigns](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionscampaigns-1.md): Patch a list of Campaigns.              A campaign, or in other words a marketing campaign, is an entity that defines advertising objectives and success criteria.
+- [/2026-01/marketing-solutions/campaigns/{campaign-id}](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionscampaigns-2.md): Get the data for the specified campaign.              A campaign, or in other words a marketing campaign, is an entity that defines advertising objectives and success criteria.
+- [/2026-01/marketing-solutions/campaigns/search](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionscampaignssearch.md): Search endpoint for campaigns              A campaign, or in other words a marketing campaign, is an entity that defines advertising objectives and success criteria.
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/advertisers](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesadvertisers.md): Get the collection of advertisers associated with the user.
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/advertisers/{advertiserId}](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesadvertisers-1.md): Get an advertiser.
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/advertisers/{advertiserId}/ad-preview](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesadvertisers-ad-preview.md): Get a preview of an HTML ad with products belonging to the provided seller • <b>advertiserId</b>: Valid crp advertiserId, seller belongs to provided advertiser<br /> • <b>sellerId</b>: Products from given SellerId will fill the ad preview, must be existing crp sellerId<br /> • <b>height</b>: heig…
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/advertisers/{advertiserId}/adsets](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesadvertisers-adsets.md): Get the collection of adsets associated with the advertiserId.
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/advertisers/{advertiserId}/budgets](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesadvertisers-budgets.md): Get CRP budgets for a specific advertiser
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/advertisers/{advertiserId}/campaigns](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesadvertisers-campaigns.md): Get the collection of CRP campaigns associated with the advertiserId.
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/advertisers/{advertiserId}/seller-campaigns](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesadvertisers-seller-campaigns.md): Get CRP seller campaigns for a specific advertiser
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/advertisers/{advertiserId}/sellers](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesadvertisers-sellers.md): Create new sellers for an advertiser
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/advertisers/preview-limit](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesadvertiserspreview-limit.md): Get the collection of advertisers preview limits associated with the authorized user.
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/budgets](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesbudgets.md): Return a collection of budgets filtered by optional filter parameters, **including archived budgets**. This is the endpoint to use when investigating past budget history.              By default, budgets whose endDate is in the past are excluded. Use `endAfterDate` to retrieve archived budgets (e.…
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/budgets](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesbudgets-1.md): Create one or more new budgets to enable spending with the given limitations. All three types of budgets can be created this way.              The following constraints apply when creating a new budget.              • <b>sellerId</b>: the seller MUST be supplied<br /> • <b>campaignIds</b>: a n…
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/budgets](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesbudgets-2.md): Modify one or more existing active budgets to change their limitations or status. All three types of budgets can be modified.              The following constraints apply when modifying an existing budget.              • <b>campaignIds</b>: a non-empty subset of the original campaign ids MAY be…
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/budgets/{budgetId}](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesbudgets-3.md): Return a budget. For example,                  {         "id": "1759183",         "sellerId": "321392",         "campaignIds": [             143962         ],         "budgetType": "Capped",         "amount": 1000,         "startDate": "2021-01-11",         "endDate": "2021-01-12",…
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/budgets/{budgetId}](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesbudgets-4.md): Modify an existing active budget to change its limitations or status. All three types of budgets can be modified.              See the additional restrictions listed in the PATCH budgets endpoint.
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/seller-campaigns](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesseller-campaigns.md): Return a collection of seller campaigns filtered by optional filter parameters. If all parameters are omitted the entire collection to which the user has access is returned. Returned sellers must satisfy all supplied filter criteria if multiple parameters are used.
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/seller-campaigns](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesseller-campaigns-1.md): Patching a collection of seller campaigns allows their bids to be modified. Each bid must be a non-negative value. Setting the bid to zero will make a seller campaign inactive.              The currency used for bids will be the default currency of the campaign.
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/seller-campaigns/{sellerCampaignId}](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesseller-campaigns-2.md): Return details for a seller campaign. For example,                  {         "id": "543210.123456",         "sellerId": "543210",         "campaignId": 123456,         "bid": 1.55,         "suspendedSince": "2018-07-30T15:15:24.813",         "suspensionReasons": [             "NoMoreBudget…
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/seller-campaigns/{sellerCampaignId}](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesseller-campaigns-3.md): Patching a seller campaign allows the bid to be modified. The bid must be a non-negative value. Setting the bid to zero will make a seller campaign inactive.              The currency used for bids will be the default currency of the campaign.
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/seller-campaigns/{sellerCampaignId}/budgets](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesseller-campaigns-budgets.md): Return a collection of budgets for this seller campaign filtered by optional filter parameters. If all parameters are omitted the entire collection to which the user has access is returned, except those whose endDate is in the past. Returned budgets must satisfy all supplied filter criteria if mu…
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/sellers](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomessellers.md): Return a collection of sellers filtered by optional filter parameters. If all parameters are omitted the entire collection to which the user has access is returned. Returned sellers must satisfy all supplied filter criteria if multiple parameters are used.
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/sellers/{sellerId}](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomessellers-1.md): Return details for the selected seller. For example,                  {         "id" : "123456"         "sellerName": "HBogart",     }
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/sellers/{sellerId}/budgets](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomessellers-budgets.md): Return current (non-archived) budgets for this seller. Budgets whose endDate is in the past are excluded by default. To retrieve archived or past budgets, use the `/budgets` endpoint (GetMarketplaceSellerBudgets) with the `endAfterDate` filter instead.
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/sellers/{sellerId}/seller-campaigns](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomessellers-seller-campaigns.md): Return a collection of seller campaigns for this seller filtered by optional filter parameters. If all parameters are omitted the entire collection to which the user has access is returned. Returned sellers must satisfy all supplied filter criteria if multiple parameters are used. See the seller…
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/sellers/{sellerId}/seller-campaigns](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomessellers-seller-campaigns-1.md): Associate an existing Seller with an existing Campaign allowing for budget creation
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/stats/campaigns](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesstatscampaigns.md): ## Dimensions              Get performance statistics aggregated for _campaigns_. The campaign id appears in the output as the first column.              Aggregation can be done by `hour`, `day`, `month`, or `year` aligned with the user timezone if provided. The aggregation interval size is co…
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/stats/seller-campaigns](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesstatsseller-campaigns.md): ## Dimensions              Get performance statistics aggregated for _seller campaigns_.The campaign id, seller id, and seller name appear in the first three columns of the output. These are followed by the interval size column.              Aggregation can be done by `hour`, `day`, `month`, o…
+- [/2026-01/marketing-solutions/marketplace-performance-outcomes/stats/sellers](https://developers.criteo.com/marketing-solutions/reference/campaign/2026-01marketing-solutionsmarketplace-performance-outcomesstatssellers.md): ## Dimensions              Get performance statistics aggregated for _sellers_. The seller id appears in the output in the first column and the seller name appears in the second.              Aggregation can be done by `hour`, `day`, `month`, or `year` aligned with the user timezone if provide…
+- [/2026-01/commerce-grid/me](https://developers.criteo.com/marketing-solutions/reference/commerce-grid/gateway/2026-01commerce-gridme.md): Get information about the currently logged application
+- [/2026-01/commerce-grid/audience-segments](https://developers.criteo.com/marketing-solutions/reference/commerce-grid/segment/2026-01commerce-gridaudience-segments.md): Updates the properties of all segments with a valid configuration, and returns the full segments. For those that cannot be updated, one or multiple errors are returned.
+- [/2026-01/commerce-grid/audience-segments/{audience-segment-id}/contact-list/add-remove](https://developers.criteo.com/marketing-solutions/reference/commerce-grid/segment/2026-01commerce-gridaudience-segments-contact-listadd-remove.md): Add/remove identifiers to or from a Commerce Grid audience segment of type Contact List.
+- [/2026-01/commerce-grid/audience-segments/{audience-segment-id}/contact-list/clear](https://developers.criteo.com/marketing-solutions/reference/commerce-grid/segment/2026-01commerce-gridaudience-segments-contact-listclear.md): Delete all identifiers from a Commerce Grid audience segment of type Contact List.
+- [/2026-01/commerce-grid/audience-segments/{audience-segment-id}/contact-list/statistics](https://developers.criteo.com/marketing-solutions/reference/commerce-grid/segment/2026-01commerce-gridaudience-segments-contact-liststatistics.md): Returns the statistics of a contact list segment.
+- [/2026-01/commerce-grid/audience-segments/create](https://developers.criteo.com/marketing-solutions/reference/commerce-grid/segment/2026-01commerce-gridaudience-segmentscreate.md): Creates all segments with a valid configuration, and returns the full segments. For those that cannot be created, one or multiple errors are returned.
+- [/2026-01/commerce-grid/audience-segments/delete](https://developers.criteo.com/marketing-solutions/reference/commerce-grid/segment/2026-01commerce-gridaudience-segmentsdelete.md): Delete the segments associated to the given IDs.
+- [/2026-01/commerce-grid/audience-segments/search](https://developers.criteo.com/marketing-solutions/reference/commerce-grid/segment/2026-01commerce-gridaudience-segmentssearch.md): Returns a list of segments that match the provided filters. If present, the filters are AND'ed together when applied.
+- [/2026-01/marketing-solutions/ads/{id}](https://developers.criteo.com/marketing-solutions/reference/creative/2026-01marketing-solutionsads.md): Get an Ad with its id
+- [/2026-01/marketing-solutions/ads/{id}](https://developers.criteo.com/marketing-solutions/reference/creative/2026-01marketing-solutionsads-1.md): Delete an Ad
+- [/2026-01/marketing-solutions/advertisers/{advertiser-id}/ads](https://developers.criteo.com/marketing-solutions/reference/creative/2026-01marketing-solutionsadvertisers-ads.md): Get the list of self-services Ads for a given advertiser
+- [/2026-01/marketing-solutions/advertisers/{advertiser-id}/ads](https://developers.criteo.com/marketing-solutions/reference/creative/2026-01marketing-solutionsadvertisers-ads-1.md): Create an Ad
+- [/2026-01/marketing-solutions/advertisers/{advertiser-id}/coupons](https://developers.criteo.com/marketing-solutions/reference/creative/2026-01marketing-solutionsadvertisers-coupons.md): Get the list of self-services Coupons for a given advertiser
+- [/2026-01/marketing-solutions/advertisers/{advertiser-id}/coupons](https://developers.criteo.com/marketing-solutions/reference/creative/2026-01marketing-solutionsadvertisers-coupons-1.md): Create a Coupon
+- [/2026-01/marketing-solutions/advertisers/{advertiser-id}/coupons/{id}](https://developers.criteo.com/marketing-solutions/reference/creative/2026-01marketing-solutionsadvertisers-coupons-2.md): Get a Coupon with its id
+- [/2026-01/marketing-solutions/advertisers/{advertiser-id}/coupons/{id}](https://developers.criteo.com/marketing-solutions/reference/creative/2026-01marketing-solutionsadvertisers-coupons-3.md): Edit a specific Coupon
+- [/2026-01/marketing-solutions/advertisers/{advertiser-id}/coupons/{id}](https://developers.criteo.com/marketing-solutions/reference/creative/2026-01marketing-solutionsadvertisers-coupons-4.md): Delete a Coupon
+- [/2026-01/marketing-solutions/advertisers/{advertiser-id}/coupons/{id}/preview](https://developers.criteo.com/marketing-solutions/reference/creative/2026-01marketing-solutionsadvertisers-coupons-preview.md): Get the preview of a specific Coupon
+- [/2026-01/marketing-solutions/advertisers/{advertiser-id}/coupons-supported-sizes](https://developers.criteo.com/marketing-solutions/reference/creative/2026-01marketing-solutionsadvertisers-coupons-supported-sizes.md): Get the list of Coupon supported sizes
+- [/2026-01/marketing-solutions/advertisers/{advertiser-id}/creatives](https://developers.criteo.com/marketing-solutions/reference/creative/2026-01marketing-solutionsadvertisers-creatives.md): Get the list of self-services Creatives for a given advertiser
+- [/2026-01/marketing-solutions/advertisers/{advertiser-id}/creatives](https://developers.criteo.com/marketing-solutions/reference/creative/2026-01marketing-solutionsadvertisers-creatives-1.md): Create a Creative
+- [/2026-01/marketing-solutions/creatives/{id}](https://developers.criteo.com/marketing-solutions/reference/creative/2026-01marketing-solutionscreatives.md): Get a Creative with its id
+- [/2026-01/marketing-solutions/creatives/{id}](https://developers.criteo.com/marketing-solutions/reference/creative/2026-01marketing-solutionscreatives-1.md): Edit a specific Creative
+- [/2026-01/marketing-solutions/creatives/{id}](https://developers.criteo.com/marketing-solutions/reference/creative/2026-01marketing-solutionscreatives-2.md): Delete a Creative if there are no ads binded to it
+- [/2026-01/marketing-solutions/creatives/{id}/preview](https://developers.criteo.com/marketing-solutions/reference/creative/2026-01marketing-solutionscreatives-preview.md): Get the preview of a specific Creative
+- [/2026-01/marketing-solutions/me](https://developers.criteo.com/marketing-solutions/reference/gateway/2026-01marketing-solutionsme.md): Get information about the currently logged application
+- [/2026-01/marketing-solutions/ads/{ad-id}/product-filter](https://developers.criteo.com/marketing-solutions/reference/reco/2026-01marketing-solutionsads-product-filter.md): Fetch product filtering configuration for a given ad
+- [/2026-01/marketing-solutions/ads/{ad-id}/product-filter](https://developers.criteo.com/marketing-solutions/reference/reco/2026-01marketing-solutionsads-product-filter-1.md): Enable product filtering for a given ad
+- [/2026-01/marketing-solutions/ads/{ad-id}/product-filter](https://developers.criteo.com/marketing-solutions/reference/reco/2026-01marketing-solutionsads-product-filter-2.md): Disable product filtering for a given ad
+- [/2026-01/marketing-solutions/product-sets](https://developers.criteo.com/marketing-solutions/reference/reco/2026-01marketing-solutionsproduct-sets.md): Create a new product set
+- [/2026-01/marketing-solutions/product-sets/{product-set-id}](https://developers.criteo.com/marketing-solutions/reference/reco/2026-01marketing-solutionsproduct-sets-1.md): Fetch an existing product set
+- [/2026-01/marketing-solutions/product-sets/{product-set-id}](https://developers.criteo.com/marketing-solutions/reference/reco/2026-01marketing-solutionsproduct-sets-2.md): Remove a product set
+- [/2026-01/marketing-solutions/product-sets/{product-set-id}](https://developers.criteo.com/marketing-solutions/reference/reco/2026-01marketing-solutionsproduct-sets-3.md): Patch an existing product set
+- [/2026-01/marketing-solutions/product-sets/{product-set-id}/product-filters](https://developers.criteo.com/marketing-solutions/reference/reco/2026-01marketing-solutionsproduct-sets-product-filters.md): Fetch product filtering usages for a given product set
+- [/2026-01/marketing-solutions/product-sets/dataset/{dataset-id}](https://developers.criteo.com/marketing-solutions/reference/reco/2026-01marketing-solutionsproduct-setsdataset.md): Fetch product sets of a given dataset
+- [Announcing bulk calls and rate limits](https://developers.criteo.com/retail-media/changelog/announcing-bulk-calls-and-rate-limits.md)
+- [Bug Fix for PUT | preferred-line-item Endpoint (Preferred Deals Only)](https://developers.criteo.com/retail-media/changelog/bug-fix-for-put-preferred-line-item-endpoint.md)
+- [Changelog](https://developers.criteo.com/retail-media/changelog/index.md): Recent updates to the Retail Media API.
+- [Welcome to Criteo Changelog](https://developers.criteo.com/retail-media/changelog/retailmedia-changelog.md)
+- [Upcoming API Deprecations and Sunsets](https://developers.criteo.com/retail-media/changelog/upcoming-deprecations.md)
+- [v2022.04 Release Notes](https://developers.criteo.com/retail-media/changelog/v202204-release-notes.md)
+- [Version 2021.10 release notes](https://developers.criteo.com/retail-media/changelog/version-202107-release-notes.md)
+- [Version 2022.10 Release Notes](https://developers.criteo.com/retail-media/changelog/version-202210-release-notes.md)
+- [Version 2023.01 Release Notes](https://developers.criteo.com/retail-media/changelog/version-202301.md)
+- [Version 2023.04 Release Notes](https://developers.criteo.com/retail-media/changelog/version-202304-release-notes.md)
+- [Version 2023.07 Release Notes](https://developers.criteo.com/retail-media/changelog/version-202307-release-notes.md)
+- [Version 2025.01 Release Notes](https://developers.criteo.com/retail-media/changelog/version-202501-release-notes.md)
+- [Version 2025.04 Release Notes](https://developers.criteo.com/retail-media/changelog/version-202504-release-notes.md)
+- [Version 2025.07 Release Notes](https://developers.criteo.com/retail-media/changelog/version-202507-release-notes.md)
+- [Version 2025.10 Release Notes](https://developers.criteo.com/retail-media/changelog/version-202510-release-notes.md)
+- [Version 2026.01 Release Notes](https://developers.criteo.com/retail-media/changelog/version-202601-release-notes.md)
+- [Account](https://developers.criteo.com/retail-media/docs/account.md)
+- [Account Creation and Management (Private Market)](https://developers.criteo.com/retail-media/docs/account-creation-and-management-private-market.md)
+- [Account Fees (Private Market)](https://developers.criteo.com/retail-media/docs/account-fees.md)
+- [Account Level Report](https://developers.criteo.com/retail-media/docs/account-level-report.md)
+- [Accounts Endpoints](https://developers.criteo.com/retail-media/docs/accounts-endpoints.md)
+- [Algebra Nodes](https://developers.criteo.com/retail-media/docs/algebra-nodes.md)
+- [Demand Side Analytics (DSP)](https://developers.criteo.com/retail-media/docs/analytics.md)
+- [Audience Endpoints](https://developers.criteo.com/retail-media/docs/audience-endpoints.md)
+- [Audience Segment Endpoints](https://developers.criteo.com/retail-media/docs/audience-segment-endpoints.md)
+- [Audiences](https://developers.criteo.com/retail-media/docs/audiences.md)
+- [Balances](https://developers.criteo.com/retail-media/docs/balances.md)
+- [Balances Endpoints](https://developers.criteo.com/retail-media/docs/balances-endpoints.md): View and manage all available balances across campaigns
+- [Bid Multipliers](https://developers.criteo.com/retail-media/docs/bid-multipliers.md)
+- [Billing](https://developers.criteo.com/retail-media/docs/billing.md)
+- [Brands](https://developers.criteo.com/retail-media/docs/brands.md)
+- [Budget Overrides](https://developers.criteo.com/retail-media/docs/budget-overrides.md): This feature provides more flexibility that allow advertisers to override a line-item budget for specific days or months.
+- [Campaigns](https://developers.criteo.com/retail-media/docs/campaign.md): This page is an overview of how to get started with Campaigns
+- [Campaigns Endpoints](https://developers.criteo.com/retail-media/docs/campaigns-endpoints.md): View and manage all your campaigns
+- [Catalog Endpoints](https://developers.criteo.com/retail-media/docs/catalog-endpoints.md): Generate and download a copy of retailer's inventory
+- [Catalog](https://developers.criteo.com/retail-media/docs/catalogs.md)
+- [Category Search](https://developers.criteo.com/retail-media/docs/category-search.md)
+- [DSP Analytics Endpoints](https://developers.criteo.com/retail-media/docs/demand-side-analytics-get-started.md): Setup your endpoints, view report attributes, and examples of requests
+- [Overview](https://developers.criteo.com/retail-media/docs/demand-side-analytics-overview.md)
+- [Fill Rate Report](https://developers.criteo.com/retail-media/docs/fill-rate-report.md)
+- [Is Criteo Retail Media API for you?](https://developers.criteo.com/retail-media/docs/is-criteo-api-for-you.md)
+- [Keyword Review](https://developers.criteo.com/retail-media/docs/keyword-review.md)
+- [Keywords](https://developers.criteo.com/retail-media/docs/keywords.md)
+- [Line Items](https://developers.criteo.com/retail-media/docs/line-items.md)
+- [Line Items Endpoints](https://developers.criteo.com/retail-media/docs/line-items-endpoints.md)
+- [Metrics and Dimensions (DSP)](https://developers.criteo.com/retail-media/docs/metrics-and-dimensions.md)
+- [Metrics and Dimensions (SSP)](https://developers.criteo.com/retail-media/docs/metrics-and-dimensions-ssp.md)
+- [Metrics & Dimensions (Fill Rate Report)](https://developers.criteo.com/retail-media/docs/metrics-dimensions-fill-rate-report.md)
+- [Minimum Bid](https://developers.criteo.com/retail-media/docs/minimum-bid.md)
+- [Onsite Sponsored Products](https://developers.criteo.com/retail-media/docs/onsite-sponsored-products.md)
+- [Onsite Sponsored Products Line Items](https://developers.criteo.com/retail-media/docs/onsite-sponsored-products-line-items.md)
+- [Partner Billing Report](https://developers.criteo.com/retail-media/docs/partner-billing-report.md)
+- [PBR Metrics](https://developers.criteo.com/retail-media/docs/pbr-metrics.md)
+- [Promoted Products](https://developers.criteo.com/retail-media/docs/promoted-products.md)
+- [Recommended Categories](https://developers.criteo.com/retail-media/docs/recommended-categories.md)
+- [Recommended Keywords](https://developers.criteo.com/retail-media/docs/recommended-keywords.md)
+- [Report Types](https://developers.criteo.com/retail-media/docs/report-types.md): A list of all available report types
+- [Reporting Diagnostic Guide](https://developers.criteo.com/retail-media/docs/reporting-overview-diagnostic-guide.md): Understanding how SSP and DSP reporting works, how to align API results with the UI, and how to navigate rate limits, data latency, and reporting discrepancies.
+- [Retailer Budgets](https://developers.criteo.com/retail-media/docs/retailer-budgets.md)
+- [Retailer Search](https://developers.criteo.com/retail-media/docs/retailer-search.md)
+- [Revenue Report](https://developers.criteo.com/retail-media/docs/revenue-report-ssp.md): Supply Side Revenue Report (v2)
+- [Sellers](https://developers.criteo.com/retail-media/docs/sellers.md)
+- [Supply Side Analytics (SSP)](https://developers.criteo.com/retail-media/docs/supply-side-reporting-ssp.md)
+- [Welcome to Criteo Retail Media API](https://developers.criteo.com/retail-media/docs/welcome-to-criteo.md)
+- [/2026-01/retail-media/account-management/accounts/{accountId}/brands/add](https://developers.criteo.com/retail-media/reference/accounts/2026-01retail-mediaaccount-managementaccounts-brandsadd.md): Add brands to an account
+- [/2026-01/retail-media/account-management/accounts/{accountId}/brands/remove](https://developers.criteo.com/retail-media/reference/accounts/2026-01retail-mediaaccount-managementaccounts-brandsremove.md): Remove brands from an account
+- [/2026-01/retail-media/account-management/accounts/{accountId}/create-brand-account](https://developers.criteo.com/retail-media/reference/accounts/2026-01retail-mediaaccount-managementaccounts-create-brand-account.md): Creates a new child Demand Brand account for the provided parent Private Market account
+- [/2026-01/retail-media/account-management/accounts/{accountId}/create-seller-account](https://developers.criteo.com/retail-media/reference/accounts/2026-01retail-mediaaccount-managementaccounts-create-seller-account.md): Creates a new child Demand Seller account for the provided parent Private Market account
+- [/2026-01/retail-media/account-management/accounts/{accountId}/private-market-child-accounts](https://developers.criteo.com/retail-media/reference/accounts/2026-01retail-mediaaccount-managementaccounts-private-market-child-accounts.md): Gets Private Market child accounts that are associated with the given account
+- [/2026-01/retail-media/account-management/accounts/{accountId}/sellers](https://developers.criteo.com/retail-media/reference/accounts/2026-01retail-mediaaccount-managementaccounts-sellers.md): Replace the sellers associated with an account
+- [/2026-01/retail-media/accounts](https://developers.criteo.com/retail-media/reference/accounts/2026-01retail-mediaaccounts.md): Gets page of account objects that the current user can access
+- [/2026-01/retail-media/accounts/{accountId}/grant-consent](https://developers.criteo.com/retail-media/reference/accounts/2026-01retail-mediaaccounts-grant-consent.md): Grant consent to a business application on behalf of a Private Market demand account
+- [/2026-01/retail-media/accounts/fees/search](https://developers.criteo.com/retail-media/reference/accounts/2026-01retail-mediaaccountsfeessearch.md): Get fees for provided accounts
+- [/2026-01/retail-media/accounts/fees/update](https://developers.criteo.com/retail-media/reference/accounts/2026-01retail-mediaaccountsfeesupdate.md): Set fees for provided accounts
+- [/2026-01/retail-media/accounts/sellers/search](https://developers.criteo.com/retail-media/reference/accounts/2026-01retail-mediaaccountssellerssearch.md): Get the sellers mapped to provided accounts
+- [/2026-01/retail-media/brands/search](https://developers.criteo.com/retail-media/reference/accounts/2026-01retail-mediabrandssearch.md): Search for brands given a retailer ID and search term.
+- [/2026-01/retail-media/reports/{reportId}/output](https://developers.criteo.com/retail-media/reference/analytics/2026-01retail-mediareports-output.md): Returns the output of an async report
+- [/2026-01/retail-media/reports/{reportId}/status](https://developers.criteo.com/retail-media/reference/analytics/2026-01retail-mediareports-status.md): Returns the status of an async report
+- [/2026-01/retail-media/reports/accounts](https://developers.criteo.com/retail-media/reference/analytics/2026-01retail-mediareportsaccounts.md): Returns an asynchronous Accounts Report <br /> This endpoint is subject to specific rate limits.
+- [/2026-01/retail-media/reports/campaigns](https://developers.criteo.com/retail-media/reference/analytics/2026-01retail-mediareportscampaigns.md): Return an asynchronous Campaigns Report <br /> This endpoint is subject to specific rate limits.
+- [/2026-01/retail-media/reports/fillrate](https://developers.criteo.com/retail-media/reference/analytics/2026-01retail-mediareportsfillrate.md): Returns an asynchronous Fill Rate Report <br /> This endpoint is subject to specific rate limits.
+- [/2026-01/retail-media/reports/line-items](https://developers.criteo.com/retail-media/reference/analytics/2026-01retail-mediareportsline-items.md): Returns an asynchronous Line Items Report <br /> This endpoint is subject to specific rate limits.
+- [/2026-01/retail-media/reports/revenue](https://developers.criteo.com/retail-media/reference/analytics/2026-01retail-mediareportsrevenue.md): Returns an asynchronous Revenue Report <br /> This endpoint is subject to specific rate limits.
+- [/2026-01/retail-media/reports/unfilled-placements](https://developers.criteo.com/retail-media/reference/analytics/2026-01retail-mediareportsunfilled-placements.md): Returns an asynchronous Unfilled Placements Report <br /> This endpoint is subject to specific rate limits.
+- [/2026-01/retail-media/accounts/{account-id}/audience-segments](https://developers.criteo.com/retail-media/reference/audience/2026-01retail-mediaaccounts-audience-segments.md): Updates the properties of all segments with a valid configuration, and returns the full segments. For those that cannot be updated, one or multiple errors are returned.
+- [/2026-01/retail-media/accounts/{account-id}/audience-segments/{audience-segment-id}/contact-list](https://developers.criteo.com/retail-media/reference/audience/2026-01retail-mediaaccounts-audience-segments-contact-list.md): Returns the statistics of a contact list segment.
+- [/2026-01/retail-media/accounts/{account-id}/audience-segments/create](https://developers.criteo.com/retail-media/reference/audience/2026-01retail-mediaaccounts-audience-segmentscreate.md): Creates all segments with a valid configuration, and returns the full segments. For those that cannot be created, one or multiple errors are returned.
+- [/2026-01/retail-media/accounts/{account-id}/audience-segments/delete](https://developers.criteo.com/retail-media/reference/audience/2026-01retail-mediaaccounts-audience-segmentsdelete.md): Delete the segments associated to the given IDs.
+- [/2026-01/retail-media/accounts/{account-id}/audience-segments/search](https://developers.criteo.com/retail-media/reference/audience/2026-01retail-mediaaccounts-audience-segmentssearch.md): Returns a list of segments that match the provided filters. If present, the filters are AND'ed together when applied.
+- [/2026-01/retail-media/accounts/{account-id}/audiences/search](https://developers.criteo.com/retail-media/reference/audience/2026-01retail-mediaaccounts-audiencessearch.md): Returns a list of audiences that match the provided filters. If present, the filters are AND'ed together when applied.
+- [/2026-01/retail-media/audience-segments/{audience-segment-id}/contact-list/add-remove](https://developers.criteo.com/retail-media/reference/audience/2026-01retail-mediaaudience-segments-contact-listadd-remove.md): Add/remove identifiers to or from a retail-media contact list audience-segment, with external audience segment id.
+- [/2026-01/retail-media/audience-segments/{audience-segment-id}/contact-list/clear](https://developers.criteo.com/retail-media/reference/audience/2026-01retail-mediaaudience-segments-contact-listclear.md): Delete all identifiers from a retail-media contact list audience-segment, with external audience segment id.
+- [/2026-01/retail-media/accounts/{account-id}/balances](https://developers.criteo.com/retail-media/reference/balance/2026-01retail-mediaaccounts-balances.md): Gets page of balance objects for the given account id
+- [/2026-01/retail-media/accounts/{account-id}/balances](https://developers.criteo.com/retail-media/reference/balance/2026-01retail-mediaaccounts-balances-1.md): Create balance for the given account id
+- [/2026-01/retail-media/accounts/{account-id}/balances/{balance-id}](https://developers.criteo.com/retail-media/reference/balance/2026-01retail-mediaaccounts-balances-2.md): Get a balance for the given account id and balance id
+- [/2026-01/retail-media/accounts/{account-id}/balances/{balance-id}](https://developers.criteo.com/retail-media/reference/balance/2026-01retail-mediaaccounts-balances-3.md): Modify a balance for the given account id
+- [/2026-01/retail-media/accounts/{account-id}/balances/{balance-id}/add-funds](https://developers.criteo.com/retail-media/reference/balance/2026-01retail-mediaaccounts-balances-add-funds.md): Add funds to a balance for the given account id
+- [/2026-01/retail-media/accounts/{account-id}/balances/{balance-id}/change-dates](https://developers.criteo.com/retail-media/reference/balance/2026-01retail-mediaaccounts-balances-change-dates.md): Change dates of a balance for the given account id
+- [/2026-01/retail-media/balances/{balance-id}/campaigns](https://developers.criteo.com/retail-media/reference/balance/2026-01retail-mediabalances-campaigns.md): Gets page of campaigns for the given balanceId
+- [/2026-01/retail-media/balances/{balanceId}/history](https://developers.criteo.com/retail-media/reference/balance/2026-01retail-mediabalances-history.md): Gets the balance's historical change data.
+- [/2026-01/retail-media/billing/partner-report](https://developers.criteo.com/retail-media/reference/billing/2026-01retail-mediabillingpartner-report.md): Create a Partner Billing Report request.
+- [/2026-01/retail-media/billing/partner-report/{requestId}/output](https://developers.criteo.com/retail-media/reference/billing/2026-01retail-mediabillingpartner-report-output.md): Get the output of an existing Partner Billing Report.
+- [/2026-01/retail-media/billing/partner-report/{requestId}/status](https://developers.criteo.com/retail-media/reference/billing/2026-01retail-mediabillingpartner-report-status.md): Get the status of an existing Partner Billing Report.
+- [/2026-01/retail-media/accounts/{accountId}/brand-catalog-export](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaaccounts-brand-catalog-export.md): Create a request for a Catalog available to the indicated account.
+- [/2026-01/retail-media/accounts/{accountId}/brands](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaaccounts-brands.md): Gets page of retailer objects that are associated with the given account
+- [/2026-01/retail-media/accounts/{account-id}/campaigns](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaaccounts-campaigns.md): Gets page of campaign objects for the given account id
+- [/2026-01/retail-media/accounts/{account-id}/campaigns](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaaccounts-campaigns-1.md): Creates a new campaign with the specified settings
+- [/2026-01/retail-media/accounts/{accountId}/catalogs](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaaccounts-catalogs.md): Create a request for a Catalog available to the indicated account.
+- [/2026-01/retail-media/accounts/{accountId}/catalogs/sellers](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaaccounts-catalogssellers.md): Create a request for a Catalog available to the indicated account.
+- [/2026-01/retail-media/accounts/{account-id}/creatives](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaaccounts-creatives.md): Get account creatives
+- [/2026-01/retail-media/accounts/{account-id}/creatives](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaaccounts-creatives-1.md): Create a creative for an account
+- [/2026-01/retail-media/accounts/{account-id}/creatives/{creative-id}](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaaccounts-creatives-2.md): Get the specified creative
+- [/2026-01/retail-media/accounts/{account-id}/creatives/{creative-id}](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaaccounts-creatives-3.md): Update a creative
+- [/2026-01/retail-media/accounts/{account-id}/creatives/search](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaaccounts-creativessearch.md): Get account creatives
+- [/2026-01/retail-media/accounts/{account-id}/keywords/in-review-report](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaaccounts-keywordsin-review-report.md): Generate a list of reports for line items which contain one or more actionable keyword reviews
+- [/2026-01/retail-media/accounts/{account-id}/line-items](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaaccounts-line-items.md): Gets page of line item objects for the given account id
+- [/2026-01/retail-media/accounts/{accountId}/retailers/search](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaaccounts-retailerssearch.md): Searches for retailers associated with the specified account based on provided search criteria
+- [/2026-01/retail-media/accounts/{accountId}/seller-catalog-export](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaaccounts-seller-catalog-export.md): Create a request for a Catalog available to the indicated account.
+- [/2026-01/retail-media/assets](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaassets.md): Creates an asset
+- [/2026-01/retail-media/auction-line-items/{lineItemId}](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaauction-line-items.md): Gets a sponsored product line item by its id.
+- [/2026-01/retail-media/auction-line-items/{lineItemId}](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaauction-line-items-1.md): Updates a Sponsored Products Line Item given a line item id and a request.
+- [/2026-01/retail-media/balances/{balance-id}/campaigns/append](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediabalances-campaignsappend.md): appends one or more campaigns to the specified balance
+- [/2026-01/retail-media/balances/{balance-id}/campaigns/delete](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediabalances-campaignsdelete.md): Removes one or more campaigns on the specified balance
+- [/2026-01/retail-media/campaigns/{campaignId}](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediacampaigns.md): Gets the campaign for the given campaign id
+- [/2026-01/retail-media/campaigns/{campaignId}](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediacampaigns-1.md): Updates the campaign for the given campaign id
+- [/2026-01/retail-media/campaigns/{campaignId}/auction-line-items](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediacampaigns-auction-line-items.md): Gets a page of sponsored product line items by campaign id.
+- [/2026-01/retail-media/campaigns/{campaignId}/auction-line-items](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediacampaigns-auction-line-items-1.md): Creates new auction line item with the specified settings
+- [/2026-01/retail-media/campaigns/{campaignId}/campaign-budget-overrides](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediacampaigns-campaign-budget-overrides.md): Get current campaign budget overrides by given campaign id.
+- [/2026-01/retail-media/campaigns/{campaignId}/campaign-budget-overrides](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediacampaigns-campaign-budget-overrides-1.md): Update campaign budget overrides by given campaign id and new campaign budget overrides settings.
+- [/2026-01/retail-media/campaigns/{campaign-id}/preferred-line-items](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediacampaigns-preferred-line-items.md): Gets page of preferred line item objects for the given campaign id
+- [/2026-01/retail-media/campaigns/{campaign-id}/preferred-line-items](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediacampaigns-preferred-line-items-1.md): Creates a new preferred line item with the specified settings
+- [/2026-01/retail-media/catalogs/{catalogId}/output](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediacatalogs-output.md): Output the indicated catalog. Catalogs are only available for retrieval when their associated status request is at a Success status. Produces application/x-json-stream CatalogProduct json objects (first introduced in the 2021-07 version).
+- [/2026-01/retail-media/catalogs/{catalogId}/status](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediacatalogs-status.md): Check the status of a catalog request.
+- [/2026-01/retail-media/categories](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediacategories.md): Endpoint to search categories by text and retailer.
+- [/2026-01/retail-media/categories/{categoryId}](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediacategories-1.md): Endpoint to search for a specific category by categoryId.
+- [/2026-01/retail-media/line-items/{line-item-id}](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-medialine-items.md): Gets the line item for the given line item id
+- [/2026-01/retail-media/line-items/{line-item-id}/bid-multipliers](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-medialine-items-bid-multipliers.md): Fetch all bid multipliers for a given line item
+- [/2026-01/retail-media/line-items/{line-item-id}/bid-multipliers](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-medialine-items-bid-multipliers-1.md): Updates the bid multipliers for a given line item
+- [/2026-01/retail-media/line-items/{id}/keywords](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-medialine-items-keywords.md): Fetch keywords associated with the specified line item
+- [/2026-01/retail-media/line-items/{id}/keywords/add-remove](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-medialine-items-keywordsadd-remove.md): Add or Remove keywords from the line item in bulk
+- [/2026-01/retail-media/line-items/{externalLineItemId}/keywords/recommended](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-medialine-items-keywordsrecommended.md): Retrieves a collection of recommended keywords for a line item
+- [/2026-01/retail-media/line-items/{line-item-id}/keywords/review](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-medialine-items-keywordsreview.md): Update the status of keyword reviews under a line item
+- [/2026-01/retail-media/line-items/{id}/keywords/set-bid](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-medialine-items-keywordsset-bid.md): Set bid overrides for associated keywords to the given line item in bulk
+- [/2026-01/retail-media/line-items/{lineItemId}/line-item-budget-overrides](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-medialine-items-line-item-budget-overrides.md): Gets a collection of monthly and daily budget overrides for the provided line item.
+- [/2026-01/retail-media/line-items/{lineItemId}/line-item-budget-overrides](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-medialine-items-line-item-budget-overrides-1.md): Update line item budget overrides by given external line item id and new line item budget overrides settings.
+- [/2026-01/retail-media/line-items/{line-item-id}/products](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-medialine-items-products.md): Retrieve a page of promoted products for a line item
+- [/2026-01/retail-media/line-items/{line-item-id}/products/append](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-medialine-items-productsappend.md): Append a collection of promoted products to a line item
+- [/2026-01/retail-media/line-items/{line-item-id}/products/delete](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-medialine-items-productsdelete.md): Remove a collection of promoted products from a line item
+- [/2026-01/retail-media/line-items/{line-item-id}/products/pause](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-medialine-items-productspause.md): Pause a collection of promoted products associated with a line item
+- [/2026-01/retail-media/line-items/{line-item-id}/products/unpause](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-medialine-items-productsunpause.md): Un-pause a collection of promoted products associated with a line item
+- [/2026-01/retail-media/preferred-line-items/{line-item-id}](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediapreferred-line-items.md): Gets the preferred line item for the given line item id
+- [/2026-01/retail-media/preferred-line-items/{line-item-id}](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediapreferred-line-items-1.md): Updates the preferred line item for the given line item id
+- [/2026-01/retail-media/preferred-line-items/{line-item-id}/targeting/add-to-basket](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediapreferred-line-items-targetingadd-to-basket.md): This endpoint gets the add to basket target on the specified line item.
+- [/2026-01/retail-media/preferred-line-items/{line-item-id}/targeting/add-to-basket](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediapreferred-line-items-targetingadd-to-basket-1.md): This endpoint sets the scope of the add to basket target on the specified line item.
+- [/2026-01/retail-media/preferred-line-items/{line-item-id}/targeting/add-to-basket/append](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediapreferred-line-items-targetingadd-to-basketappend.md): This endpoint appends one or more add to basket ids to targeting on the specified line item.  The resulting state of the add to basket target is returned.
+- [/2026-01/retail-media/preferred-line-items/{line-item-id}/targeting/add-to-basket/delete](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediapreferred-line-items-targetingadd-to-basketdelete.md): This endpoint removes one or more add to basket ids from targeting on the specified line item.  The resulting state of the add to basket target is returned.
+- [/2026-01/retail-media/preferred-line-items/{line-item-id}/targeting/audiences](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediapreferred-line-items-targetingaudiences.md): This endpoint gets the audience target on the specified line item.
+- [/2026-01/retail-media/preferred-line-items/{line-item-id}/targeting/audiences](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediapreferred-line-items-targetingaudiences-1.md): This endpoint sets the scope of the audience target on the specified line item.
+- [/2026-01/retail-media/preferred-line-items/{line-item-id}/targeting/audiences/append](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediapreferred-line-items-targetingaudiencesappend.md): This endpoint appends one or more audiences ids to targeting on the specified line item.  The resulting state of the audience target is returned.
+- [/2026-01/retail-media/preferred-line-items/{line-item-id}/targeting/audiences/delete](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediapreferred-line-items-targetingaudiencesdelete.md): This endpoint removes one or more audiences ids from targeting on the specified line item.  The resulting state of the audience target is returned.
+- [/2026-01/retail-media/preferred-line-items/{line-item-id}/targeting/stores](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediapreferred-line-items-targetingstores.md): This endpoint gets the store target on the specified line item.
+- [/2026-01/retail-media/preferred-line-items/{line-item-id}/targeting/stores](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediapreferred-line-items-targetingstores-1.md): This endpoint sets the scope of the store target on the specified line item.
+- [/2026-01/retail-media/preferred-line-items/{line-item-id}/targeting/stores/append](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediapreferred-line-items-targetingstoresappend.md): This endpoint appends one or more store ids to targeting on the specified line item.  The resulting state of the store target is returned.
+- [/2026-01/retail-media/preferred-line-items/{line-item-id}/targeting/stores/delete](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediapreferred-line-items-targetingstoresdelete.md): This endpoint removes one or more store ids from targeting on the specified line item.  The resulting state of the store target is returned.
+- [/2026-01/retail-media/retailers/{retailerId}/categories/search](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaretailers-categoriessearch.md): Search a retailer categories by given text substring and category ids.
+- [/2026-01/retail-media/retailers/{retailerId}/cpc-min-bids](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaretailers-cpc-min-bids.md): Get overall and individual minimum bid amount for given retailer id and sku id list.
+- [/2026-01/retail-media/retailers/{retailerId}/pages](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaretailers-pages.md): Get the page types available for the given retailer
+- [/2026-01/retail-media/retailers/{retailerId}/recommend-categories](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaretailers-recommend-categories.md): Endpoint to get recommended categories by given retailer id and sku id list.
+- [/2026-01/retail-media/retailers/{retailerId}/recommend-keywords](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaretailers-recommend-keywords.md): Recommend keywords by given retailer id and sku ids.
+- [/2026-01/retail-media/retailers/{retailer-id}/templates](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaretailers-templates.md): Get retailer creative templates
+- [/2026-01/retail-media/retailers/{retailer-id}/templates/{template-id}](https://developers.criteo.com/retail-media/reference/campaign/2026-01retail-mediaretailers-templates-1.md): Gets the template for the specified retailer id and template id
+- [/2026-01/retail-media/me](https://developers.criteo.com/retail-media/reference/gateway/2026-01retail-mediame.md): Get information about the currently logged application
+- [Ad Rendering Best Practices](https://developers.criteo.com/retailer-integration/docs/ad-rendering-best-practices.md): This page lists a set of best practices for Ad Rendering at Criteo.
+- [Ad Tracking Best Practices](https://developers.criteo.com/retailer-integration/docs/ad-tracking-best-practices.md)
+- [Ad Server API Calls](https://developers.criteo.com/retailer-integration/docs/api-calls.md): Use Criteo's ad server to get all information needed to render and track ads
+- [API calls](https://developers.criteo.com/retailer-integration/docs/api-calls-checklist.md)
+- [API Parameters](https://developers.criteo.com/retailer-integration/docs/api-parameters-1.md): These parameters are valid for all event types and should be included in all ad requests wherever applicable
+- [API response structure](https://developers.criteo.com/retailer-integration/docs/api-response-structure.md)
+- [API Responses](https://developers.criteo.com/retailer-integration/docs/api-responses.md)
+- [BeaconSDK](https://developers.criteo.com/retailer-integration/docs/beacon-sdk.md): This guide details the process for automatic beacon tracking on web using our Criteo's BeaconSDK.
+- [Beacon Types](https://developers.criteo.com/retailer-integration/docs/beacon-types.md): This page breaks down the different types and levels of Criteo beacons
+- [Branded Header](https://developers.criteo.com/retailer-integration/docs/branded-header.md)
+- [Branded Header](https://developers.criteo.com/retailer-integration/docs/branded-header-1.md): Here is a breakdown of the requirements for your Branded Header placement to pass both technical and design QA
+- [Branding Display Grid Solo](https://developers.criteo.com/retailer-integration/docs/branding-display-grid-solo.md): This guide provides the specifications and technical details for the Branding Display Grid Solo format rendering.
+- [Branding Display Spotlight Solo](https://developers.criteo.com/retailer-integration/docs/branding-display-spotlight-solo.md): This guide provides the specifications and technical details for the Branding Display Spotlight Solo format rendering.
+- [Branding Video Standout](https://developers.criteo.com/retailer-integration/docs/branding-video-standout.md): Branding Video Standout is a format combining a branded video with a branded image and a CTA.
+- [Butterfly](https://developers.criteo.com/retailer-integration/docs/butterfly.md)
+- [Butterfly](https://developers.criteo.com/retailer-integration/docs/butterfly-1.md): Here is a breakdown of the requirements for your Butterfly placement to pass both technical and design QA
+- [Basket Page](https://developers.criteo.com/retailer-integration/docs/cart-page.md)
+- [Category Flyout](https://developers.criteo.com/retailer-integration/docs/category-flyout.md)
+- [Category Pages](https://developers.criteo.com/retailer-integration/docs/category-page.md)
+- [Commerce Display](https://developers.criteo.com/retailer-integration/docs/commerce-display-formats.md)
+- [Commerce Display Grid Duet](https://developers.criteo.com/retailer-integration/docs/commerce-display-grid-duet.md): This guide provides the specifications and technical details for the Commerce Display Grid Duet format rendering.
+- [Commerce Display Grid Shelf](https://developers.criteo.com/retailer-integration/docs/commerce-display-grid-shelf.md): This guide provides the specifications and technical details for the Commerce Display Grid Shelf format rendering.
+- [Commerce Display Spotlight](https://developers.criteo.com/retailer-integration/docs/commerce-display-spotlight.md): This guide provides the specifications and technical details for the Commerce Display Spotlight format rendering.
+- [Commerce Video Grid Duet](https://developers.criteo.com/retailer-integration/docs/commerce-video-grid-duet.md): Commerce Video Grid Duet is an in-grid format combining a video file with one or more product SKUs.
+- [Get started with Commerce Onsite Video](https://developers.criteo.com/retailer-integration/docs/commerce-video-integration.md): Get started with the Onsite Video integration process
+- [Commerce Video Spotlight](https://developers.criteo.com/retailer-integration/docs/commerce-video-spotlight.md): Commerce Video Spotlight combines a branded 16:9 video with an interactive product zone that adapts to desktop and mobile layouts.
+- [Criteo-Owned Video Player Integration](https://developers.criteo.com/retailer-integration/docs/criteo-owned-video-player-integration.md)
+- [Digital Shelf Talker](https://developers.criteo.com/retailer-integration/docs/digital-shelf-talker.md): Specifications for the Digital Shelf Talker Ad format
+- [Digital Shelf Talker](https://developers.criteo.com/retailer-integration/docs/digital-shelf-talker-1.md): Here is a breakdown of the requirements for your Digital Shelf Talker placement to pass both technical and design QA
+- [Display Banners](https://developers.criteo.com/retailer-integration/docs/display-banners.md)
+- [Display Panel](https://developers.criteo.com/retailer-integration/docs/display-panel.md)
+- [Display Panel](https://developers.criteo.com/retailer-integration/docs/display-panel-1.md): Here is a breakdown of the requirements for your Display Panel placement to pass both technical and design QA
+- [Digital Service Act (EU Only)](https://developers.criteo.com/retailer-integration/docs/dsa-eu-only.md): Learn about the Digital Service Act and how it will impact integration. The DSA only applies in the EU.
+- [Favorites Page](https://developers.criteo.com/retailer-integration/docs/favorites-page.md)
+- [Feed Best Practices](https://developers.criteo.com/retailer-integration/docs/feed-best-practices.md)
+- [Filters](https://developers.criteo.com/retailer-integration/docs/filtering.md)
+- [Flagship](https://developers.criteo.com/retailer-integration/docs/flagship.md)
+- [Flagship](https://developers.criteo.com/retailer-integration/docs/flagship-1.md): Here is a breakdown of the requirements for your Flagship placement to pass both technical and design QA
+- [Formats Overview](https://developers.criteo.com/retailer-integration/docs/format-overview.md): This page provides an overview of all the Ad formats available to render Ads in the RM Criteo solution
+- [Google Ad Manager (GAM) - Criteo Onsite Display](https://developers.criteo.com/retailer-integration/docs/gam-overview.md)
+- [Homepage](https://developers.criteo.com/retailer-integration/docs/homepage.md)
+- [IAB](https://developers.criteo.com/retailer-integration/docs/iab.md): IAB banners are static display units that redirect to a dedicated URL
+- [IAB](https://developers.criteo.com/retailer-integration/docs/iab-1.md): Here is a breakdown of the requirements for your IAB placement to pass both technical and design QA
+- [Integration process](https://developers.criteo.com/retailer-integration/docs/integration-process.md): An overview of the integration process using the Direct API method
+- [Interactive Header](https://developers.criteo.com/retailer-integration/docs/interactive-header.md)
+- [Interactive Header](https://developers.criteo.com/retailer-integration/docs/interactive-header-1.md): Here is a breakdown of the requirements for your Interactive Header placement to pass both technical and design QA
+- [Introduction](https://developers.criteo.com/retailer-integration/docs/introduction-1.md): Sharing your catalog with Criteo is the first step for a succesful integration
+- [Introduction to Beacons](https://developers.criteo.com/retailer-integration/docs/introduction-to-beacons.md): Tracking interaction events using beacons is the last process to complete your integration with Criteo
+- [Legacy & Universal Beacons](https://developers.criteo.com/retailer-integration/docs/legacy-universal-beacons.md): This page outlines Criteo's Legacy and the Universal beacon setups and explains how to migrate from Legacy to Standard/Universal beacons
+- [Lookup Files](https://developers.criteo.com/retailer-integration/docs/lookup-files.md)
+- [Mobile Deeplinks Guide for Offsite](https://developers.criteo.com/retailer-integration/docs/mobile-deeplinks-guide-for-offsite-app-integrations.md)
+- [Offsite Add-on — FPM Identification Call](https://developers.criteo.com/retailer-integration/docs/offsite-add-on-fpm-identification-call.md)
+- [OneTag for Retail Media Onsite](https://developers.criteo.com/retailer-integration/docs/onetag.md)
+- [OneTag for Retail Media Offsite](https://developers.criteo.com/retailer-integration/docs/onetag-for-offsite.md)
+- [OneTag for Offsite - Hybrid Apps](https://developers.criteo.com/retailer-integration/docs/onetag-offsite-for-hybrid-apps.md): Addendum for Hybrid Apps
+- [Onsite Display (New)](https://developers.criteo.com/retailer-integration/docs/onsite-display-new-formats.md): This page gives an overview of the new Onsite Display Formats and maps the changes with the legacy formats
+- [Order Confirmation Page](https://developers.criteo.com/retailer-integration/docs/order-confirmation-page.md)
+- [Organic Add-To-Cart Events](https://developers.criteo.com/retailer-integration/docs/organic-add-to-cart-events.md)
+- [Integration Introduction](https://developers.criteo.com/retailer-integration/docs/overview.md): Learn more about the Criteo Retail Media Ad Delivery System and how to integrate with it
+- [Product Details Page](https://developers.criteo.com/retailer-integration/docs/product-details-page.md)
+- [Product Feed Examples](https://developers.criteo.com/retailer-integration/docs/product-feed-examples.md)
+- [Product Feed Parameters](https://developers.criteo.com/retailer-integration/docs/product-feed-parameters.md)
+- [Product Importer API Guide](https://developers.criteo.com/retailer-integration/docs/product-importer-guide.md)
+- [Product Feed Upload Guide](https://developers.criteo.com/retailer-integration/docs/product-upload-guide.md)
+- [Checklists per format](https://developers.criteo.com/retailer-integration/docs/qa-checklists.md)
+- [Ad Request Best Practices](https://developers.criteo.com/retailer-integration/docs/requesting-ads-best-practices.md)
+- [Glossary](https://developers.criteo.com/retailer-integration/docs/rm-glossary.md)
+- [Search Bar Dropdown](https://developers.criteo.com/retailer-integration/docs/search-bar-dropdown.md)
+- [Search Pages](https://developers.criteo.com/retailer-integration/docs/search-page.md)
+- [Server-Side Beacons](https://developers.criteo.com/retailer-integration/docs/server-side-beacons.md): This guides covers how to implement server-side beacons.
+- [Showcase](https://developers.criteo.com/retailer-integration/docs/showcase.md)
+- [Showcase](https://developers.criteo.com/retailer-integration/docs/showcase-1.md): Here is a breakdown of the requirements for your Showcase placement to pass both technical and design QA
+- [Sponsored Products](https://developers.criteo.com/retailer-integration/docs/sponsored-products.md): This guide provides a response description, attributes and example of rendering for the Sponsored Products ads
+- [Sponsored Products](https://developers.criteo.com/retailer-integration/docs/sponsored-products-1.md): Here is a breakdown of the requirements for your sponsored product placement to pass both technical and design QA:
+- [Tracking Ad-Related Activity](https://developers.criteo.com/retailer-integration/docs/tracking-ad-related-activity.md)
+- [Authentication Tokens](https://developers.criteo.com/retailer-integration/docs/using-tokens.md)
+- [Video Formats](https://developers.criteo.com/retailer-integration/docs/video-formats.md): Overview of the available Criteo Video Ad Formats
+- [Video Player Implementation (App: Android)](https://developers.criteo.com/retailer-integration/docs/video-player-implementation-app-android.md): This document provides implementation guidance for integrating Onsite Video ads into native Android apps.
+- [Video Player Implementation (Web Browser)](https://developers.criteo.com/retailer-integration/docs/video-player-implementation-guide-desktopmobile.md): This page provides implementation guidance for video players in web browsers, relevant for both desktop and mobile browsers.
+- [Video Player Implementation (App: iOS)](https://developers.criteo.com/retailer-integration/docs/video-player-implementation-ios-app.md): This document provides implementation guidance for Onsite Video Ads in iOS Apps.
+- [Video Player Specifications](https://developers.criteo.com/retailer-integration/docs/video-player-specifications.md)
+- [What's New?](https://developers.criteo.com/retailer-integration/docs/whats-new.md): Welcome to the Changelog for the Retailer Integration Documentation.
+
+## OpenAPI Specs
+
+- [open-api-specifications](https://api.criteo.com/preview/marketingsolutions/open-api-specifications.json)

@@ -1,8 +1,27 @@
 aid: hooklogic-criteo
 name: HookLogic (Criteo)
-description: 'HookLogic (Criteo) is a company surfaced as a portfolio company of bain-capital-ventures
-  and added to the API Evangelist network as a stub for enrichment. Sector: commerce. This profile is
-  a lead awaiting the enrichment pipeline.'
+description: >-
+  HookLogic was a retail-media advertising exchange and ad server that let brands
+  buy sponsored-product placements in retailer search results (Walmart, Target,
+  Best Buy). Criteo acquired HookLogic for ~$250M in 2016, and the product line
+  is now delivered as the Criteo Retail Media API — a REST API for retailers,
+  brands, and agencies to programmatically create, launch, monitor, and report on
+  retail-media campaigns. It uses OAuth 2.0 (client-credentials and
+  authorization-code flows), RFC 7807 error bodies, date-based API versioning,
+  and ships officially supported Python, PHP, and Java SDKs.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/u/1713646?v=4
 url: https://raw.githubusercontent.com/api-evangelist/hooklogic-criteo/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,15 +29,204 @@ x-backed-by:
 - bain-capital-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-lineage: HookLogic acquired by Criteo (2016); product line is now Criteo Retail Media
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Commerce
-apis: []
+- Retail Media
+- Advertising
+- E-commerce
+- Marketing
+- Retail
+- APIs
+apis:
+- aid: hooklogic-criteo:hooklogic-criteo-accounts-api
+  name: HookLogic (Criteo) Accounts API
+  description: The Accounts API from HookLogic (Criteo) — 12 operation(s) for accounts.
+  humanURL: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
+  baseURL: https://api.criteo.com
+  tags:
+  - Accounts
+  properties:
+  - type: OpenAPI
+    url: openapi/hooklogic-criteo-accounts-api-openapi.yml
+  - type: Documentation
+    url: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
+  - type: APIReference
+    url: https://developers.criteo.com/criteo-apis/docs/overview
+- aid: hooklogic-criteo:hooklogic-criteo-analytics-api
+  name: HookLogic (Criteo) Analytics API
+  description: The Analytics API from HookLogic (Criteo) — 12 operation(s) for analytics.
+  humanURL: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
+  baseURL: https://api.criteo.com
+  tags:
+  - Analytics
+  properties:
+  - type: OpenAPI
+    url: openapi/hooklogic-criteo-analytics-api-openapi.yml
+  - type: Documentation
+    url: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
+  - type: APIReference
+    url: https://developers.criteo.com/criteo-apis/docs/overview
+- aid: hooklogic-criteo:hooklogic-criteo-audience-api
+  name: HookLogic (Criteo) Audience API
+  description: The Audience API from HookLogic (Criteo) — 8 operation(s) for audience.
+  humanURL: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
+  baseURL: https://api.criteo.com
+  tags:
+  - Audience
+  properties:
+  - type: OpenAPI
+    url: openapi/hooklogic-criteo-audience-api-openapi.yml
+  - type: Documentation
+    url: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
+  - type: APIReference
+    url: https://developers.criteo.com/criteo-apis/docs/overview
+- aid: hooklogic-criteo:hooklogic-criteo-balance-api
+  name: HookLogic (Criteo) Balance API
+  description: The Balance API from HookLogic (Criteo) — 6 operation(s) for balance.
+  humanURL: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
+  baseURL: https://api.criteo.com
+  tags:
+  - Balance
+  properties:
+  - type: OpenAPI
+    url: openapi/hooklogic-criteo-balance-api-openapi.yml
+  - type: Documentation
+    url: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
+  - type: APIReference
+    url: https://developers.criteo.com/criteo-apis/docs/overview
+- aid: hooklogic-criteo:hooklogic-criteo-billing-api
+  name: HookLogic (Criteo) Billing API
+  description: The Billing API from HookLogic (Criteo) — 3 operation(s) for billing.
+  humanURL: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
+  baseURL: https://api.criteo.com
+  tags:
+  - Billing
+  properties:
+  - type: OpenAPI
+    url: openapi/hooklogic-criteo-billing-api-openapi.yml
+  - type: Documentation
+    url: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
+  - type: APIReference
+    url: https://developers.criteo.com/criteo-apis/docs/overview
+- aid: hooklogic-criteo:hooklogic-criteo-campaign-api
+  name: HookLogic (Criteo) Campaign API
+  description: The Campaign API from HookLogic (Criteo) — 54 operation(s) for campaign.
+  humanURL: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
+  baseURL: https://api.criteo.com
+  tags:
+  - Campaign
+  properties:
+  - type: OpenAPI
+    url: openapi/hooklogic-criteo-campaign-api-openapi.yml
+  - type: Documentation
+    url: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
+  - type: APIReference
+    url: https://developers.criteo.com/criteo-apis/docs/overview
+- aid: hooklogic-criteo:hooklogic-criteo-catalog-api
+  name: HookLogic (Criteo) Catalog API
+  description: The Catalog API from HookLogic (Criteo) — 2 operation(s) for catalog.
+  humanURL: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
+  baseURL: https://api.criteo.com
+  tags:
+  - Catalog
+  properties:
+  - type: OpenAPI
+    url: openapi/hooklogic-criteo-catalog-api-openapi.yml
+  - type: Documentation
+    url: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
+  - type: APIReference
+    url: https://developers.criteo.com/criteo-apis/docs/overview
+- aid: hooklogic-criteo:hooklogic-criteo-gateway-api
+  name: HookLogic (Criteo) Gateway API
+  description: The Gateway API from HookLogic (Criteo) — 1 operation(s) for gateway.
+  humanURL: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
+  baseURL: https://api.criteo.com
+  tags:
+  - Gateway
+  properties:
+  - type: OpenAPI
+    url: openapi/hooklogic-criteo-gateway-api-openapi.yml
+  - type: Documentation
+    url: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
+  - type: APIReference
+    url: https://developers.criteo.com/criteo-apis/docs/overview
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DeveloperPortal
+  url: https://developers.criteo.com
+- type: Documentation
+  url: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
+- type: APIReference
+  url: https://developers.criteo.com/criteo-apis/docs/overview
+- type: GettingStarted
+  url: https://developers.criteo.com/criteo-apis/docs/connect-to-the-api
+- type: Support
+  url: https://developers.criteo.com/criteo-apis/docs/escalation-guidelines
+- type: Blog
+  url: https://www.criteo.com/blog/
+- type: GitHubOrganization
+  url: https://github.com/criteo
+- type: SignUp
+  url: https://developers.criteo.com/criteo-apis/docs/create-your-partner-account
+- type: TermsOfService
+  url: https://developers.criteo.com/criteo-apis/docs/criteo-api-terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.criteo.com/privacy/
+- type: Postman
+  url: https://www.postman.com/realcriteo/workspace/criteo/overview
+- type: Authentication
+  url: authentication/hooklogic-criteo-authentication.yml
+- type: Conventions
+  url: conventions/hooklogic-criteo-conventions.yml
+- type: ErrorCatalog
+  url: errors/hooklogic-criteo-problem-types.yml
+- type: RateLimits
+  url: rate-limits/hooklogic-criteo-rate-limits.yml
+- type: Lifecycle
+  url: lifecycle/hooklogic-criteo-lifecycle.yml
+- type: StatusPage
+  url: https://status.criteo.com
+- type: Deprecation
+  url: https://developers.criteo.com/criteo-apis/docs/versioning-policy
+- type: ChangeLog
+  url: changelog/hooklogic-criteo-changelog.yml
+- type: Packages
+  url: packages/hooklogic-criteo-packages.yml
+- type: SDKs
+  url: packages/hooklogic-criteo-packages.yml
+- type: LLMsTxt
+  url: llms/hooklogic-criteo-llms.txt
+- type: WellKnown
+  url: well-known/hooklogic-criteo-well-known.yml
+- type: SecurityTxt
+  url: well-known/hooklogic-criteo-security.txt
+- type: MCPServer
+  url: mcp/hooklogic-criteo-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Conformance
+  url: conformance/hooklogic-criteo-conformance.yml
+- type: DataModel
+  url: data-model/hooklogic-criteo-data-model.yml
+- type: DomainSecurity
+  url: security/hooklogic-criteo-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/hooklogic-criteo-vulnerability-disclosure.yml
+- type: Security
+  url: https://api.criteo.com/.well-known/security.txt
+- type: AgenticAccess
+  url: agentic-access/hooklogic-criteo-agentic-access.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
