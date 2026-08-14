@@ -32,7 +32,7 @@ x-tier-reason: portfolio-lead
 x-lineage: HookLogic acquired by Criteo (2016); product line is now Criteo Retail Media
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-19'
+modified: '2026-08-13'
 tags:
 - Company
 - Commerce
@@ -161,6 +161,24 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/hooklogic-criteo-trust-center.yml
+- type: Compliance
+  url: security/hooklogic-criteo-trust-center.yml
+- type: OAuthScopes
+  url: scopes/hooklogic-criteo-scopes.yml
+- type: AgentCard
+  url: a2a/hooklogic-criteo-a2a.yml
+- type: ToolCrosswalk
+  url: mcp/hooklogic-criteo-tool-crosswalk.yml
+- type: Plans
+  url: plans/hooklogic-criteo-plans-pricing.yml
+- type: Components
+  url: components/hooklogic-criteo-components.yml
+- type: HelpCenter
+  url: https://help.criteo.com
+- type: Quickstart
+  url: https://developers.criteo.com/criteo-apis/docs/connect-to-the-api
 - type: Overlay
   url: overlays/hooklogic-criteo-retailmedia-overlay.yaml
 - type: DeveloperPortal
@@ -228,7 +246,7 @@ common:
 - type: AgenticAccess
   url: agentic-access/hooklogic-criteo-agentic-access.yml
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-13'
+  status: enriched
+  artifacts_added: 9
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
