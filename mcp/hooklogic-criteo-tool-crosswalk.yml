@@ -1,0 +1,93 @@
+generated: '2026-08-13'
+method: derived
+source: mcp/hooklogic-criteo-mcp.yml, openapi/hooklogic-criteo-retailmedia-openapi-original.json
+note: >-
+  Binds the three tools Criteo's live MCP server actually publishes to the REST
+  operations of the Criteo Retail Media API (the HookLogic product line). The
+  headline finding is the shape of the gap, not the mapping: Criteo's MCP server
+  is a DOCUMENTATION agent. Every one of its tools reads about the API; none of
+  them calls it. All 98 Retail Media REST operations are therefore rest_only —
+  an agent can use this MCP server to learn how to launch a campaign, and then
+  has to leave MCP entirely and speak OAuth2 + REST to actually launch one.
+surfaces:
+  openapi: openapi/hooklogic-criteo-retailmedia-openapi-original.json
+  openapi_paths: 98
+  mcp: https://developers.criteo.com/mcp
+  mcp_gated: false
+  graphql: null
+  rest_base: https://api.criteo.com
+  rest_gated: true
+  rest_gate: >-
+    OAuth2 client-credentials or authorization-code; a partner account and
+    advertiser consent are required before any operation can be called.
+crosswalk:
+- tool: search_criteo_docs
+  category: documentation
+  rest: []
+  binding: none
+  confidence: high
+  note: >-
+    Full-text search over the Criteo Docs knowledge base. Backs no REST
+    operation — it is a retrieval tool over documentation content, including the
+    published OpenAPI specs.
+- tool: query_docs_filesystem_criteo_docs
+  category: documentation
+  rest: []
+  binding: none
+  confidence: high
+  note: >-
+    Read-only shell-like query against a virtualized in-memory filesystem
+    containing the Criteo Docs pages AND the OpenAPI specs. This is the one tool
+    that indirectly exposes the REST contract: an agent can read the spec
+    through it, but cannot invoke any operation.
+- tool: submit_feedback
+  category: meta
+  rest: []
+  binding: none
+  confidence: high
+  note: Files a documentation-quality report; no public REST equivalent.
+mcp_only:
+- tool: search_criteo_docs
+  reason: Documentation retrieval; Criteo publishes no public search REST endpoint.
+- tool: query_docs_filesystem_criteo_docs
+  reason: Virtualized docs filesystem; no REST equivalent exists.
+- tool: submit_feedback
+  reason: Docs feedback channel; no REST equivalent exists.
+rest_only_note: >-
+  Every operation in the Retail Media OpenAPI has no backing MCP tool. Rather
+  than restate all 98 paths, the surface is summarized by tag below; the full
+  operation list, already expressed as a candidate tool per operation, is in
+  mcp/hooklogic-criteo-mcp.yml under candidate_tools.
+rest_only_by_tag:
+- tag: Campaign
+  operations: 54
+  spec: openapi/hooklogic-criteo-campaign-api-openapi.yml
+- tag: Accounts
+  operations: 12
+  spec: openapi/hooklogic-criteo-accounts-api-openapi.yml
+- tag: Analytics
+  operations: 12
+  spec: openapi/hooklogic-criteo-analytics-api-openapi.yml
+- tag: Audience
+  operations: 8
+  spec: openapi/hooklogic-criteo-audience-api-openapi.yml
+- tag: Balance
+  operations: 6
+  spec: openapi/hooklogic-criteo-balance-api-openapi.yml
+- tag: Billing
+  operations: 3
+  spec: openapi/hooklogic-criteo-billing-api-openapi.yml
+- tag: Catalog
+  operations: 2
+  spec: openapi/hooklogic-criteo-catalog-api-openapi.yml
+- tag: Gateway
+  operations: 1
+  spec: openapi/hooklogic-criteo-gateway-api-openapi.yml
+coverage:
+  mcp_tools: 3
+  mcp_tools_bound_to_rest: 0
+  mcp_only: 3
+  rest_operations: 98
+  rest_operations_with_tool: 0
+  rest_only: 98
+  percent_rest_covered_by_mcp: 0

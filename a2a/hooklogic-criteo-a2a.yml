@@ -1,0 +1,64 @@
+generated: '2026-08-13'
+method: probed
+source: https://developers.criteo.com/.well-known/agent-card.json
+note: >-
+  Criteo serves a real A2A Agent Card from its developer-portal host. The card
+  describes the "Criteo Docs" agent, which fronts the Retail Media API (the
+  HookLogic product line) and the Marketing Solutions API documentation, and it
+  advertises a single published Agent Skill. The API host itself
+  (api.criteo.com) returns 404 for both card paths — only the docs host serves
+  one.
+discovery:
+  path: /.well-known/agent-card.json
+  canonical: true
+  host: https://developers.criteo.com
+x-evidence:
+  fetched: '2026-08-13'
+  url: https://developers.criteo.com/.well-known/agent-card.json
+  http_status: 200
+  content_type: application/json
+  also_probed:
+  - url: https://api.criteo.com/.well-known/agent-card.json
+    http_status: 404
+  - url: https://api.criteo.com/.well-known/agent.json
+    http_status: 404
+  - url: https://www.criteo.com/.well-known/agent-card.json
+    http_status: 404
+card:
+  file: a2a/hooklogic-criteo-agent-card.json
+  name: Criteo Docs
+  url: https://developers.criteo.com/
+  version: 1.0.0
+  protocolVersion: '0.3'
+  preferredTransport: HTTP+JSON
+  provider_organization: Criteo Docs
+  documentationUrl: https://developers.criteo.com/
+  skills:
+  - id: criteo
+    name: Criteo
+    url: https://developers.criteo.com/.well-known/agent-skills/criteo/skill.md
+grade: conformant
+grade_checks:
+  capabilities_is_object: true
+  protocolVersion_present: true
+  skills_is_array: true
+  preferredTransport_present: true
+  defaultInputModes_present: true
+  defaultOutputModes_present: true
+deviations:
+- protocolVersion is '0.3', not A2A 1.0.0 — the card uses the pre-1.0 field set
+  (supportedInterfaces rather than additionalInterfaces).
+- No top-level `description` field on the card.
+- capabilities declares streaming false and pushNotifications false, and there is
+  no extensions block, so the agent surface is request/response only.
+- skills[] entries carry an empty tags[] array.
+related:
+- type: MCPServer
+  url: mcp/hooklogic-criteo-mcp.yml
+  note: >-
+    The same docs host serves a live remote MCP endpoint at
+    https://developers.criteo.com/mcp — the agent card and the MCP server are two
+    faces of the same Mintlify-hosted documentation agent.
+- type: AgentSkill
+  url: skills/hooklogic-criteo-criteo-published-skill.md
+  note: The skill the card points at, saved verbatim.

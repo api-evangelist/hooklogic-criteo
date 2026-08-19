@@ -1,0 +1,60 @@
+generated: '2026-08-13'
+method: searched
+source: https://developers.criteo.com/retailer-integration/docs/beacon-sdk
+note: >-
+  Criteo ships client-side, embeddable integration surfaces for retailers — the
+  half of the HookLogic product line that runs in the retailer's own storefront
+  rather than in a brand's back office. These are distinct from the server-side
+  client libraries in packages/: they are browser JavaScript that a retailer
+  drops into page templates to render and measure sponsored placements. Both
+  families are documented in the Retailer Integration section of the developer
+  portal.
+families:
+- family: BeaconSDK
+  kind: javascript-library
+  description: >-
+    Criteo's lightweight external JavaScript library that automates the full
+    ad-beacon lifecycle (load, view, click) on web, so a retailer does not build
+    or maintain custom tracking logic. Beacon URLs returned by the Delivery API
+    are attached to HTML elements as data- attributes and the SDK fires them.
+  loader: https://static.criteo.net/cbs/prod/stable/BeaconSDK/bundle.js
+  loader_variants:
+  - https://static.criteo.net/cbs/prod/stable/BeaconSDK/bundle.js
+  - https://static.criteo.net/cbs/prod/v5/BeaconSDK/bundle.min.js
+  distribution: cdn
+  attributes:
+  - data-criteo-placement-onloadbeacon
+  - data-criteo-placement-onviewbeacon
+  - data-criteo-placement-onclickbeacon
+  - data-criteo-product-onloadbeacon
+  - data-criteo-product-onviewbeacon
+  - data-criteo-product-onclickbeacon
+  - data-dynamic-tracking
+  docs: https://developers.criteo.com/retailer-integration/docs/beacon-sdk
+- family: OneTag
+  kind: javascript-tag
+  description: >-
+    The Criteo OneTag JavaScript integration. A tag fired on each page of the
+    shopping journey that logs user events, builds audiences, sends ad requests,
+    and — unlike the direct ad-server integration — injects the returned ads onto
+    the page itself along with load/view/click beacons.
+  distribution: hosted-tag
+  variants:
+  - name: OneTag for Retail Media Onsite
+    docs: https://developers.criteo.com/retailer-integration/docs/onetag
+  - name: OneTag for Retail Media Offsite
+    docs: https://developers.criteo.com/retailer-integration/docs/onetag-for-offsite
+  - name: OneTag for Offsite — Hybrid Apps
+    docs: https://developers.criteo.com/retailer-integration/docs/onetag-offsite-for-hybrid-apps
+  required_pages:
+  - any page carrying ad placements
+  - search pages
+  - product detail pages
+  - order confirmation pages
+component_count: 2
+related:
+  packages: packages/hooklogic-criteo-packages.yml
+  note: >-
+    Server-side SDKs (Python, PHP, Java) live in packages/; these browser
+    surfaces are versioned and delivered from static.criteo.net, not a package
+    registry.

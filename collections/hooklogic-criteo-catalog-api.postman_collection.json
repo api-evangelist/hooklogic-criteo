@@ -1,0 +1,323 @@
+{
+  "item": [
+    {
+      "id": "9c182eee-1997-4d0f-aea8-1911e4cb8baf",
+      "name": "Catalog",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c63fe6e0-29c9-452b-8ea2-9e04d85d3302",
+          "name": "/2026-07/retail-media/catalog/merchants/{merchantId}/store-inventory/delete",
+          "request": {
+            "name": "/2026-07/retail-media/catalog/merchants/{merchantId}/store-inventory/delete",
+            "description": {
+              "content": "Used to publish a batch of store inventories to delete. The batch is processed asynchronously.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "catalog",
+                "merchants",
+                ":merchantId",
+                "store-inventory",
+                "delete"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "merchantId",
+                  "description": "(Required) Identifies the merchant, can also be called partnerId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": [\n    {\n      \"attributes\": {\n        \"batchId\": \"<string>\",\n        \"productId\": \"<string>\",\n        \"storeId\": \"<string>\"\n      },\n      \"type\": \"<string>\"\n    },\n    {\n      \"attributes\": {\n        \"batchId\": \"<string>\",\n        \"productId\": \"<string>\",\n        \"storeId\": \"<string>\"\n      },\n      \"type\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "59c53b44-41ac-44d1-b023-9bae4b29bdce",
+              "name": "Batch accepted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "catalog",
+                    "merchants",
+                    ":merchantId",
+                    "store-inventory",
+                    "delete"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "merchantId",
+                      "description": "(Required) Identifies the merchant, can also be called partnerId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"attributes\": {\n        \"batchId\": \"<string>\",\n        \"productId\": \"<string>\",\n        \"storeId\": \"<string>\"\n      },\n      \"type\": \"<string>\"\n    },\n    {\n      \"attributes\": {\n        \"batchId\": \"<string>\",\n        \"productId\": \"<string>\",\n        \"storeId\": \"<string>\"\n      },\n      \"type\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "99a3fdd1-7194-4408-8701-5ded11952c50",
+          "name": "/2026-07/retail-media/catalog/merchants/{merchantId}/store-inventory/upsert",
+          "request": {
+            "name": "/2026-07/retail-media/catalog/merchants/{merchantId}/store-inventory/upsert",
+            "description": {
+              "content": "Used to publish a batch of store inventories to upsert. The batch is processed asynchronously.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "catalog",
+                "merchants",
+                ":merchantId",
+                "store-inventory",
+                "upsert"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "merchantId",
+                  "description": "(Required) Identifies the merchant, can also be called partnerId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": [\n    {\n      \"attributes\": {\n        \"availability\": \"<string>\",\n        \"batchId\": \"<string>\",\n        \"price\": \"<string>\",\n        \"productId\": \"<string>\",\n        \"storeId\": \"<string>\",\n        \"salePrice\": \"<string>\"\n      },\n      \"type\": \"<string>\"\n    },\n    {\n      \"attributes\": {\n        \"availability\": \"<string>\",\n        \"batchId\": \"<string>\",\n        \"price\": \"<string>\",\n        \"productId\": \"<string>\",\n        \"storeId\": \"<string>\",\n        \"salePrice\": \"<string>\"\n      },\n      \"type\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e1103ff2-b36d-4dec-ad26-9e30f348fb10",
+              "name": "Batch accepted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "catalog",
+                    "merchants",
+                    ":merchantId",
+                    "store-inventory",
+                    "upsert"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "merchantId",
+                      "description": "(Required) Identifies the merchant, can also be called partnerId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"attributes\": {\n        \"availability\": \"<string>\",\n        \"batchId\": \"<string>\",\n        \"price\": \"<string>\",\n        \"productId\": \"<string>\",\n        \"storeId\": \"<string>\",\n        \"salePrice\": \"<string>\"\n      },\n      \"type\": \"<string>\"\n    },\n    {\n      \"attributes\": {\n        \"availability\": \"<string>\",\n        \"batchId\": \"<string>\",\n        \"price\": \"<string>\",\n        \"productId\": \"<string>\",\n        \"storeId\": \"<string>\",\n        \"salePrice\": \"<string>\"\n      },\n      \"type\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.criteo.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "accessTokenUrl",
+        "value": "https://api.criteo.com/oauth2/token"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "20591a48-2302-4a70-89c0-cc0e7a7c88ad",
+    "name": "Criteo Accounts Catalog API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Criteo API - RetailMedia",
+      "type": "text/plain"
+    }
+  }
+}

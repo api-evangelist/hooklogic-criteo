@@ -1,0 +1,347 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Criteo Accounts Balance API",
+    "version": "2026-07"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://api.criteo.com/oauth2/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Balance",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "/2026-07/retail-media/accounts/{account-id}/balances",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.criteo.com/2026-07/retail-media/accounts/:account-id/balances",
+            "params": [
+              {
+                "name": "account-id",
+                "value": "",
+                "type": "path",
+                "description": "The account to get balances for"
+              },
+              {
+                "name": "limitToId",
+                "value": "",
+                "type": "query",
+                "description": "The ids that you would like to limit your result set to"
+              },
+              {
+                "name": "pageIndex",
+                "value": "",
+                "type": "query",
+                "description": "The 0 indexed page index you would like to receive given the page size"
+              },
+              {
+                "name": "pageSize",
+                "value": "",
+                "type": "query",
+                "description": "The maximum number of items you would like to receive in this request"
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://api.criteo.com/oauth2/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Gets page of balance objects for the given account id"
+        },
+        {
+          "info": {
+            "name": "/2026-07/retail-media/accounts/{account-id}/balances",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.criteo.com/2026-07/retail-media/accounts/:account-id/balances",
+            "params": [
+              {
+                "name": "account-id",
+                "value": "",
+                "type": "path",
+                "description": "The account to create balances for"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://api.criteo.com/oauth2/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Create balance for the given account id"
+        },
+        {
+          "info": {
+            "name": "/2026-07/retail-media/accounts/{account-id}/balances/{balance-id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.criteo.com/2026-07/retail-media/accounts/:account-id/balances/:balance-id",
+            "params": [
+              {
+                "name": "account-id",
+                "value": "",
+                "type": "path",
+                "description": "The account of the balance"
+              },
+              {
+                "name": "balance-id",
+                "value": "",
+                "type": "path",
+                "description": "The balance id"
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://api.criteo.com/oauth2/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Get a balance for the given account id and balance id"
+        },
+        {
+          "info": {
+            "name": "/2026-07/retail-media/accounts/{account-id}/balances/{balance-id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.criteo.com/2026-07/retail-media/accounts/:account-id/balances/:balance-id",
+            "params": [
+              {
+                "name": "account-id",
+                "value": "",
+                "type": "path",
+                "description": "The account of the balance"
+              },
+              {
+                "name": "balance-id",
+                "value": "",
+                "type": "path",
+                "description": "The balance to change the dates"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://api.criteo.com/oauth2/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Modify a balance for the given account id"
+        },
+        {
+          "info": {
+            "name": "/2026-07/retail-media/accounts/{account-id}/balances/{balance-id}/add-funds",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.criteo.com/2026-07/retail-media/accounts/:account-id/balances/:balance-id/add-funds",
+            "params": [
+              {
+                "name": "account-id",
+                "value": "",
+                "type": "path",
+                "description": "The account of the balance"
+              },
+              {
+                "name": "balance-id",
+                "value": "",
+                "type": "path",
+                "description": "The balance to add funds to"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://api.criteo.com/oauth2/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Add funds to a balance for the given account id"
+        },
+        {
+          "info": {
+            "name": "/2026-07/retail-media/accounts/{account-id}/balances/{balance-id}/change-dates",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.criteo.com/2026-07/retail-media/accounts/:account-id/balances/:balance-id/change-dates",
+            "params": [
+              {
+                "name": "account-id",
+                "value": "",
+                "type": "path",
+                "description": "The account of the balance"
+              },
+              {
+                "name": "balance-id",
+                "value": "",
+                "type": "path",
+                "description": "The balance to change the dates"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://api.criteo.com/oauth2/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Change dates of a balance for the given account id"
+        },
+        {
+          "info": {
+            "name": "/2026-07/retail-media/balances/{balance-id}/campaigns",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.criteo.com/2026-07/retail-media/balances/:balance-id/campaigns",
+            "params": [
+              {
+                "name": "balance-id",
+                "value": "",
+                "type": "path",
+                "description": "The balance to get campaigns from"
+              },
+              {
+                "name": "limitToId",
+                "value": "",
+                "type": "query",
+                "description": "The ids that you would like to limit your result set to"
+              },
+              {
+                "name": "pageIndex",
+                "value": "",
+                "type": "query",
+                "description": "The 0 indexed page index you would like to receive given the page size"
+              },
+              {
+                "name": "pageSize",
+                "value": "",
+                "type": "query",
+                "description": "The maximum number of items you would like to receive in this request"
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://api.criteo.com/oauth2/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Gets page of campaigns for the given balanceId"
+        },
+        {
+          "info": {
+            "name": "/2026-07/retail-media/balances/{balanceId}/history",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.criteo.com/2026-07/retail-media/balances/:balanceId/history",
+            "params": [
+              {
+                "name": "balanceId",
+                "value": "",
+                "type": "path",
+                "description": "Balance id."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "The number of elements to be returned."
+              },
+              {
+                "name": "limitToChangeTypes",
+                "value": "",
+                "type": "query",
+                "description": "Comma separated change types string that will be queried."
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The (zero-based) starting offset in the collection."
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://api.criteo.com/oauth2/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Gets the balance's historical change data."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

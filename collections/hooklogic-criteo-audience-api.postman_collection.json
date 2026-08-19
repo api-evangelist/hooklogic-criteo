@@ -1,0 +1,1157 @@
+{
+  "item": [
+    {
+      "id": "0392f1f7-a918-4bb0-86bd-fb5f23fae9e9",
+      "name": "Audience",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9aaa38ef-e93a-4541-b992-709d633e0f58",
+          "name": "/2026-07/retail-media/accounts/{account-id}/audience-segments",
+          "request": {
+            "name": "/2026-07/retail-media/accounts/{account-id}/audience-segments",
+            "description": {
+              "content": "Updates the properties of all segments with a valid configuration, and returns the full segments. For those that cannot be updated, one or multiple errors are returned.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "accounts",
+                ":account-id",
+                "audience-segments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "account-id",
+                  "description": "(Required) Account id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": [\n    {\n      \"attributes\": {\n        \"contactList\": \"<object>\",\n        \"description\": {\n          \"value\": \"<string>\"\n        },\n        \"events\": {\n          \"brandIds\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"categoryIds\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"lookbackDays\": \"<string>\",\n          \"maxPrice\": {\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"minPrice\": {\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"shopperActivity\": \"<string>\"\n        },\n        \"name\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"attributes\": {\n        \"contactList\": \"<object>\",\n        \"description\": {\n          \"value\": \"<string>\"\n        },\n        \"events\": {\n          \"brandIds\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"categoryIds\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"lookbackDays\": \"<string>\",\n          \"maxPrice\": {\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"minPrice\": {\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"shopperActivity\": \"<string>\"\n        },\n        \"name\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "967d0a05-b946-487c-93b8-5f31b9e5f13b",
+              "name": "Success or partial success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "accounts",
+                    ":account-id",
+                    "audience-segments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "account-id",
+                      "description": "(Required) Account id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"attributes\": {\n        \"contactList\": \"<object>\",\n        \"description\": {\n          \"value\": \"<string>\"\n        },\n        \"events\": {\n          \"brandIds\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"categoryIds\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"lookbackDays\": \"<string>\",\n          \"maxPrice\": {\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"minPrice\": {\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"shopperActivity\": \"<string>\"\n        },\n        \"name\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"attributes\": {\n        \"contactList\": \"<object>\",\n        \"description\": {\n          \"value\": \"<string>\"\n        },\n        \"events\": {\n          \"brandIds\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"categoryIds\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"lookbackDays\": \"<string>\",\n          \"maxPrice\": {\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"minPrice\": {\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"shopperActivity\": \"<string>\"\n        },\n        \"name\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"attributes\": {\n        \"accountId\": \"string\",\n        \"channels\": [\n          \"Onsite\",\n          \"Unknown\"\n        ],\n        \"contactList\": {\n          \"identifierType\": \"PhoneNumber\",\n          \"isReadOnly\": true,\n          \"sharingStatus\": \"SharedWithAll\"\n        },\n        \"createdAt\": \"1993-05-10T00:03:42.043Z\",\n        \"createdById\": \"string\",\n        \"description\": \"string\",\n        \"events\": {\n          \"brandIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"categoryIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"lookbackDays\": \"Last150Days\",\n          \"maxPrice\": 5340.39419397786,\n          \"minPrice\": 7662.548335547654,\n          \"shopperActivity\": \"AddToCart\"\n        },\n        \"name\": \"string\",\n        \"retailerId\": \"string\",\n        \"type\": \"Events\",\n        \"updatedAt\": \"1982-04-20T08:24:49.970Z\"\n      },\n      \"id\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"attributes\": {\n        \"accountId\": \"string\",\n        \"channels\": [\n          \"Offsite\",\n          \"Onsite\"\n        ],\n        \"contactList\": {\n          \"identifierType\": \"Email\",\n          \"isReadOnly\": true,\n          \"sharingStatus\": \"SharedWithAll\"\n        },\n        \"createdAt\": \"1976-03-15T10:16:59.222Z\",\n        \"createdById\": \"string\",\n        \"description\": \"string\",\n        \"events\": {\n          \"brandIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"categoryIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"lookbackDays\": \"Last14Days\",\n          \"maxPrice\": 7150.912226926978,\n          \"minPrice\": 8931.599487263371,\n          \"shopperActivity\": \"Buy\"\n        },\n        \"name\": \"string\",\n        \"retailerId\": \"string\",\n        \"type\": \"ContactList\",\n        \"updatedAt\": \"2016-01-26T20:10:00.709Z\"\n      },\n      \"id\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"availability\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"authorization\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"access-control\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"authorization\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8c449201-e177-432d-ad90-7119c0ba7f29",
+          "name": "/2026-07/retail-media/accounts/{account-id}/audience-segments/{audience-segment-id}/contact-list",
+          "request": {
+            "name": "/2026-07/retail-media/accounts/{account-id}/audience-segments/{audience-segment-id}/contact-list",
+            "description": {
+              "content": "Returns the statistics of a contact list segment.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "accounts",
+                ":account-id",
+                "audience-segments",
+                ":audience-segment-id",
+                "contact-list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "account-id",
+                  "description": "(Required) Account Id"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "audience-segment-id",
+                  "description": "(Required) Segment Id."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "2f8b7a60-de70-4f2a-8f1f-18a0360db148",
+              "name": "Success or partial success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "accounts",
+                    ":account-id",
+                    "audience-segments",
+                    ":audience-segment-id",
+                    "contact-list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "account-id",
+                      "description": "(Required) Account Id"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "audience-segment-id",
+                      "description": "(Required) Segment Id."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"attributes\": {\n      \"matchRate\": 9297.21000284681,\n      \"numberOfIdentifiers\": 8639,\n      \"numberOfMatches\": 1713\n    },\n    \"id\": \"string\",\n    \"type\": \"string\"\n  },\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"authorization\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"deprecation\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"deprecation\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"access-control\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fbf8fb21-a8c0-4b9b-90bc-b74e0a081c8d",
+          "name": "/2026-07/retail-media/accounts/{account-id}/audience-segments/create",
+          "request": {
+            "name": "/2026-07/retail-media/accounts/{account-id}/audience-segments/create",
+            "description": {
+              "content": "Creates all segments with a valid configuration, and returns the full segments. For those that cannot be created, one or multiple errors are returned.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "accounts",
+                ":account-id",
+                "audience-segments",
+                "create"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "account-id",
+                  "description": "(Required) Account Id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": [\n    {\n      \"attributes\": {\n        \"name\": \"<string>\",\n        \"retailerId\": \"<string>\",\n        \"contactList\": {\n          \"identifierType\": \"<string>\"\n        },\n        \"description\": \"<string>\",\n        \"events\": {\n          \"lookbackDays\": \"<string>\",\n          \"shopperActivity\": \"<string>\",\n          \"brandIds\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"categoryIds\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"maxPrice\": \"<double>\",\n          \"minPrice\": \"<double>\"\n        }\n      },\n      \"type\": \"<string>\"\n    },\n    {\n      \"attributes\": {\n        \"name\": \"<string>\",\n        \"retailerId\": \"<string>\",\n        \"contactList\": {\n          \"identifierType\": \"<string>\"\n        },\n        \"description\": \"<string>\",\n        \"events\": {\n          \"lookbackDays\": \"<string>\",\n          \"shopperActivity\": \"<string>\",\n          \"brandIds\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"categoryIds\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"maxPrice\": \"<double>\",\n          \"minPrice\": \"<double>\"\n        }\n      },\n      \"type\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e59cbda7-d2b9-43a5-adf4-7d390f202447",
+              "name": "Success or partial success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "accounts",
+                    ":account-id",
+                    "audience-segments",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "account-id",
+                      "description": "(Required) Account Id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"attributes\": {\n        \"name\": \"<string>\",\n        \"retailerId\": \"<string>\",\n        \"contactList\": {\n          \"identifierType\": \"<string>\"\n        },\n        \"description\": \"<string>\",\n        \"events\": {\n          \"lookbackDays\": \"<string>\",\n          \"shopperActivity\": \"<string>\",\n          \"brandIds\": [\n            \"<string>\"\n          ],\n          \"categoryIds\": [\n            \"<string>\"\n          ],\n          \"maxPrice\": \"<double>\",\n          \"minPrice\": \"<double>\"\n        }\n      },\n      \"type\": \"<string>\"\n    },\n    {\n      \"attributes\": {\n        \"name\": \"<string>\",\n        \"retailerId\": \"<string>\",\n        \"contactList\": {\n          \"identifierType\": \"<string>\"\n        },\n        \"description\": \"<string>\",\n        \"events\": {\n          \"lookbackDays\": \"<string>\",\n          \"shopperActivity\": \"<string>\",\n          \"brandIds\": [\n            \"<string>\"\n          ],\n          \"categoryIds\": [\n            \"<string>\"\n          ],\n          \"maxPrice\": \"<double>\",\n          \"minPrice\": \"<double>\"\n        }\n      },\n      \"type\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"attributes\": {\n        \"accountId\": \"string\",\n        \"channels\": [\n          \"Unknown\",\n          \"Offsite\"\n        ],\n        \"contactList\": {\n          \"identifierType\": \"CustomerId\",\n          \"isReadOnly\": false,\n          \"sharingStatus\": \"NotShared\"\n        },\n        \"createdAt\": \"1969-11-22T11:46:10.912Z\",\n        \"createdById\": \"string\",\n        \"description\": \"string\",\n        \"events\": {\n          \"brandIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"categoryIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"lookbackDays\": \"Last45Days\",\n          \"maxPrice\": 4611.125352808249,\n          \"minPrice\": 8342.774235995716,\n          \"shopperActivity\": \"View\"\n        },\n        \"name\": \"string\",\n        \"retailerId\": \"string\",\n        \"type\": \"Unknown\",\n        \"updatedAt\": \"2021-10-22T14:45:19.087Z\"\n      },\n      \"id\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"attributes\": {\n        \"accountId\": \"string\",\n        \"channels\": [\n          \"Offsite\",\n          \"Unknown\"\n        ],\n        \"contactList\": {\n          \"identifierType\": \"CustomerId\",\n          \"isReadOnly\": true,\n          \"sharingStatus\": \"NotShared\"\n        },\n        \"createdAt\": \"1993-07-05T07:03:31.349Z\",\n        \"createdById\": \"string\",\n        \"description\": \"string\",\n        \"events\": {\n          \"brandIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"categoryIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"lookbackDays\": \"Last180Days\",\n          \"maxPrice\": 3064.8117546498033,\n          \"minPrice\": 8475.809941284513,\n          \"shopperActivity\": \"View\"\n        },\n        \"name\": \"string\",\n        \"retailerId\": \"string\",\n        \"type\": \"Unknown\",\n        \"updatedAt\": \"1998-11-14T08:54:29.140Z\"\n      },\n      \"id\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"quota\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"quota\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"authentication\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"availability\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "76da75e5-816f-4f1c-a6db-34542b2748c8",
+          "name": "/2026-07/retail-media/accounts/{account-id}/audience-segments/delete",
+          "request": {
+            "name": "/2026-07/retail-media/accounts/{account-id}/audience-segments/delete",
+            "description": {
+              "content": "Delete the segments associated to the given IDs.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "accounts",
+                ":account-id",
+                "audience-segments",
+                "delete"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "account-id",
+                  "description": "(Required) Account id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": [\n    {\n      \"attributes\": \"<object>\",\n      \"id\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"attributes\": \"<object>\",\n      \"id\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "8099965f-23de-48c5-98db-3cb25c8f1819",
+              "name": "Success or partial success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "accounts",
+                    ":account-id",
+                    "audience-segments",
+                    "delete"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "account-id",
+                      "description": "(Required) Account id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"attributes\": \"<object>\",\n      \"id\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"attributes\": \"<object>\",\n      \"id\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"attributes\": {},\n      \"id\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"attributes\": {},\n      \"id\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"deprecation\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"access-control\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"validation\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"deprecation\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ebb7f5d1-a157-4d28-a18b-820eabd2ed94",
+          "name": "/2026-07/retail-media/accounts/{account-id}/audience-segments/search",
+          "request": {
+            "name": "/2026-07/retail-media/accounts/{account-id}/audience-segments/search",
+            "description": {
+              "content": "Returns a list of segments that match the provided filters. If present, the filters are AND'ed together when applied.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "accounts",
+                ":account-id",
+                "audience-segments",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "50",
+                  "description": "The number of elements to be returned. The default is 50 and the maximum is 500."
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "The (zero-based) offset into the collection. The default is 0."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "account-id",
+                  "description": "(Required) Account Id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"audienceSegmentIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"audienceSegmentTypes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"retailerIds\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6fff6436-ad8a-4fa0-b0db-59fd3481d725",
+              "name": "Success or partial success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "accounts",
+                    ":account-id",
+                    "audience-segments",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "50"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "account-id",
+                      "description": "(Required) Account Id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"audienceSegmentIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"audienceSegmentTypes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"retailerIds\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"attributes\": {\n        \"accountId\": \"string\",\n        \"channels\": [\n          \"Offsite\",\n          \"Offsite\"\n        ],\n        \"contactList\": {\n          \"identifierType\": \"Email\",\n          \"isReadOnly\": false,\n          \"sharingStatus\": \"SharedWithAll\"\n        },\n        \"createdAt\": \"2018-10-13T04:37:15.777Z\",\n        \"createdById\": \"string\",\n        \"description\": \"string\",\n        \"events\": {\n          \"brandIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"categoryIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"lookbackDays\": \"Unknown\",\n          \"maxPrice\": 9835.288385959495,\n          \"minPrice\": 1919.5676149347207,\n          \"shopperActivity\": \"Unknown\"\n        },\n        \"name\": \"string\",\n        \"retailerId\": \"string\",\n        \"type\": \"ContactList\",\n        \"updatedAt\": \"1999-10-02T18:33:54.593Z\"\n      },\n      \"id\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"attributes\": {\n        \"accountId\": \"string\",\n        \"channels\": [\n          \"Offsite\",\n          \"Unknown\"\n        ],\n        \"contactList\": {\n          \"identifierType\": \"Unknown\",\n          \"isReadOnly\": false,\n          \"sharingStatus\": \"NotShared\"\n        },\n        \"createdAt\": \"1971-05-16T12:31:13.290Z\",\n        \"createdById\": \"string\",\n        \"description\": \"string\",\n        \"events\": {\n          \"brandIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"categoryIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"lookbackDays\": \"Last90Days\",\n          \"maxPrice\": 8744.592099139674,\n          \"minPrice\": 2044.991702694331,\n          \"shopperActivity\": \"Buy\"\n        },\n        \"name\": \"string\",\n        \"retailerId\": \"string\",\n        \"type\": \"Events\",\n        \"updatedAt\": \"2014-10-13T19:57:41.198Z\"\n      },\n      \"id\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\",\n        \"key_3\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"validation\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"authorization\"\n    }\n  ],\n  \"meta\": {\n    \"limit\": 3787,\n    \"offset\": 6097,\n    \"totalItems\": 7156\n  },\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"validation\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"access-control\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "63733777-dff4-4161-9c97-1fc17084d0e2",
+          "name": "/2026-07/retail-media/accounts/{account-id}/audiences/search",
+          "request": {
+            "name": "/2026-07/retail-media/accounts/{account-id}/audiences/search",
+            "description": {
+              "content": "Returns a list of audiences that match the provided filters. If present, the filters are AND'ed together when applied.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "accounts",
+                ":account-id",
+                "audiences",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "50",
+                  "description": "The number of elements to be returned. The default is 50 and the maximum is 500."
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "The (zero-based) offset into the collection. The default is 0."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "account-id",
+                  "description": "(Required) Account Id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"audienceIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"audienceSegmentIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"retailerIds\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "61677c4a-441f-4ffd-9b26-0f7d31535351",
+              "name": "Success or partial success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "accounts",
+                    ":account-id",
+                    "audiences",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "50"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "account-id",
+                      "description": "(Required) Account Id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"audienceIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"audienceSegmentIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"retailerIds\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"attributes\": {\n        \"accountId\": \"string\",\n        \"algebra\": {\n          \"and\": [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/RmAlgebraNodeV1 detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/RmAlgebraNodeV1 detected>\"\n            }\n          ],\n          \"audienceSegmentId\": \"string\",\n          \"or\": [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/RmAlgebraNodeV1 detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/RmAlgebraNodeV1 detected>\"\n            }\n          ]\n        },\n        \"channels\": [\n          \"Offsite\",\n          \"Onsite\"\n        ],\n        \"createdAt\": \"1949-04-22T17:48:16.333Z\",\n        \"createdById\": \"string\",\n        \"description\": \"string\",\n        \"name\": \"string\",\n        \"retailerId\": \"string\",\n        \"updatedAt\": \"1991-03-22T08:49:39.797Z\"\n      },\n      \"id\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"attributes\": {\n        \"accountId\": \"string\",\n        \"algebra\": {\n          \"and\": [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/RmAlgebraNodeV1 detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/RmAlgebraNodeV1 detected>\"\n            }\n          ],\n          \"audienceSegmentId\": \"string\",\n          \"or\": [\n            {\n              \"value\": \"<Circular reference to #/components/schemas/RmAlgebraNodeV1 detected>\"\n            },\n            {\n              \"value\": \"<Circular reference to #/components/schemas/RmAlgebraNodeV1 detected>\"\n            }\n          ]\n        },\n        \"channels\": [\n          \"Offsite\",\n          \"Onsite\"\n        ],\n        \"createdAt\": \"1978-02-03T19:37:49.086Z\",\n        \"createdById\": \"string\",\n        \"description\": \"string\",\n        \"name\": \"string\",\n        \"retailerId\": \"string\",\n        \"updatedAt\": \"2010-07-10T03:05:41.991Z\"\n      },\n      \"id\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"quota\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"availability\"\n    }\n  ],\n  \"meta\": {\n    \"limit\": 8416,\n    \"offset\": 9621,\n    \"totalItems\": 1729\n  },\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"authorization\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"deprecation\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6c5833bf-cfd1-4c9f-b404-fd4901914ebb",
+          "name": "/2026-07/retail-media/audience-segments/{audience-segment-id}/contact-list/add-remove",
+          "request": {
+            "name": "/2026-07/retail-media/audience-segments/{audience-segment-id}/contact-list/add-remove",
+            "description": {
+              "content": "Add/remove identifiers to or from a retail-media contact list audience-segment, with external audience segment id.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "audience-segments",
+                ":audience-segment-id",
+                "contact-list",
+                "add-remove"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<int64>",
+                  "key": "audience-segment-id",
+                  "description": "(Required) The id of the contact list audience-segment to amend, we only accept external Id here"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"identifiers\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"operation\": \"<string>\",\n      \"identifierType\": \"<string>\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "94fd1549-3286-4913-bc56-e0f74b48f71f",
+              "name": "Summary of created request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "audience-segments",
+                    ":audience-segment-id",
+                    "contact-list",
+                    "add-remove"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<int64>",
+                      "key": "audience-segment-id",
+                      "description": "(Required) The id of the contact list audience-segment to amend, we only accept external Id here"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"identifiers\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"operation\": \"<string>\",\n      \"identifierType\": \"<string>\"\n    },\n    \"type\": \"AddRemoveContactlist\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"type\": \"AddRemoveContactlistResult\",\n  \"data\": {\n    \"contactListId\": 568708742535471100,\n    \"operation\": \"add\",\n    \"requestDate\": \"2018-12-10T10:00:50.0000000+00:00\",\n    \"identifierType\": \"madid\",\n    \"nbValidIdentifiers\": 7343,\n    \"nbInvalidIdentifiers\": 13,\n    \"sampleInvalidIdentifiers\": [\n      \"InvalidIdentifier\"\n    ]\n  },\n  \"errors\": [\n    {\n      \"traceId\": \"667ac683ac797284.667ac683ac797284<:667ac683ac797284\",\n      \"type\": \"availability\",\n      \"code\": \"internal-error\",\n      \"instance\": \"\",\n      \"title\": \"Internal error\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"traceId\": \"56ed4096-f96a-4944-8881-05468efe0ec9\",\n      \"type\": \"deprecation\",\n      \"code\": \"deprecated-field\",\n      \"instance\": \"/audiences/314195\",\n      \"title\": \"'nbValidIds' is deprecated\",\n      \"detail\": \"The field 'nbValidIds' is deprecated please use 'nbValidIdentifiers'\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a50025f0-ed81-4368-abf5-fdbf5b29acf6",
+          "name": "/2026-07/retail-media/audience-segments/{audience-segment-id}/contact-list/clear",
+          "request": {
+            "name": "/2026-07/retail-media/audience-segments/{audience-segment-id}/contact-list/clear",
+            "description": {
+              "content": "Delete all identifiers from a retail-media contact list audience-segment, with external audience segment id.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "audience-segments",
+                ":audience-segment-id",
+                "contact-list",
+                "clear"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<int64>",
+                  "key": "audience-segment-id",
+                  "description": "(Required) The id of the contact list audience-segment to amend, we only accept external Id here"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "23451e17-5b9e-4aa2-9bb0-a962ead1d7f4",
+              "name": "The Contact List identifiers were deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "audience-segments",
+                    ":audience-segment-id",
+                    "contact-list",
+                    "clear"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<int64>",
+                      "key": "audience-segment-id",
+                      "description": "(Required) The id of the contact list audience-segment to amend, we only accept external Id here"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.criteo.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "accessTokenUrl",
+        "value": "https://api.criteo.com/oauth2/token"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "8965412a-32ba-456a-983b-fa02e49daa21",
+    "name": "Criteo Accounts Audience API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Criteo API - RetailMedia",
+      "type": "text/plain"
+    }
+  }
+}

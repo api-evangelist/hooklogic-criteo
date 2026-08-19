@@ -1,14 +1,49 @@
-generated: '2026-07-19'
+generated: '2026-08-13'
 method: searched
-source: https://developers.criteo.com/criteo-apis/docs/criteo-api-swagger
+source: https://developers.criteo.com/retail-media/changelog/changelog
 note: >-
   Criteo Retail Media ships two dated stable OpenAPI versions per year (January
-  and July). Each entry below corresponds to a published, live OpenAPI
-  specification version. See the versioning policy for the deprecation window.
+  and July) and publishes a dated release-notes changelog. Each version entry
+  below corresponds to a published, live OpenAPI specification. See the
+  versioning policy for the deprecation window.
 scheme: date-based
 current_version: '2026-07'
 changelog_urls:
-- https://developers.criteo.com/marketing-solutions/changelog/index.md
+- https://developers.criteo.com/retail-media/changelog/changelog
+- https://developers.criteo.com/marketing-solutions/changelog/changelog
+- https://developers.criteo.com/retailer-integration/changelog/changelog
+recent_entries:
+- date: '2026-08'
+  label: August 2026
+  tags: [Experimental]
+  breaking: false
+  additions:
+  - >-
+    Line Item Core — new type-agnostic line item endpoints in Experimental:
+    POST /line-items, PATCH /line-items/{line-item-id},
+    POST /line-items/demand-search, POST /line-items/supply-search. Pass a
+    campaignId and the API infers the line item type; type-specific settings move
+    into a details object (initially onsiteDisplayDetails).
+- date: '2026-07'
+  label: 2026.07 Version
+  tags: [New releases, Breaking Change]
+  breaking: true
+  highlights:
+  - >-
+    Versioning policy moves to two versions per year (January, July) and a
+    three-tier release model — Experimental, Release Candidate, Stable —
+    replacing the previous two-tier Preview/Stable system.
+  breaking_changes:
+  - 'Retailer Search: isAvailable removed; use budgetModelAvailabilities.'
+  - 'Line items: aiAssistant added as a targetable value in pageTypes.'
+  - 'Real-Time Performance: billableImpressions/billableClicks renamed to impressions/clicks.'
+  - >-
+    DSP Analytics redesign: /reports/campaigns, /reports/line-items,
+    /reports/accounts and the reportType field replaced by purpose-built
+    endpoints that declare metrics and dimensions explicitly.
+  - >-
+    Balance endpoints: account-id and balance-id path parameters renamed to
+    accountId and balanceId.
 entries:
 - version: '2026-07'
   status: stable

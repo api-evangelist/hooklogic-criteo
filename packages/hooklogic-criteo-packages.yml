@@ -1,10 +1,15 @@
-generated: '2026-07-19'
+generated: '2026-08-13'
 method: searched
 source: https://developers.criteo.com/criteo-apis/docs/api-client-libraries
 note: >-
   HookLogic is now the Criteo Retail Media API. Criteo publishes officially
   supported client libraries for Retail Media (Python, PHP, Java) plus a
-  community-supported Node.js client.
+  community-supported Node.js client. Versions and dates below were read from
+  each registry's metadata endpoint on 2026-08-13. CURRENCY FINDING: the Java
+  and PHP SDKs both ship builds of the 2027.01 API version dated 2026-08-11/12,
+  while the PyPI package has not published since 2026-06-01 and its newest
+  release still targets the 2026.01 API version — the Python SDK is two API
+  versions behind its siblings.
 packages:
 - language: python
   registry: pypi
@@ -13,21 +18,56 @@ packages:
   install: pip install criteo-api-retailmedia-sdk
   repo: https://github.com/criteo/criteo-api-python-sdk
   official: true
+  version: 2026.1.0.260601
+  published: '2026-06-01'
+  note: >-
+    Latest release targets the 2026.01 API version. No release covering 2026.07
+    or 2027.01 has been published, and no upload of any kind since 2026-06-01 —
+    the Java and PHP SDKs shipped 2027.01 builds on 2026-08-11/12.
 - language: php
   registry: packagist
   name: criteo/criteo-api-retailmedia-sdk
   url: https://packagist.org/packages/criteo/criteo-api-retailmedia-sdk
   install: composer require criteo/criteo-api-retailmedia-sdk
   official: true
+  version: 2027.01.0.260811
+  published: '2026-08-11'
 - language: java
   registry: maven
   name: com.criteo:criteo-api-retailmedia-sdk
-  url: https://search.maven.org/search?q=a:criteo-api-retailmedia-sdk
+  url: https://central.sonatype.com/artifact/com.criteo/criteo-api-retailmedia-sdk
   repo: https://github.com/criteo/criteo-api-java-sdk
   official: true
+  version: 2027.01.0.260812
+  published: '2026-08-12'
+  note: >-
+    Read from https://repo1.maven.org/maven2/com/criteo/criteo-api-retailmedia-sdk/maven-metadata.xml
+    (lastUpdated 20260812). The search.maven.org solrsearch endpoint returned no
+    document for this artifact.
 - language: javascript
   registry: github
   name: criteo-api-nodejs-client
   url: https://github.com/joepikowski/criteo-api-nodejs-client
   official: false
   support: community
+  version: null
+  published: null
+  note: >-
+    Community client, distributed from GitHub only. Not published to npm —
+    registry.npmjs.org/criteo-api-nodejs-client returns {"error":"Not found"} —
+    so there is no registry metadata endpoint to read a version or date from.
+- language: javascript
+  registry: cdn
+  name: BeaconSDK
+  url: https://static.criteo.net/cbs/prod/stable/BeaconSDK/bundle.js
+  official: true
+  version: null
+  published: null
+  note: >-
+    Browser library for retailer-side beacon tracking, delivered from Criteo's
+    own CDN. The documented loader URL is UNPINNED (.../prod/stable/...) and
+    floats to whatever Criteo has deployed, so a consumer cannot tell which build
+    they are loading; a v5 path (.../prod/v5/BeaconSDK/bundle.min.js) also
+    appears in the docs. There is no registry or CDN metadata endpoint for
+    static.criteo.net. See components/hooklogic-criteo-components.yml.
+official_count: 4

@@ -1,0 +1,394 @@
+{
+  "item": [
+    {
+      "id": "887e3a77-980e-4daf-840c-4f942bc1d2e5",
+      "name": "Billing",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "13c797cb-4ae3-49c3-8ecb-a6185b9f384a",
+          "name": "/2026-07/retail-media/billing/partner-report",
+          "request": {
+            "name": "/2026-07/retail-media/billing/partner-report",
+            "description": {
+              "content": "Create a Partner Billing Report request.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "billing",
+                "partner-report"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"endDate\": \"<date>\",\n      \"startDate\": \"<date>\",\n      \"accountIds\": [\n        \"<string>\"\n      ],\n      \"format\": \"json\",\n      \"retailerIds\": [\n        \"<integer>\"\n      ]\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "547f43db-287f-47fc-a1e0-04a155c1473e",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "billing",
+                    "partner-report"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"endDate\": \"<date>\",\n      \"startDate\": \"<date>\",\n      \"accountIds\": [\n        \"<string>\"\n      ],\n      \"format\": \"json\",\n      \"retailerIds\": [\n        \"<integer>\"\n      ]\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"attributes\": {\n      \"createdAt\": \"2012-07-20T22:59:05.255Z\",\n      \"status\": \"pending\",\n      \"errorMessage\": \"string\"\n    },\n    \"id\": \"string\",\n    \"type\": \"string\"\n  },\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"validation\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"validation\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"deprecation\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"access-control\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a32582cd-7dba-48b6-bf83-682ce7a409ee",
+          "name": "/2026-07/retail-media/billing/partner-report/{requestId}/output",
+          "request": {
+            "name": "/2026-07/retail-media/billing/partner-report/{requestId}/output",
+            "description": {
+              "content": "Get the output of an existing Partner Billing Report.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "billing",
+                "partner-report",
+                ":requestId",
+                "output"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "requestId",
+                  "description": "(Required) The id of a Partner Billing Report request."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/csv"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ca2679ac-65ea-428c-b92c-db81c78024b1",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "billing",
+                    "partner-report",
+                    ":requestId",
+                    "output"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "requestId",
+                      "description": "(Required) The id of a Partner Billing Report request."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/csv"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"string\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "99859745-6e08-4ee5-8dd3-7d1161ac204e",
+          "name": "/2026-07/retail-media/billing/partner-report/{requestId}/status",
+          "request": {
+            "name": "/2026-07/retail-media/billing/partner-report/{requestId}/status",
+            "description": {
+              "content": "Get the status of an existing Partner Billing Report.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "billing",
+                "partner-report",
+                ":requestId",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "requestId",
+                  "description": "(Required) The id of a Partner Billing Report request."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "1c482e57-d471-469e-97d9-6bdc5403a10e",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "billing",
+                    "partner-report",
+                    ":requestId",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "requestId",
+                      "description": "(Required) The id of a Partner Billing Report request."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"attributes\": {\n      \"createdAt\": \"2012-04-28T14:09:53.847Z\",\n      \"status\": \"expired\",\n      \"errorMessage\": \"string\"\n    },\n    \"id\": \"string\",\n    \"type\": \"string\"\n  },\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"unknown\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"authorization\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"availability\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\",\n        \"key_3\": \"string\",\n        \"key_4\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"authorization\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.criteo.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "accessTokenUrl",
+        "value": "https://api.criteo.com/oauth2/token"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "2cd3b737-593d-4cf6-a6ad-bad7377b9722",
+    "name": "Criteo Accounts Billing API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Criteo API - RetailMedia",
+      "type": "text/plain"
+    }
+  }
+}

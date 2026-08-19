@@ -1,0 +1,1645 @@
+{
+  "item": [
+    {
+      "id": "eb90603d-684e-401d-8fef-6653c7068f21",
+      "name": "Accounts",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6f7f729c-9f2a-43d1-9a76-567d9ba7462d",
+          "name": "/2026-07/retail-media/account-management/accounts/{accountId}/brands/add",
+          "request": {
+            "name": "/2026-07/retail-media/account-management/accounts/{accountId}/brands/add",
+            "description": {
+              "content": "Add brands to an account",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "account-management",
+                "accounts",
+                ":accountId",
+                "brands",
+                "add"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "accountId",
+                  "description": "(Required) the account id to update"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"brandIds\": [\n        \"<long>\",\n        \"<long>\"\n      ]\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b46517f2-1894-4eed-9f5b-2e2f63bef4b7",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "account-management",
+                    "accounts",
+                    ":accountId",
+                    "brands",
+                    "add"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accountId",
+                      "description": "(Required) the account id to update"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"brandIds\": [\n        \"<long>\",\n        \"<long>\"\n      ]\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"attributes\": {\n      \"brandIds\": [\n        \"<long>\",\n        \"<long>\"\n      ]\n    },\n    \"type\": \"<string>\"\n  },\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"access-control\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"unknown\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"quota\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"authorization\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0853cd74-fa41-4e23-9adb-aa02c86f035b",
+          "name": "/2026-07/retail-media/account-management/accounts/{accountId}/brands/remove",
+          "request": {
+            "name": "/2026-07/retail-media/account-management/accounts/{accountId}/brands/remove",
+            "description": {
+              "content": "Remove brands from an account",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "account-management",
+                "accounts",
+                ":accountId",
+                "brands",
+                "remove"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "accountId",
+                  "description": "(Required) the account id to update"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"brandIds\": [\n        \"<long>\",\n        \"<long>\"\n      ]\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0a32d550-250e-4850-b93a-46c3ffaaf320",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "account-management",
+                    "accounts",
+                    ":accountId",
+                    "brands",
+                    "remove"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accountId",
+                      "description": "(Required) the account id to update"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"brandIds\": [\n        \"<long>\",\n        \"<long>\"\n      ]\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"attributes\": {\n      \"brandIds\": [\n        \"<long>\",\n        \"<long>\"\n      ]\n    },\n    \"type\": \"<string>\"\n  },\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"deprecation\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"validation\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"authorization\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"availability\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1a351a20-a970-4458-b5ba-c56f010a2c7d",
+          "name": "/2026-07/retail-media/account-management/accounts/{accountId}/create-brand-account",
+          "request": {
+            "name": "/2026-07/retail-media/account-management/accounts/{accountId}/create-brand-account",
+            "description": {
+              "content": "Creates a new child Demand Brand account for the provided parent Private Market account",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "account-management",
+                "accounts",
+                ":accountId",
+                "create-brand-account"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "accountId",
+                  "description": "(Required) The given account id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"brands\": [\n        \"<long>\",\n        \"<long>\"\n      ],\n      \"companyName\": \"<string>\",\n      \"name\": \"<string>\",\n      \"onBehalfCompanyName\": \"<string>\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "8179d701-83ba-4c3f-a936-e3570a8f8278",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "account-management",
+                    "accounts",
+                    ":accountId",
+                    "create-brand-account"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accountId",
+                      "description": "(Required) The given account id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"brands\": [\n        \"<long>\",\n        \"<long>\"\n      ],\n      \"companyName\": \"<string>\",\n      \"name\": \"<string>\",\n      \"onBehalfCompanyName\": \"<string>\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"attributes\": {\n      \"companyName\": \"string\",\n      \"countryIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"currencyId\": \"string\",\n      \"name\": \"string\",\n      \"onBehalfCompanyName\": \"string\",\n      \"parentAccountLabel\": \"string\",\n      \"subType\": \"Unknown\",\n      \"timeZone\": \"string\",\n      \"type\": \"Supply\"\n    },\n    \"id\": \"string\",\n    \"type\": \"string\"\n  },\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"validation\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"access-control\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"quota\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"validation\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "83b083bd-9d55-4a08-964a-690a381d7a9b",
+          "name": "/2026-07/retail-media/account-management/accounts/{accountId}/create-seller-account",
+          "request": {
+            "name": "/2026-07/retail-media/account-management/accounts/{accountId}/create-seller-account",
+            "description": {
+              "content": "Creates a new child Demand Seller account for the provided parent Private Market account",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "account-management",
+                "accounts",
+                ":accountId",
+                "create-seller-account"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "accountId",
+                  "description": "(Required) The given account id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"sellers\": [\n        {\n          \"retailerId\": \"<integer>\",\n          \"sellerId\": \"<string>\"\n        },\n        {\n          \"retailerId\": \"<integer>\",\n          \"sellerId\": \"<string>\"\n        }\n      ],\n      \"companyName\": \"<string>\",\n      \"name\": \"<string>\",\n      \"onBehalfCompanyName\": \"<string>\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "caa4502c-dcb1-4bff-a8ba-5003edcd76ad",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "account-management",
+                    "accounts",
+                    ":accountId",
+                    "create-seller-account"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accountId",
+                      "description": "(Required) The given account id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"sellers\": [\n        {\n          \"retailerId\": \"<integer>\",\n          \"sellerId\": \"<string>\"\n        },\n        {\n          \"retailerId\": \"<integer>\",\n          \"sellerId\": \"<string>\"\n        }\n      ],\n      \"companyName\": \"<string>\",\n      \"name\": \"<string>\",\n      \"onBehalfCompanyName\": \"<string>\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"attributes\": {\n      \"companyName\": \"string\",\n      \"countryIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"currencyId\": \"string\",\n      \"name\": \"string\",\n      \"onBehalfCompanyName\": \"string\",\n      \"parentAccountLabel\": \"string\",\n      \"subType\": \"Brand\",\n      \"timeZone\": \"string\",\n      \"type\": \"Unknown\"\n    },\n    \"id\": \"string\",\n    \"type\": \"string\"\n  },\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"authorization\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"authorization\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"availability\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"access-control\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cb28ea3c-ee92-426b-8113-d1366cbcaf3a",
+          "name": "/2026-07/retail-media/account-management/accounts/{accountId}/private-market-child-accounts",
+          "request": {
+            "name": "/2026-07/retail-media/account-management/accounts/{accountId}/private-market-child-accounts",
+            "description": {
+              "content": "Gets Private Market child accounts that are associated with the given account",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "account-management",
+                "accounts",
+                ":accountId",
+                "private-market-child-accounts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "25",
+                  "description": "The number of accounts to be returned. The default is 25."
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "The (zero-based) offset into the collection of accounts. The default is 0."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "accountId",
+                  "description": "(Required) Account Id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "49f7489e-c372-4fcc-9ec1-434259322758",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "account-management",
+                    "accounts",
+                    ":accountId",
+                    "private-market-child-accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "25"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accountId",
+                      "description": "(Required) Account Id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"attributes\": {\n        \"companyName\": \"string\",\n        \"countryIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"currencyId\": \"string\",\n        \"name\": \"string\",\n        \"onBehalfCompanyName\": \"string\",\n        \"subType\": \"Brand\",\n        \"timeZone\": \"string\",\n        \"type\": \"Demand\"\n      },\n      \"id\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"attributes\": {\n        \"companyName\": \"string\",\n        \"countryIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"currencyId\": \"string\",\n        \"name\": \"string\",\n        \"onBehalfCompanyName\": \"string\",\n        \"subType\": \"Brand\",\n        \"timeZone\": \"string\",\n        \"type\": \"Supply\"\n      },\n      \"id\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"authentication\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"authentication\"\n    }\n  ],\n  \"metadata\": {\n    \"limit\": 4289,\n    \"offset\": 9948,\n    \"count\": 728\n  },\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"validation\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"availability\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "62a3b8bb-e57c-4bc7-9c78-29dce8a553a9",
+          "name": "/2026-07/retail-media/account-management/accounts/{accountId}/sellers",
+          "request": {
+            "name": "/2026-07/retail-media/account-management/accounts/{accountId}/sellers",
+            "description": {
+              "content": "Replace the sellers associated with an account",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "account-management",
+                "accounts",
+                ":accountId",
+                "sellers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "accountId",
+                  "description": "(Required) The given account id"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": [\n    {\n      \"attributes\": {\n        \"retailerId\": \"<integer>\",\n        \"sellerId\": \"<string>\"\n      },\n      \"type\": \"<string>\"\n    },\n    {\n      \"attributes\": {\n        \"retailerId\": \"<integer>\",\n        \"sellerId\": \"<string>\"\n      },\n      \"type\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "4fa20ffb-1bee-4d81-a945-4589b43ef85c",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "account-management",
+                    "accounts",
+                    ":accountId",
+                    "sellers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accountId",
+                      "description": "(Required) The given account id"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"attributes\": {\n        \"retailerId\": \"<integer>\",\n        \"sellerId\": \"<string>\"\n      },\n      \"type\": \"<string>\"\n    },\n    {\n      \"attributes\": {\n        \"retailerId\": \"<integer>\",\n        \"sellerId\": \"<string>\"\n      },\n      \"type\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"attributes\": {\n        \"retailerId\": \"<integer>\",\n        \"sellerId\": \"<string>\"\n      },\n      \"type\": \"<string>\"\n    },\n    {\n      \"attributes\": {\n        \"retailerId\": \"<integer>\",\n        \"sellerId\": \"<string>\"\n      },\n      \"type\": \"<string>\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"authentication\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"quota\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"authorization\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"quota\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "77c07fe3-d473-4ca9-879e-7ea9037c0ee4",
+          "name": "/2026-07/retail-media/accounts",
+          "request": {
+            "name": "/2026-07/retail-media/accounts",
+            "description": {
+              "content": "Gets page of account objects that the current user can access",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "accounts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "limitToId",
+                  "value": "<string>",
+                  "description": "The ids that you would like to limit your result set to"
+                },
+                {
+                  "disabled": false,
+                  "key": "limitToId",
+                  "value": "<string>",
+                  "description": "The ids that you would like to limit your result set to"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageIndex",
+                  "value": "0",
+                  "description": "The 0 indexed page index you would like to receive given the page size"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageSize",
+                  "value": "25",
+                  "description": "The maximum number of items you would like to receive in this request"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "1bde55b7-0567-4e79-9a51-347b95162e07",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limitToId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limitToId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "pageIndex",
+                      "value": "0"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "25"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": \"string\",\n      \"type\": \"string\",\n      \"attributes\": {\n        \"countries\": [\n          \"string\",\n          \"string\"\n        ],\n        \"currency\": \"string\",\n        \"name\": \"string\",\n        \"parentAccountLabel\": \"string\",\n        \"timeZone\": \"string\",\n        \"type\": \"demand\",\n        \"companyName\": \"string\",\n        \"onBehalfCompanyName\": \"string\",\n        \"subtype\": \"seller\"\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"type\": \"string\",\n      \"attributes\": {\n        \"countries\": [\n          \"string\",\n          \"string\"\n        ],\n        \"currency\": \"string\",\n        \"name\": \"st\",\n        \"parentAccountLabel\": \"string\",\n        \"timeZone\": \"string\",\n        \"type\": \"demand\",\n        \"companyName\": \"string\",\n        \"onBehalfCompanyName\": \"string\",\n        \"subtype\": \"seller\"\n      }\n    }\n  ],\n  \"metadata\": {\n    \"currentPageIndex\": 6781,\n    \"currentPageSize\": 6707,\n    \"nextPage\": \"string\",\n    \"previousPage\": \"string\",\n    \"totalItemsAcrossAllPages\": 7559,\n    \"totalPages\": 1435\n  },\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"deprecation\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"access-control\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"validation\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"unknown\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f1fa0658-ca0d-4e65-809c-57313b60c24c",
+          "name": "/2026-07/retail-media/accounts/{accountId}/grant-consent",
+          "request": {
+            "name": "/2026-07/retail-media/accounts/{accountId}/grant-consent",
+            "description": {
+              "content": "Grant consent to a business application on behalf of a Private Market demand account",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "accounts",
+                ":accountId",
+                "grant-consent"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "accountId",
+                  "description": "(Required) The demand account ID on which to grant consent"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"callbackUrl\": \"<string>\",\n      \"clientId\": \"<string>\",\n      \"callbackState\": \"<string>\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "17c12de7-6989-484b-965d-cfc75e40f66d",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "accounts",
+                    ":accountId",
+                    "grant-consent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accountId",
+                      "description": "(Required) The demand account ID on which to grant consent"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"callbackUrl\": \"<string>\",\n      \"clientId\": \"<string>\",\n      \"callbackState\": \"<string>\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "dbf3d756-1891-450f-9093-f27bafb39d79",
+          "name": "/2026-07/retail-media/accounts/fees/search",
+          "request": {
+            "name": "/2026-07/retail-media/accounts/fees/search",
+            "description": {
+              "content": "Get fees for provided accounts",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "accounts",
+                "fees",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "50",
+                  "description": "used for paging, number of results returned per request, Maximum of 500"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "used for paging, number of records to skip"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"accountIds\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ec7252bd-4aff-4ec4-92c3-41209db5e54c",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "accounts",
+                    "fees",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "50"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"accountIds\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"attributes\": {\n        \"accountId\": \"string\",\n        \"fees\": {\n          \"demandManaged\": {\n            \"rate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"managedService\": {\n            \"onsiteDisplayEnabled\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"onsiteSponsoredProductsEnabled\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        }\n      },\n      \"type\": \"string\"\n    },\n    {\n      \"attributes\": {\n        \"accountId\": \"string\",\n        \"fees\": {\n          \"demandManaged\": {\n            \"rate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"managedService\": {\n            \"onsiteDisplayEnabled\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"onsiteSponsoredProductsEnabled\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rate\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        }\n      },\n      \"type\": \"string\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"availability\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"access-control\"\n    }\n  ],\n  \"metadata\": {\n    \"limit\": 2584,\n    \"offset\": 1293,\n    \"count\": 5289\n  },\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"validation\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"availability\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4f3f4c3b-4e42-4a74-82f8-a99f49d471aa",
+          "name": "/2026-07/retail-media/accounts/fees/update",
+          "request": {
+            "name": "/2026-07/retail-media/accounts/fees/update",
+            "description": {
+              "content": "Set fees for provided accounts",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "accounts",
+                "fees",
+                "update"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"accountIds\": [\n        \"<string>\"\n      ],\n      \"fees\": {\n        \"demandManaged\": {\n          \"rate\": \"<double>\"\n        },\n        \"managedService\": {\n          \"onsiteDisplayEnabled\": \"<boolean>\",\n          \"onsiteSponsoredProductsEnabled\": \"<boolean>\",\n          \"rate\": \"<double>\"\n        }\n      }\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "61c3bfc0-a53d-4c8d-ad34-5c65c22a753b",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "accounts",
+                    "fees",
+                    "update"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"accountIds\": [\n        \"<string>\"\n      ],\n      \"fees\": {\n        \"demandManaged\": {\n          \"rate\": \"<double>\"\n        },\n        \"managedService\": {\n          \"onsiteDisplayEnabled\": \"<boolean>\",\n          \"onsiteSponsoredProductsEnabled\": \"<boolean>\",\n          \"rate\": \"<double>\"\n        }\n      }\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4ae5cbb5-39d8-4d93-94d2-39aa08eabc25",
+          "name": "/2026-07/retail-media/accounts/sellers/search",
+          "request": {
+            "name": "/2026-07/retail-media/accounts/sellers/search",
+            "description": {
+              "content": "Get the sellers mapped to provided accounts",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "accounts",
+                "sellers",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"accountIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"includeDetails\": false\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "92c2175a-2dad-45a7-ab41-06f672a6e12f",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "accounts",
+                    "sellers",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"accountIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"includeDetails\": false\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"attributes\": {\n        \"accountId\": \"string\",\n        \"sellers\": [\n          {\n            \"name\": \"string\",\n            \"retailerId\": 2314,\n            \"sellerId\": \"string\"\n          },\n          {\n            \"name\": \"string\",\n            \"retailerId\": 6114,\n            \"sellerId\": \"string\"\n          }\n        ]\n      },\n      \"type\": \"string\"\n    },\n    {\n      \"attributes\": {\n        \"accountId\": \"string\",\n        \"sellers\": [\n          {\n            \"name\": \"string\",\n            \"retailerId\": 3555,\n            \"sellerId\": \"string\"\n          },\n          {\n            \"name\": \"string\",\n            \"retailerId\": 4590,\n            \"sellerId\": \"string\"\n          }\n        ]\n      },\n      \"type\": \"string\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"deprecation\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"availability\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"access-control\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"quota\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "383bd798-067f-4044-accb-a79b77a5428f",
+          "name": "/2026-07/retail-media/brands/search",
+          "request": {
+            "name": "/2026-07/retail-media/brands/search",
+            "description": {
+              "content": "Search for brands given a retailer ID and search term.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "brands",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "25",
+                  "description": "the number of brands to return"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "offset of paginated results"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"retailerIds\": [\n        \"<integer>\"\n      ],\n      \"brandType\": \"<string>\",\n      \"name\": \"<string>\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "afbefc82-e594-43d9-b24b-7976ab7bf08b",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "brands",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "25"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"retailerIds\": [\n        \"<integer>\"\n      ],\n      \"brandType\": \"<string>\",\n      \"name\": \"<string>\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"attributes\": {\n        \"brandType\": \"string\",\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"retailerIds\": [\n          1964,\n          7830\n        ]\n      },\n      \"id\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"attributes\": {\n        \"brandType\": \"string\",\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"retailerIds\": [\n          9829,\n          8770\n        ]\n      },\n      \"id\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"unknown\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"access-control\"\n    }\n  ],\n  \"metadata\": {\n    \"limit\": 7648,\n    \"offset\": 7216,\n    \"count\": 5985\n  },\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"validation\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"type\": \"validation\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.criteo.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "accessTokenUrl",
+        "value": "https://api.criteo.com/oauth2/token"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "baaaa12f-8c62-4858-be09-9aa649af5f7b",
+    "name": "Criteo Accounts API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Criteo API - RetailMedia",
+      "type": "text/plain"
+    }
+  }
+}

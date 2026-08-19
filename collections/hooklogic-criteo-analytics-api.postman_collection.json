@@ -1,0 +1,1451 @@
+{
+  "item": [
+    {
+      "id": "53e8f727-17b7-48ab-88c8-2912149e2657",
+      "name": "Analytics",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "27728551-c232-4829-909d-3b2e67ea87a4",
+          "name": "/2026-07/retail-media/reports/{reportId}/output",
+          "request": {
+            "name": "/2026-07/retail-media/reports/{reportId}/output",
+            "description": {
+              "content": "Returns the output of an async report",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "reports",
+                ":reportId",
+                "output"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "reportId",
+                  "description": "(Required) The ID of the report to retrieve"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f49bdb9f-5104-4454-9183-2d86988d72c3",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "reports",
+                    ":reportId",
+                    "output"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "reportId",
+                      "description": "(Required) The ID of the report to retrieve"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"string\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ec232048-cb9b-4f0e-afa1-30215b8dabd3",
+          "name": "/2026-07/retail-media/reports/{reportId}/status",
+          "request": {
+            "name": "/2026-07/retail-media/reports/{reportId}/status",
+            "description": {
+              "content": "Returns the status of an async report",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "reports",
+                ":reportId",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "reportId",
+                  "description": "(Required) The ID of the report to retrieve"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "897403e4-92e7-44a2-940a-475d6c937c14",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "reports",
+                    ":reportId",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "reportId",
+                      "description": "(Required) The ID of the report to retrieve"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"attributes\": {\n      \"createdAt\": \"string\",\n      \"expiresAt\": \"string\",\n      \"fileSizeBytes\": 3954,\n      \"id\": \"string\",\n      \"md5CheckSum\": \"string\",\n      \"message\": \"string\",\n      \"rowCount\": 8856,\n      \"status\": \"success\"\n    },\n    \"id\": \"string\",\n    \"type\": \"string\"\n  },\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"quota\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"authorization\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"availability\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"availability\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "85686e2c-e065-4136-b850-05200a702469",
+          "name": "/2026-07/retail-media/reports/attributed-transactions",
+          "request": {
+            "name": "/2026-07/retail-media/reports/attributed-transactions",
+            "description": {
+              "content": "Creates an attributed-transactions async report. The request accepts explicit attributed-transaction dimensions, metrics, and filters.\r\n<br />\r\nThis endpoint is subject to specific rate limits.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "reports",
+                "attributed-transactions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"dimensions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"endDate\": \"<dateTime>\",\n      \"filters\": {\n        \"accountIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"campaignIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"lineItemIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"mediaTypes\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      \"metrics\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"startDate\": \"<dateTime>\",\n      \"clickAttributionWindow\": \"<string>\",\n      \"clickMatchLevel\": \"campaign\",\n      \"format\": \"<string>\",\n      \"timezone\": \"UTC\",\n      \"viewAttributionWindow\": \"<string>\",\n      \"viewMatchLevel\": \"campaign\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "21831473-fbee-422f-96a3-707b082d680d",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "reports",
+                    "attributed-transactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"dimensions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"endDate\": \"<dateTime>\",\n      \"filters\": {\n        \"accountIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"campaignIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"lineItemIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"mediaTypes\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      \"metrics\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"startDate\": \"<dateTime>\",\n      \"clickAttributionWindow\": \"<string>\",\n      \"clickMatchLevel\": \"campaign\",\n      \"format\": \"<string>\",\n      \"timezone\": \"UTC\",\n      \"viewAttributionWindow\": \"<string>\",\n      \"viewMatchLevel\": \"campaign\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"attributes\": {\n      \"createdAt\": \"string\",\n      \"expiresAt\": \"string\",\n      \"fileSizeBytes\": 9070,\n      \"id\": \"string\",\n      \"md5CheckSum\": \"string\",\n      \"message\": \"string\",\n      \"rowCount\": 8490,\n      \"status\": \"pending\"\n    },\n    \"id\": \"string\",\n    \"type\": \"string\"\n  },\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\",\n        \"key_3\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"access-control\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"quota\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"availability\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"authentication\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5651ebcd-b2e9-49e9-9084-984fcb378cae",
+          "name": "/2026-07/retail-media/reports/fillrate",
+          "request": {
+            "name": "/2026-07/retail-media/reports/fillrate",
+            "description": {
+              "content": "Returns an asynchronous Fill Rate Report\r\n<br />\r\nThis endpoint is subject to specific rate limits.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "reports",
+                "fillrate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"dimensions\": [\n        \"<string>\"\n      ],\n      \"endDate\": \"<dateTime>\",\n      \"metrics\": [\n        \"<string>\"\n      ],\n      \"startDate\": \"<dateTime>\",\n      \"supplyAccountIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"adServerType\": \"all\",\n      \"format\": \"json\",\n      \"timezone\": \"UTC\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7e0e06b8-c077-4590-aeaa-c166e0dc4620",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "reports",
+                    "fillrate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"dimensions\": [\n        \"<string>\"\n      ],\n      \"endDate\": \"<dateTime>\",\n      \"metrics\": [\n        \"<string>\"\n      ],\n      \"startDate\": \"<dateTime>\",\n      \"supplyAccountIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"adServerType\": \"all\",\n      \"format\": \"json\",\n      \"timezone\": \"UTC\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"attributes\": {\n      \"createdAt\": \"string\",\n      \"expiresAt\": \"string\",\n      \"fileSizeBytes\": 9070,\n      \"id\": \"string\",\n      \"md5CheckSum\": \"string\",\n      \"message\": \"string\",\n      \"rowCount\": 8490,\n      \"status\": \"pending\"\n    },\n    \"id\": \"string\",\n    \"type\": \"string\"\n  },\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\",\n        \"key_3\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"access-control\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"quota\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"availability\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"authentication\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fcf44641-736b-4b23-a6e2-8c8408a8e6ec",
+          "name": "/2026-07/retail-media/reports/missed-opportunities",
+          "request": {
+            "name": "/2026-07/retail-media/reports/missed-opportunities",
+            "description": {
+              "content": "Creates a missed-opportunities async report. The request accepts explicit missed-opportunities dimensions, metrics, and filters.\r\n<br />\r\nThis endpoint is subject to specific rate limits.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "reports",
+                "missed-opportunities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"dimensions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"endDate\": \"<dateTime>\",\n      \"filters\": {\n        \"accountIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"campaignIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"campaignTypes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"lineItemIds\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      \"metrics\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"startDate\": \"<dateTime>\",\n      \"format\": \"<string>\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "afe73139-786a-4ea5-8be3-ed73bf4acc93",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "reports",
+                    "missed-opportunities"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"dimensions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"endDate\": \"<dateTime>\",\n      \"filters\": {\n        \"accountIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"campaignIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"campaignTypes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"lineItemIds\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      \"metrics\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"startDate\": \"<dateTime>\",\n      \"format\": \"<string>\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"attributes\": {\n      \"createdAt\": \"string\",\n      \"expiresAt\": \"string\",\n      \"fileSizeBytes\": 9070,\n      \"id\": \"string\",\n      \"md5CheckSum\": \"string\",\n      \"message\": \"string\",\n      \"rowCount\": 8490,\n      \"status\": \"pending\"\n    },\n    \"id\": \"string\",\n    \"type\": \"string\"\n  },\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\",\n        \"key_3\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"access-control\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"quota\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"availability\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"authentication\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a30a1548-dffe-4de8-8be9-87bb7650f9ec",
+          "name": "/2026-07/retail-media/reports/performance",
+          "request": {
+            "name": "/2026-07/retail-media/reports/performance",
+            "description": {
+              "content": "Creates a performance DSP analytics async report. Dimensions and metrics select the output schema, and filters constrain eligible data.\r\n<br />\r\nThis endpoint is subject to specific rate limits.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "reports",
+                "performance"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"dimensions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"endDate\": \"<dateTime>\",\n      \"filters\": {\n        \"accountIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"activationPlatforms\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"budgetModels\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"buyTypes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"campaignIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"campaignTypes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"lineItemIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"mediaTypes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"salesChannels\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"searchTermTargetings\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"searchTermTypes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"targetedKeywordTypes\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      \"metrics\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"startDate\": \"<dateTime>\",\n      \"clickAttributionWindow\": \"<string>\",\n      \"clickMatchLevel\": \"campaign\",\n      \"format\": \"<string>\",\n      \"timezone\": \"UTC\",\n      \"viewAttributionWindow\": \"<string>\",\n      \"viewMatchLevel\": \"campaign\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "be757fb6-6359-4d91-897a-56c09f7ce6a9",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "reports",
+                    "performance"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"dimensions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"endDate\": \"<dateTime>\",\n      \"filters\": {\n        \"accountIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"activationPlatforms\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"budgetModels\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"buyTypes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"campaignIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"campaignTypes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"lineItemIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"mediaTypes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"salesChannels\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"searchTermTargetings\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"searchTermTypes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"targetedKeywordTypes\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      \"metrics\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"startDate\": \"<dateTime>\",\n      \"clickAttributionWindow\": \"<string>\",\n      \"clickMatchLevel\": \"campaign\",\n      \"format\": \"<string>\",\n      \"timezone\": \"UTC\",\n      \"viewAttributionWindow\": \"<string>\",\n      \"viewMatchLevel\": \"campaign\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"attributes\": {\n      \"createdAt\": \"string\",\n      \"expiresAt\": \"string\",\n      \"fileSizeBytes\": 9070,\n      \"id\": \"string\",\n      \"md5CheckSum\": \"string\",\n      \"message\": \"string\",\n      \"rowCount\": 8490,\n      \"status\": \"pending\"\n    },\n    \"id\": \"string\",\n    \"type\": \"string\"\n  },\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\",\n        \"key_3\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"access-control\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"quota\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"availability\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"authentication\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0dfa6772-5341-4d74-997b-b745ed4cf917",
+          "name": "/2026-07/retail-media/reports/revenue",
+          "request": {
+            "name": "/2026-07/retail-media/reports/revenue",
+            "description": {
+              "content": "Returns an asynchronous Revenue Report\r\n<br />\r\nThis endpoint is subject to specific rate limits.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "reports",
+                "revenue"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"endDate\": \"<dateTime>\",\n      \"startDate\": \"<dateTime>\",\n      \"accountIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"activationPlatforms\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"advertiserTypes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"budgetModels\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"buyType\": \"<string>\",\n      \"campaignIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"campaignType\": \"all\",\n      \"clickAttributionWindow\": \"none\",\n      \"clickMatchLevel\": \"campaign\",\n      \"dimensions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"format\": \"json\",\n      \"id\": \"<string>\",\n      \"ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"lineItemIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"mediaType\": \"all\",\n      \"metrics\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"reportType\": \"<string>\",\n      \"retailerIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"revenueType\": \"<string>\",\n      \"salesChannel\": \"all\",\n      \"skuRelations\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"soldBy\": \"<string>\",\n      \"targetedKeywordTypes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"timezone\": \"UTC\",\n      \"viewAttributionWindow\": \"none\",\n      \"viewMatchLevel\": \"campaign\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0d6e1c9b-1288-4511-ae87-2aa8793326dc",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "reports",
+                    "revenue"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"endDate\": \"<dateTime>\",\n      \"startDate\": \"<dateTime>\",\n      \"accountIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"activationPlatforms\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"advertiserTypes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"budgetModels\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"buyType\": \"<string>\",\n      \"campaignIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"campaignType\": \"all\",\n      \"clickAttributionWindow\": \"none\",\n      \"clickMatchLevel\": \"campaign\",\n      \"dimensions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"format\": \"json\",\n      \"id\": \"<string>\",\n      \"ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"lineItemIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"mediaType\": \"all\",\n      \"metrics\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"reportType\": \"<string>\",\n      \"retailerIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"revenueType\": \"<string>\",\n      \"salesChannel\": \"all\",\n      \"skuRelations\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"soldBy\": \"<string>\",\n      \"targetedKeywordTypes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"timezone\": \"UTC\",\n      \"viewAttributionWindow\": \"none\",\n      \"viewMatchLevel\": \"campaign\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"attributes\": {\n      \"createdAt\": \"string\",\n      \"expiresAt\": \"string\",\n      \"fileSizeBytes\": 9070,\n      \"id\": \"string\",\n      \"md5CheckSum\": \"string\",\n      \"message\": \"string\",\n      \"rowCount\": 8490,\n      \"status\": \"pending\"\n    },\n    \"id\": \"string\",\n    \"type\": \"string\"\n  },\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\",\n        \"key_3\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"access-control\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"quota\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"availability\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"authentication\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d3e091fc-e68c-4ef5-bf27-8b6ec4dc48e4",
+          "name": "/2026-07/retail-media/reports/sync/attributed-transactions",
+          "request": {
+            "name": "/2026-07/retail-media/reports/sync/attributed-transactions",
+            "description": {
+              "content": "Returns a synchronous Attributed Transactions Report",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "reports",
+                "sync",
+                "attributed-transactions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"accountId\": \"<string>\",\n      \"endDate\": \"<dateTime>\",\n      \"startDate\": \"<dateTime>\",\n      \"campaignIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"campaignType\": \"all\",\n      \"clickAttributionWindow\": \"none\",\n      \"dimensions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"lineItemIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"mediaType\": \"all\",\n      \"metrics\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"salesChannel\": \"all\",\n      \"timezone\": \"UTC\",\n      \"viewAttributionWindow\": \"none\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "af99d37a-eecf-41f4-a4b6-15aeafc016cb",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "reports",
+                    "sync",
+                    "attributed-transactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"accountId\": \"<string>\",\n      \"endDate\": \"<dateTime>\",\n      \"startDate\": \"<dateTime>\",\n      \"campaignIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"campaignType\": \"all\",\n      \"clickAttributionWindow\": \"none\",\n      \"dimensions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"lineItemIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"mediaType\": \"all\",\n      \"metrics\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"salesChannel\": \"all\",\n      \"timezone\": \"UTC\",\n      \"viewAttributionWindow\": \"none\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"attributes\": [\n      [],\n      []\n    ],\n    \"type\": \"string\"\n  },\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"access-control\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"availability\"\n    }\n  ],\n  \"meta\": {\n    \"columns\": [\n      {\n        \"name\": \"string\",\n        \"role\": \"Interval\",\n        \"type\": \"Money\",\n        \"currency\": \"string\",\n        \"deprecated\": false,\n        \"description\": \"string\",\n        \"duration\": \"string\",\n        \"timezone\": \"string\",\n        \"title\": \"string\"\n      },\n      {\n        \"name\": \"string\",\n        \"role\": \"Interval\",\n        \"type\": \"Date\",\n        \"currency\": \"string\",\n        \"deprecated\": false,\n        \"description\": \"string\",\n        \"duration\": \"string\",\n        \"timezone\": \"string\",\n        \"title\": \"string\"\n      }\n    ],\n    \"dataCompleteThrough\": {\n      \"dateTime\": \"string\",\n      \"timezone\": \"string\"\n    },\n    \"rows\": 3662\n  },\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"quota\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"quota\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7ff89bd0-aafa-4e0c-a2db-313fbaa936ef",
+          "name": "/2026-07/retail-media/reports/sync/campaigns",
+          "request": {
+            "name": "/2026-07/retail-media/reports/sync/campaigns",
+            "description": {
+              "content": "Returns a synchronous Campaigns Report",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "reports",
+                "sync",
+                "campaigns"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"accountId\": \"<string>\",\n      \"endDate\": \"<dateTime>\",\n      \"startDate\": \"<dateTime>\",\n      \"campaignIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"campaignType\": \"all\",\n      \"clickAttributionWindow\": \"none\",\n      \"dimensions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"metrics\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"reportType\": \"summary\",\n      \"salesChannel\": \"all\",\n      \"timezone\": \"UTC\",\n      \"viewAttributionWindow\": \"none\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e8629dd2-e5bb-4640-b2df-2bfd054c3557",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "reports",
+                    "sync",
+                    "campaigns"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"accountId\": \"<string>\",\n      \"endDate\": \"<dateTime>\",\n      \"startDate\": \"<dateTime>\",\n      \"campaignIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"campaignType\": \"all\",\n      \"clickAttributionWindow\": \"none\",\n      \"dimensions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"metrics\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"reportType\": \"summary\",\n      \"salesChannel\": \"all\",\n      \"timezone\": \"UTC\",\n      \"viewAttributionWindow\": \"none\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"attributes\": [\n      [],\n      []\n    ],\n    \"type\": \"string\"\n  },\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"unknown\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"deprecation\"\n    }\n  ],\n  \"meta\": {\n    \"columns\": [\n      {\n        \"name\": \"string\",\n        \"role\": \"Dimension\",\n        \"type\": \"Duration\",\n        \"currency\": \"string\",\n        \"deprecated\": true,\n        \"description\": \"string\",\n        \"duration\": \"string\",\n        \"timezone\": \"string\",\n        \"title\": \"string\"\n      },\n      {\n        \"name\": \"string\",\n        \"role\": \"Dimension\",\n        \"type\": \"String\",\n        \"currency\": \"string\",\n        \"deprecated\": false,\n        \"description\": \"string\",\n        \"duration\": \"string\",\n        \"timezone\": \"string\",\n        \"title\": \"string\"\n      }\n    ],\n    \"dataCompleteThrough\": {\n      \"dateTime\": \"string\",\n      \"timezone\": \"string\"\n    },\n    \"rows\": 4706\n  },\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"authorization\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"authorization\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2734b108-bdb5-416f-8554-07a9c14cefea",
+          "name": "/2026-07/retail-media/reports/sync/line-items",
+          "request": {
+            "name": "/2026-07/retail-media/reports/sync/line-items",
+            "description": {
+              "content": "Returns a synchronous Line Items Report",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "reports",
+                "sync",
+                "line-items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"accountId\": \"<string>\",\n      \"endDate\": \"<dateTime>\",\n      \"startDate\": \"<dateTime>\",\n      \"campaignIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"campaignType\": \"all\",\n      \"clickAttributionWindow\": \"none\",\n      \"dimensions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"lineItemIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"metrics\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"reportType\": \"summary\",\n      \"salesChannel\": \"all\",\n      \"timezone\": \"UTC\",\n      \"viewAttributionWindow\": \"none\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ed524227-bca0-4bca-b114-c75e99ec9e4d",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "reports",
+                    "sync",
+                    "line-items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"accountId\": \"<string>\",\n      \"endDate\": \"<dateTime>\",\n      \"startDate\": \"<dateTime>\",\n      \"campaignIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"campaignType\": \"all\",\n      \"clickAttributionWindow\": \"none\",\n      \"dimensions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"lineItemIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"metrics\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"reportType\": \"summary\",\n      \"salesChannel\": \"all\",\n      \"timezone\": \"UTC\",\n      \"viewAttributionWindow\": \"none\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"attributes\": [\n      [],\n      []\n    ],\n    \"type\": \"string\"\n  },\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"unknown\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"deprecation\"\n    }\n  ],\n  \"meta\": {\n    \"columns\": [\n      {\n        \"name\": \"string\",\n        \"role\": \"Dimension\",\n        \"type\": \"Duration\",\n        \"currency\": \"string\",\n        \"deprecated\": true,\n        \"description\": \"string\",\n        \"duration\": \"string\",\n        \"timezone\": \"string\",\n        \"title\": \"string\"\n      },\n      {\n        \"name\": \"string\",\n        \"role\": \"Dimension\",\n        \"type\": \"String\",\n        \"currency\": \"string\",\n        \"deprecated\": false,\n        \"description\": \"string\",\n        \"duration\": \"string\",\n        \"timezone\": \"string\",\n        \"title\": \"string\"\n      }\n    ],\n    \"dataCompleteThrough\": {\n      \"dateTime\": \"string\",\n      \"timezone\": \"string\"\n    },\n    \"rows\": 4706\n  },\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"authorization\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"authorization\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "74463043-c041-42b5-a2e7-c82f07e9f178",
+          "name": "/2026-07/retail-media/reports/sync/real-time-performance",
+          "request": {
+            "name": "/2026-07/retail-media/reports/sync/real-time-performance",
+            "description": {
+              "content": "Returns a synchronous Real Time Performance Report. Returns empty rows; metadata includes dataCompleteThrough (latest time from streaming table in the request timezone).\r\n<br />\r\nThis endpoint is subject to specific rate limits.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "reports",
+                "sync",
+                "real-time-performance"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"startDate\": \"<dateTime>\",\n      \"accountIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"campaignIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"dimensions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"endDate\": \"<dateTime>\",\n      \"lineItemIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"metrics\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"retailerIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"timezone\": \"UTC\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "4493dc0c-f276-4ce8-bc62-b2800227538c",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "reports",
+                    "sync",
+                    "real-time-performance"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"startDate\": \"<dateTime>\",\n      \"accountIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"campaignIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"dimensions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"endDate\": \"<dateTime>\",\n      \"lineItemIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"metrics\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"retailerIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"timezone\": \"UTC\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"attributes\": [\n      [],\n      []\n    ],\n    \"type\": \"string\"\n  },\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"unknown\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"deprecation\"\n    }\n  ],\n  \"meta\": {\n    \"columns\": [\n      {\n        \"name\": \"string\",\n        \"role\": \"Dimension\",\n        \"type\": \"Duration\",\n        \"currency\": \"string\",\n        \"deprecated\": true,\n        \"description\": \"string\",\n        \"duration\": \"string\",\n        \"timezone\": \"string\",\n        \"title\": \"string\"\n      },\n      {\n        \"name\": \"string\",\n        \"role\": \"Dimension\",\n        \"type\": \"String\",\n        \"currency\": \"string\",\n        \"deprecated\": false,\n        \"description\": \"string\",\n        \"duration\": \"string\",\n        \"timezone\": \"string\",\n        \"title\": \"string\"\n      }\n    ],\n    \"dataCompleteThrough\": {\n      \"dateTime\": \"string\",\n      \"timezone\": \"string\"\n    },\n    \"rows\": 4706\n  },\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"authorization\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"authorization\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9567c043-a3f4-4e11-ba2b-cf9876545401",
+          "name": "/2026-07/retail-media/reports/unfilled-placements",
+          "request": {
+            "name": "/2026-07/retail-media/reports/unfilled-placements",
+            "description": {
+              "content": "Returns an asynchronous Unfilled Placements Report\r\n<br />\r\nThis endpoint is subject to specific rate limits.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "2026-07",
+                "retail-media",
+                "reports",
+                "unfilled-placements"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://api.criteo.com/oauth2/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"dimensions\": [\n        \"<string>\"\n      ],\n      \"endDate\": \"<dateTime>\",\n      \"metrics\": [\n        \"<string>\"\n      ],\n      \"startDate\": \"<dateTime>\",\n      \"supplyAccountIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"adServerType\": \"all\",\n      \"campaignType\": \"all\",\n      \"format\": \"json\",\n      \"timezone\": \"UTC\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e9fea425-0858-4bf3-b704-f39dd15c2400",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "2026-07",
+                    "retail-media",
+                    "reports",
+                    "unfilled-placements"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"dimensions\": [\n        \"<string>\"\n      ],\n      \"endDate\": \"<dateTime>\",\n      \"metrics\": [\n        \"<string>\"\n      ],\n      \"startDate\": \"<dateTime>\",\n      \"supplyAccountIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"adServerType\": \"all\",\n      \"campaignType\": \"all\",\n      \"format\": \"json\",\n      \"timezone\": \"UTC\"\n    },\n    \"type\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"attributes\": {\n      \"createdAt\": \"string\",\n      \"expiresAt\": \"string\",\n      \"fileSizeBytes\": 9070,\n      \"id\": \"string\",\n      \"md5CheckSum\": \"string\",\n      \"message\": \"string\",\n      \"rowCount\": 8490,\n      \"status\": \"pending\"\n    },\n    \"id\": \"string\",\n    \"type\": \"string\"\n  },\n  \"errors\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\",\n        \"key_3\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"access-control\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"quota\"\n    }\n  ],\n  \"warnings\": [\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"availability\"\n    },\n    {\n      \"code\": \"string\",\n      \"detail\": \"string\",\n      \"instance\": \"string\",\n      \"source\": {\n        \"key_0\": \"string\"\n      },\n      \"stackTrace\": \"string\",\n      \"title\": \"string\",\n      \"traceId\": \"string\",\n      \"traceIdentifier\": \"string\",\n      \"type\": \"authentication\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.criteo.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "accessTokenUrl",
+        "value": "https://api.criteo.com/oauth2/token"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "3d0fb4ab-d60a-468c-b3ec-c1629779bf3e",
+    "name": "Criteo Accounts Analytics API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Criteo API - RetailMedia",
+      "type": "text/plain"
+    }
+  }
+}

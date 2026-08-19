@@ -1,0 +1,139 @@
+generated: '2026-08-13'
+method: searched
+docs: https://developers.criteo.com/criteo-apis/docs/authorization-requests
+note: >-
+  Scope strings below were derived from the Criteo Retail Media OpenAPI security
+  requirements and then reconciled against the published authorization docs.
+  Criteo does not publish a flat scope-reference table; it documents the same
+  thing as a PERMISSION MODEL — an API application declares the "domains" it
+  needs (Accounts, Analytics, Audience, Balance, Billing, Campaign, Catalog) at
+  one of two permission levels, and an advertiser grants or denies them per
+  account through the consent dashboard. The `<Domain>_Read` / `<Domain>_Manage`
+  pairs in the spec are exactly that model expressed as OAuth2 scopes.
+permission_model:
+  documented_at: https://developers.criteo.com/criteo-apis/docs/authorization-requests
+  levels:
+  - name: Read-only
+    scope_suffix: _Read
+    description: >-
+      View an advertiser's data or campaign details without making changes —
+      e.g. an app that generates campaign reports.
+  - name: Manage
+    scope_suffix: _Manage
+    description: >-
+      Modify campaigns, ad sets, or ads — e.g. an app that automates CPC
+      settings or uploads a contact list.
+  consent:
+    dashboard: https://developers.criteo.com/criteo-apis/docs/consent-url-generation
+    granted_by: [Admin, Business Manager, Technical Manager]
+    revocable: true
+    note: >-
+      Consent is granted per portfolio/account. Revocation causes previously
+      working calls to return 403.
+  applies_to_flow: authorizationCode
+  client_credentials_note: >-
+    Client-credentials applications carry application-level scopes and are
+    limited to a single data owner; no advertiser consent step applies.
+source: openapi/hooklogic-criteo-accounts-api-openapi.yml, openapi/hooklogic-criteo-analytics-api-openapi.yml,
+  openapi/hooklogic-criteo-audience-api-openapi.yml, openapi/hooklogic-criteo-balance-api-openapi.yml,
+  openapi/hooklogic-criteo-billing-api-openapi.yml, openapi/hooklogic-criteo-campaign-api-openapi.yml,
+  openapi/hooklogic-criteo-catalog-api-openapi.yml, openapi/hooklogic-criteo-gateway-api-openapi.yml
+schemes:
+- name: oauth
+  source: openapi/hooklogic-criteo-accounts-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://api.criteo.com/oauth2/token
+  - flow: authorizationCode
+    authorizationUrl: https://api.criteo.com/oauth2
+    tokenUrl: https://api.criteo.com/oauth2/token
+- name: oauth
+  source: openapi/hooklogic-criteo-analytics-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://api.criteo.com/oauth2/token
+  - flow: authorizationCode
+    authorizationUrl: https://api.criteo.com/oauth2
+    tokenUrl: https://api.criteo.com/oauth2/token
+- name: oauth
+  source: openapi/hooklogic-criteo-audience-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://api.criteo.com/oauth2/token
+  - flow: authorizationCode
+    authorizationUrl: https://api.criteo.com/oauth2
+    tokenUrl: https://api.criteo.com/oauth2/token
+- name: oauth
+  source: openapi/hooklogic-criteo-balance-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://api.criteo.com/oauth2/token
+  - flow: authorizationCode
+    authorizationUrl: https://api.criteo.com/oauth2
+    tokenUrl: https://api.criteo.com/oauth2/token
+- name: oauth
+  source: openapi/hooklogic-criteo-billing-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://api.criteo.com/oauth2/token
+  - flow: authorizationCode
+    authorizationUrl: https://api.criteo.com/oauth2
+    tokenUrl: https://api.criteo.com/oauth2/token
+- name: oauth
+  source: openapi/hooklogic-criteo-campaign-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://api.criteo.com/oauth2/token
+  - flow: authorizationCode
+    authorizationUrl: https://api.criteo.com/oauth2
+    tokenUrl: https://api.criteo.com/oauth2/token
+- name: oauth
+  source: openapi/hooklogic-criteo-catalog-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://api.criteo.com/oauth2/token
+  - flow: authorizationCode
+    authorizationUrl: https://api.criteo.com/oauth2
+    tokenUrl: https://api.criteo.com/oauth2/token
+- name: oauth
+  source: openapi/hooklogic-criteo-gateway-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://api.criteo.com/oauth2/token
+  - flow: authorizationCode
+    authorizationUrl: https://api.criteo.com/oauth2
+    tokenUrl: https://api.criteo.com/oauth2/token
+scopes:
+- scope: RetailMedia_Accounts_Manage
+  sources:
+  - openapi/hooklogic-criteo-accounts-api-openapi.yml
+- scope: RetailMedia_Accounts_Read
+  sources:
+  - openapi/hooklogic-criteo-accounts-api-openapi.yml
+- scope: RetailMedia_Analytics_Read
+  sources:
+  - openapi/hooklogic-criteo-analytics-api-openapi.yml
+- scope: RetailMedia_Audience_Manage
+  sources:
+  - openapi/hooklogic-criteo-audience-api-openapi.yml
+- scope: RetailMedia_Audience_Read
+  sources:
+  - openapi/hooklogic-criteo-audience-api-openapi.yml
+- scope: RetailMedia_Balance_Manage
+  sources:
+  - openapi/hooklogic-criteo-balance-api-openapi.yml
+- scope: RetailMedia_Balance_Read
+  sources:
+  - openapi/hooklogic-criteo-balance-api-openapi.yml
+- scope: RetailMedia_Billing_Read
+  sources:
+  - openapi/hooklogic-criteo-billing-api-openapi.yml
+- scope: RetailMedia_Campaign_Manage
+  sources:
+  - openapi/hooklogic-criteo-campaign-api-openapi.yml
+- scope: RetailMedia_Campaign_Read
+  sources:
+  - openapi/hooklogic-criteo-campaign-api-openapi.yml
+- scope: RetailMedia_Catalog_Manage
+  sources:
+  - openapi/hooklogic-criteo-catalog-api-openapi.yml

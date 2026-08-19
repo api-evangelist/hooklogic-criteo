@@ -1,8 +1,13 @@
-generated: '2026-07-19'
+generated: '2026-08-13'
 method: searched
 note: >-
-  Probed the /.well-known/ discovery surface on the Criteo API and website hosts.
-  A valid RFC 9116 security.txt is served on both api.criteo.com and www.criteo.com.
+  Probed the /.well-known/ discovery surface on the Criteo API, corporate and
+  developer-portal hosts. A valid RFC 9116 security.txt is served on both
+  api.criteo.com and www.criteo.com. The developer-portal host serves the
+  interesting agent surface: a real A2A agent card, an MCP server declaration,
+  and a published Agent Skill. api.criteo.com answers every miss with a JSON
+  RFC 7807 error body carrying a traceId (a real 404, not an SPA shell);
+  www.criteo.com answers misses with an HTML shell and a 404 status.
 hosts:
 - host: https://api.criteo.com
   documents:
@@ -13,9 +18,15 @@ hosts:
     status: 404
   - path: /.well-known/oauth-authorization-server
     status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
   - path: /.well-known/api-catalog
     status: 404
   - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
     status: 404
 - host: https://www.criteo.com
   documents:
@@ -25,11 +36,43 @@ hosts:
     status: 404
   - path: /.well-known/api-catalog
     status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
 - host: https://developers.criteo.com
   documents:
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: ../a2a/hooklogic-criteo-agent-card.json
+    detail: >-
+      Real A2A Agent Card (name "Criteo Docs", protocolVersion 0.3). Graded
+      conformant — see a2a/hooklogic-criteo-a2a.yml.
+  - path: /.well-known/mcp.json
+    status: 200
+    detail: >-
+      Declares transport http and the MCP endpoint. Recorded in
+      mcp/hooklogic-criteo-mcp.yml; the callable endpoint on this host is
+      https://developers.criteo.com/mcp.
+  - path: /.well-known/agent-skills/criteo/skill.md
+    status: 200
+    file: ../skills/hooklogic-criteo-criteo-published-skill.md
+    detail: Provider-published Agent Skill, saved verbatim.
   - path: /.well-known/security.txt
     status: 404
   - path: /.well-known/openid-configuration
     status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
   - path: /.well-known/api-catalog
     status: 404
+non_well_known_discovery:
+- url: https://developers.criteo.com/llms.txt
+  status: 200
+  file: ../llms/hooklogic-criteo-llms.txt
+- url: https://developers.criteo.com/llms-full.txt
+  status: 200
+  detail: Served, but intentionally not committed (see .gitignore).
+- url: https://developers.criteo.com/AGENTS.md
+  status: 404
+checked: '2026-08-13'

@@ -1,12 +1,45 @@
-generated: '2026-07-19'
-method: derived
+generated: '2026-08-13'
+method: searched
 source: openapi/hooklogic-criteo-retailmedia-openapi-original.json
 note: >-
   Cross-cutting standards conformance for the Criteo Retail Media API, derived
-  from the OpenAPI security scheme and the published platform guides. No public
-  trust center or named certification program (SOC 2 / ISO 27001) was found for
-  the developer API surface, so no Compliance pointer is emitted.
+  from the OpenAPI security scheme and the published platform guides, then
+  extended with probed agent-surface standards. Criteo DOES run a public trust
+  center at security.criteo.com naming SOC 2 and ISO/IEC 27001 (this corrects
+  the previous round, which recorded none) — see
+  security/hooklogic-criteo-trust-center.yml.
+compliance:
+  trust_center: https://security.criteo.com/
+  certifications:
+  - SOC 2
+  - ISO/IEC 27001
 standards:
+- id: a2a-agent-card
+  conforms: true
+  evidence: >-
+    /.well-known/agent-card.json served 200 on developers.criteo.com;
+    capabilities is an object, protocolVersion present ('0.3'), skills is an
+    array. Graded conformant in a2a/hooklogic-criteo-a2a.yml.
+- id: mcp
+  conforms: true
+  evidence: >-
+    POST tools/list to https://developers.criteo.com/mcp returns 200 with three
+    tools carrying inputSchema; /.well-known/mcp.json declares transport http.
+    Documentation scope only — no REST operation is exposed as a tool.
+- id: agent-skills
+  conforms: true
+  evidence: >-
+    /.well-known/agent-skills/criteo/skill.md served 200 with SKILL.md
+    frontmatter (name, description, metadata) and advertised from the agent card.
+- id: llms-txt
+  conforms: true
+  evidence: https://developers.criteo.com/llms.txt served 200, 92KB, plus llms-full.txt
+- id: soc2
+  conforms: true
+  evidence: named on the security.criteo.com trust center
+- id: iso-27001
+  conforms: true
+  evidence: named on the security.criteo.com trust center
 - id: oauth2
   conforms: true
   evidence: openapi securitySchemes type oauth2 (clientCredentials + authorizationCode flows)

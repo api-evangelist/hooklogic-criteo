@@ -1,0 +1,14 @@
+generated: '2026-08-13'
+method: searched
+probe: true
+source: https://security.criteo.com/
+url: https://security.criteo.com/
+certifications:
+- SOC 2
+- ISO 27001
+evidence:
+- source: https://security.criteo.com/
+  keywords:
+  - soc 2
+  - iso/iec 27001
+  - trust center

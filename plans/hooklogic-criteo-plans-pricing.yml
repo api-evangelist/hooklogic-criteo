@@ -1,0 +1,49 @@
+generated: '2026-08-13'
+method: searched
+source: https://developers.criteo.com/retail-media/docs/is-criteo-api-for-you
+note: >-
+  Criteo publishes NO plans, tiers or list prices for the Retail Media API (the
+  HookLogic product line). There is no pricing page on criteo.com — both
+  /pricing and /pricing/ return 404 — and the developer portal frames access by
+  PARTY TYPE rather than by plan: brands and agencies build with the API under
+  their existing Criteo advertising relationship, retailers are told to "reach
+  out to your Criteo representative", and marketplaces are onboarded through
+  Private Market. API access itself is not sold as a metered product; the money
+  changes hands as retail-media ad spend, billed through the Balance and Billing
+  endpoints, at rates negotiated per contract. Access to the API requires a
+  partner account plus explicit advertiser consent, so nothing here is
+  self-serve priced.
+plan_count: 0
+pricing_model: contract / negotiated ad spend (no published API plans)
+pricing_url: null
+currency: null
+free_tier: false
+access_gate:
+- Criteo partner account (developer account + organization + API application)
+- Advertiser consent granted per account through the consent dashboard
+- Party-type qualification (brand, agency, partner, retailer, marketplace)
+billing_surface:
+  note: >-
+    Spend is managed through the API rather than priced by it. Balances are
+    funded and campaigns drawn against them; partner billing reports are pulled
+    asynchronously.
+  operations:
+  - CreateBalanceByAccountId
+  - AddFundsByAccountAndBalanceId
+  - GetBalanceHistory
+  - CreatePartnerBillingReportRequestV1
+  - GetPartnerBillingReportOutputV1
+  see: openapi/hooklogic-criteo-billing-api-openapi.yml
+evidence:
+- url: https://www.criteo.com/pricing/
+  status: 404
+- url: https://www.criteo.com/pricing
+  status: 404
+- url: https://developers.criteo.com/retail-media/docs/is-criteo-api-for-you.md
+  status: 200
+  detail: >-
+    Access is described by audience (Brand / Agencies / Partner / Retailers /
+    Marketplaces), with no price, plan or quota attached to any of them.
+- url: https://developers.criteo.com/criteo-apis/docs/create-your-partner-account.md
+  status: 200
+  detail: Partner-account onboarding, no pricing.
