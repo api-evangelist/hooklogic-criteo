@@ -38,6 +38,14 @@ tags:
 - Commerce
 - Retail Media
 - Advertising
+- E-Commerce
+- Marketing
+- Retail
+tags_raw:
+- Company
+- Commerce
+- Retail Media
+- Advertising
 - E-commerce
 - Marketing
 - Retail
@@ -49,6 +57,8 @@ apis:
   humanURL: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
   baseURL: https://api.criteo.com
   tags:
+  - Account
+  tags_raw:
   - Accounts
   properties:
   - type: OpenAPI
@@ -91,6 +101,8 @@ apis:
   humanURL: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
   baseURL: https://api.criteo.com
   tags:
+  - Balances
+  tags_raw:
   - Balance
   properties:
   - type: OpenAPI
