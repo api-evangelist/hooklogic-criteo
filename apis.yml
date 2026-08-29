@@ -185,6 +185,9 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: CapabilityMap
+  url: capabilities/hooklogic-criteo-capability-edges.yml
+  name: HookLogic (Criteo) Business Capability Map
 - type: TrustCenter
   url: security/hooklogic-criteo-trust-center.yml
 - type: Compliance
