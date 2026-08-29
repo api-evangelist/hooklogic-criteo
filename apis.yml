@@ -9,6 +9,18 @@ description: >-
   retail-media campaigns. It uses OAuth 2.0 (client-credentials and
   authorization-code flows), RFC 7807 error bodies, date-based API versioning,
   and ships officially supported Python, PHP, and Java SDKs.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
