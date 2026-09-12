@@ -185,6 +185,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Website
+  url: https://www.criteo.com/
 - type: CapabilityMap
   url: capabilities/hooklogic-criteo-capability-edges.yml
   name: HookLogic (Criteo) Business Capability Map
