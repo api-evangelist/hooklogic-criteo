@@ -99,6 +99,8 @@ apis:
   humanURL: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
   baseURL: https://api.criteo.com
   tags:
+  - Audiences
+  tags_raw:
   - Audience
   properties:
   - type: OpenAPI
@@ -171,6 +173,8 @@ apis:
   humanURL: https://developers.criteo.com/retail-media/docs/welcome-to-criteo
   baseURL: https://api.criteo.com
   tags:
+  - Gateways
+  tags_raw:
   - Gateway
   properties:
   - type: OpenAPI
