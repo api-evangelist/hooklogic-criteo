@@ -1,14 +1,7 @@
 {
   "provider": "hooklogic-criteo",
   "sources": [
-    "hooklogic-criteo-accounts-api-openapi.yml",
-    "hooklogic-criteo-analytics-api-openapi.yml",
-    "hooklogic-criteo-audience-api-openapi.yml",
-    "hooklogic-criteo-balance-api-openapi.yml",
-    "hooklogic-criteo-billing-api-openapi.yml",
-    "hooklogic-criteo-campaign-api-openapi.yml",
-    "hooklogic-criteo-catalog-api-openapi.yml",
-    "hooklogic-criteo-gateway-api-openapi.yml"
+    "_original/hooklogic-criteo-retailmedia-openapi-original.json"
   ],
   "outputs": [
     "hooklogic-criteo-accounts-api-openapi.yml",
@@ -23,6 +16,19 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "hooklogic-criteo-retailmedia-openapi-original.json: upgraded openapi 3.0.1 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "hooklogic-criteo-accounts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "hooklogic-criteo-analytics-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "hooklogic-criteo-audience-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "hooklogic-criteo-balance-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "hooklogic-criteo-billing-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "hooklogic-criteo-campaign-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "hooklogic-criteo-catalog-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "hooklogic-criteo-gateway-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

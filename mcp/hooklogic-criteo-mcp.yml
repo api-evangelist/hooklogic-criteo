@@ -11,12 +11,11 @@ note: 'Criteo serves a LIVE remote MCP server from its developer-portal host. PO
   as a usable endpoint. The 114-entry candidate_tools block below remains DERIVED one-per-operation from
   the Retail Media OpenAPI; Criteo ships no MCP server that exposes those operations.'
 deployment:
-  mode: remote
-  endpoint: https://developers.criteo.com/mcp
-  auth: none
-  verified: probed
-  transport: streamable-http (text/event-stream response)
-  checked: '2026-08-13'
+  mode: none
+  verified: derived
+  tools: 114
+  checked: '2026-08-12'
+  source: catalog MCP census
 server:
   name: Criteo Docs
   endpoint: https://developers.criteo.com/mcp

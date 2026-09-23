@@ -1,6 +1,6 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: Criteo Accounts Gateway API
+  title: Criteo Gateway API
   description: Criteo API - RetailMedia
   version: 2026-07
 servers:
@@ -28,64 +28,82 @@ paths:
       - oauth: []
 components:
   schemas:
-    ApplicationSummaryModel:
+    ApplicationSummaryModelResource:
+      type:
+      - object
+      - 'null'
+      properties:
+        attributes:
+          $ref: '#/components/schemas/ApplicationSummaryModel'
+        type:
+          type:
+          - string
+          - 'null'
+      description: A top-level object that encapsulates a Criteo API response for a single value
+    ApplicationSummaryModelResponse:
       type: object
       properties:
-        applicationId:
-          type: integer
-          format: int32
-          nullable: true
-        criteoService:
-          type: string
-          nullable: true
-        description:
-          type: string
-          nullable: true
-        name:
-          type: string
-          nullable: true
-        organizationId:
-          type: integer
-          format: int32
-          nullable: true
-      description: Used for the /me endpoint. Contains information about the currently authenticated application that we accept to give to our clients
-      nullable: true
+        data:
+          $ref: '#/components/schemas/ApplicationSummaryModelResource'
+        errors:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          readOnly: true
+        warnings:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          readOnly: true
+      description: A top-level object that encapsulates a Criteo API response for a single value
     CommonProblem:
       type: object
       properties:
         code:
-          type: string
+          type:
+          - string
+          - 'null'
           description: A machine-readable error code, expressed as a string value.
-          nullable: true
         detail:
-          type: string
+          type:
+          - string
+          - 'null'
           description: A human-readable explanation specific to this occurrence of the problem
-          nullable: true
         instance:
-          type: string
+          type:
+          - string
+          - 'null'
           description: A URI that identifies the specific occurrence of the problem.
-          nullable: true
         source:
-          type: object
+          type:
+          - object
+          - 'null'
           additionalProperties:
             type: string
           description: A machine-readable structure to reference to the exact location(s) causing the error(s)
-          nullable: true
         stackTrace:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         title:
-          type: string
+          type:
+          - string
+          - 'null'
           description: A short human-readable description of the problem type
-          nullable: true
         traceId:
-          type: string
+          type:
+          - string
+          - 'null'
           description: The request correlation ID this problem comes from.
-          nullable: true
         traceIdentifier:
-          type: string
+          type:
+          - string
+          - 'null'
           description: The request correlation ID this problem comes from. (deprecated, use traceId instead)
-          nullable: true
         type:
           enum:
           - unknown
@@ -96,38 +114,39 @@ components:
           - deprecation
           - quota
           - validation
-          type: string
+          type:
+          - string
+          - 'null'
           description: The problem's category.
-          nullable: true
       description: Common problem object.
-    ApplicationSummaryModelResource:
-      type: object
+    ApplicationSummaryModel:
+      type:
+      - object
+      - 'null'
       properties:
-        attributes:
-          $ref: '#/components/schemas/ApplicationSummaryModel'
-        type:
-          type: string
-          nullable: true
-      description: A top-level object that encapsulates a Criteo API response for a single value
-      nullable: true
-    ApplicationSummaryModelResponse:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/ApplicationSummaryModelResource'
-        errors:
-          type: array
-          items:
-            $ref: '#/components/schemas/CommonProblem'
-          nullable: true
-          readOnly: true
-        warnings:
-          type: array
-          items:
-            $ref: '#/components/schemas/CommonProblem'
-          nullable: true
-          readOnly: true
-      description: A top-level object that encapsulates a Criteo API response for a single value
+        applicationId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        criteoService:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        name:
+          type:
+          - string
+          - 'null'
+        organizationId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+      description: Used for the /me endpoint. Contains information about the currently authenticated application that we accept to give to our clients
   securitySchemes:
     oauth:
       type: oauth2
