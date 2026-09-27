@@ -70,16 +70,6 @@ paths:
         - RetailMedia_Catalog_Manage
 components:
   schemas:
-    BatchStoreInventoryDeleteRequest:
-      required:
-      - data
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/DeleteEntry'
-      description: Batch to plan removals in Store inventory
     StoreInventoryDelete:
       required:
       - batchId
@@ -107,6 +97,29 @@ components:
           items:
             $ref: '#/components/schemas/InsertEntry'
       description: Batch to be stored in Store inventories
+    BatchStoreInventoryDeleteRequest:
+      required:
+      - data
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/DeleteEntry'
+      description: Batch to plan removals in Store inventory
+    DeleteEntry:
+      required:
+      - attributes
+      - type
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/StoreInventoryDelete'
+        type:
+          enum:
+          - Delete
+          type: string
+      description: Defines a reference to inventory
     StoreInventoryUpsert:
       required:
       - availability
@@ -153,19 +166,6 @@ components:
           - Upsert
           type: string
       description: Defines a pack of inventories
-    DeleteEntry:
-      required:
-      - attributes
-      - type
-      type: object
-      properties:
-        attributes:
-          $ref: '#/components/schemas/StoreInventoryDelete'
-        type:
-          enum:
-          - Delete
-          type: string
-      description: Defines a reference to inventory
   securitySchemes:
     oauth:
       type: oauth2

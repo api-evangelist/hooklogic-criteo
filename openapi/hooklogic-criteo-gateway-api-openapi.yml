@@ -28,18 +28,6 @@ paths:
       - oauth: []
 components:
   schemas:
-    ApplicationSummaryModelResource:
-      type:
-      - object
-      - 'null'
-      properties:
-        attributes:
-          $ref: '#/components/schemas/ApplicationSummaryModel'
-        type:
-          type:
-          - string
-          - 'null'
-      description: A top-level object that encapsulates a Criteo API response for a single value
     ApplicationSummaryModelResponse:
       type: object
       properties:
@@ -119,6 +107,18 @@ components:
           - 'null'
           description: The problem's category.
       description: Common problem object.
+    ApplicationSummaryModelResource:
+      type:
+      - object
+      - 'null'
+      properties:
+        attributes:
+          $ref: '#/components/schemas/ApplicationSummaryModel'
+        type:
+          type:
+          - string
+          - 'null'
+      description: A top-level object that encapsulates a Criteo API response for a single value
     ApplicationSummaryModel:
       type:
       - object

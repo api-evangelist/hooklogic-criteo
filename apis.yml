@@ -53,6 +53,7 @@ tags:
 - E-Commerce
 - Marketing
 - Retail
+- A2A
 tags_raw:
 - Company
 - Commerce
@@ -62,6 +63,7 @@ tags_raw:
 - Marketing
 - Retail
 - APIs
+- A2A
 apis:
 - aid: hooklogic-criteo:hooklogic-criteo-accounts-api
   name: HookLogic (Criteo) Accounts API
@@ -283,3 +285,10 @@ x-enrichment:
   status: enriched
   artifacts_added: 9
   pass: local-v1
+x-a2a:
+  verified: true
+  probed: '2026-09-26'
+  url: "https://developers.criteo.com/.well-known/agent-card.json"
+  grade: "conformant"
+  protocol_version: "0.3"
+  control: 404

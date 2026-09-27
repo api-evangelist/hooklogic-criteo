@@ -331,21 +331,41 @@ paths:
         - RetailMedia_Balance_Read
 components:
   schemas:
-    BalanceCampaign202110:
-      type: object
-      description: Campaigns related to the balance
-    ResourceOfUpdateBalanceModelV2:
+    UpdateBalanceModelV2Request:
       type: object
       properties:
-        attributes:
-          $ref: '#/components/schemas/UpdateBalanceModelV2'
-        id:
-          type: string
-          description: Id of the entity
-        type:
-          type: string
-          description: Canonical type name of the entity
-      description: A class that represents a domain entity exposed by an API
+        data:
+          $ref: '#/components/schemas/ResourceOfUpdateBalanceModelV2'
+      description: A top-level object that encapsulates a Criteo API request for a single entity
+    UpdateBalanceModelV2:
+      type: object
+      properties:
+        endDate:
+          type:
+          - string
+          - 'null'
+          description: End date of the balance in the format YYYY-MM-DD.
+        memo:
+          type:
+          - string
+          - 'null'
+          description: Memo.
+        name:
+          type:
+          - string
+          - 'null'
+          description: Name of the balance.
+        poNumber:
+          type:
+          - string
+          - 'null'
+          description: Purchase Order number.
+        startDate:
+          type:
+          - string
+          - 'null'
+          description: Start date of the balance in the format YYYY-MM-DD.
+      description: An object that represents the available options to set when updating a Retail Media Balance.
     CommonProblem:
       type: object
       properties:
@@ -405,41 +425,63 @@ components:
           - 'null'
           description: The problem's category.
       description: Common problem object.
-    AddFundsToBalanceV2Request:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/ResourceOfAddFundsToBalanceV2'
-      description: A top-level object that encapsulates a Criteo API request for a single entity
-    ChangeDatesOfBalanceV2Request:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/ResourceOfChangeDatesOfBalanceV2'
-      description: A top-level object that encapsulates a Criteo API request for a single entity
-    Metadata:
+    PageOfBalanceHistoryChangeDataCaptureV1:
       required:
-      - limit
-      - offset
+      - data
+      - meta
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/BalanceHistoryChangeDataCaptureV1'
+        meta:
+          $ref: '#/components/schemas/Metadata'
+      additionalProperties: false
+      description: A wrapper class to return a single page of items with metadata for offset and limit based paging.
+    ResourceOfAddFundsToBalanceV2:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/AddFundsToBalanceV2'
+        id:
+          type: string
+          description: Id of the entity
+        type:
+          type: string
+          description: Canonical type name of the entity
+      description: A class that represents a domain entity exposed by an API
+    ResourceOfBalanceResponseV2:
       type:
       - object
       - 'null'
       properties:
-        count:
+        attributes:
+          $ref: '#/components/schemas/BalanceResponseV2'
+        id:
           type:
-          - integer
+          - string
           - 'null'
-          format: int64
-        limit:
-          type: integer
-          description: The number of elements to be returned.
-          format: int32
-        offset:
-          type: integer
-          description: The (zero-based) starting offset in the collection.
-          format: int32
-      additionalProperties: false
-      description: Metadata related to the current request.
+          description: Id of the entity
+        type:
+          type:
+          - string
+          - 'null'
+          description: Canonical type name of the entity
+      description: A class that represents a domain entity exposed by an API
+    ChangeDatesOfBalanceV2:
+      type: object
+      properties:
+        endDate:
+          type: string
+          description: End date of the balance in the format YYYY-MM-DD.
+        memo:
+          type: string
+          description: Memo.
+        startDate:
+          type: string
+          description: Start date of the balance in the format YYYY-MM-DD.
+      description: An object that represents the available options to modify schedule of a balance.
     CreateBalanceV2:
       required:
       - name
@@ -480,11 +522,14 @@ components:
           type: string
           description: Start date of the balance in the format YYYY-MM-DD.
       description: An object that represents the available options to set when creating a Retail Media Balance
-    CreateBalanceV2Request:
+    BalanceCampaign202110:
+      type: object
+      description: Campaigns related to the balance
+    AddFundsToBalanceV2Request:
       type: object
       properties:
         data:
-          $ref: '#/components/schemas/ResourceOfCreateBalanceV2'
+          $ref: '#/components/schemas/ResourceOfAddFundsToBalanceV2'
       description: A top-level object that encapsulates a Criteo API request for a single entity
     BalanceHistoryChangeDataCaptureV1:
       required:
@@ -525,42 +570,47 @@ components:
           description: Username who modified the insertion order.
       additionalProperties: false
       description: Data model represents the data change capture of balance history.
-    UpdateBalanceModelV2:
+    BalanceResponseV2PagedListResponse:
       type: object
       properties:
-        endDate:
-          type:
-          - string
-          - 'null'
-          description: End date of the balance in the format YYYY-MM-DD.
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/ResourceOfBalanceResponseV2'
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          readOnly: true
+        metadata:
+          $ref: '#/components/schemas/PageMetadata'
+        warnings:
+          type: array
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          readOnly: true
+      description: Data model for a paged list of response resources
+    AddFundsToBalanceV2:
+      required:
+      - deltaAmount
+      type: object
+      properties:
+        deltaAmount:
+          type: number
+          description: Amount of billable funds to be added / decreased allotted to the balance.
+          format: double
         memo:
-          type:
-          - string
-          - 'null'
-          description: Memo.
-        name:
-          type:
-          - string
-          - 'null'
-          description: Name of the balance.
+          type: string
+          description: Memo
         poNumber:
-          type:
-          - string
-          - 'null'
+          type: string
           description: Purchase Order number.
-        startDate:
-          type:
-          - string
-          - 'null'
-          description: Start date of the balance in the format YYYY-MM-DD.
-      description: An object that represents the available options to set when updating a Retail Media Balance.
-    ResourceOfBalanceResponseV2:
-      type:
-      - object
-      - 'null'
+      description: An object that represents the available options of adding funds to a balance.
+    ResourceOfBalanceCampaign202110:
+      type: object
       properties:
         attributes:
-          $ref: '#/components/schemas/BalanceResponseV2'
+          $ref: '#/components/schemas/BalanceCampaign202110'
         id:
           type:
           - string
@@ -572,24 +622,6 @@ components:
           - 'null'
           description: Canonical type name of the entity
       description: A class that represents a domain entity exposed by an API
-    BalanceResponseV2Response:
-      type:
-      - object
-      - 'null'
-      properties:
-        data:
-          $ref: '#/components/schemas/ResourceOfBalanceResponseV2'
-        errors:
-          type: array
-          items:
-            $ref: '#/components/schemas/CommonProblem'
-          readOnly: true
-        warnings:
-          type: array
-          items:
-            $ref: '#/components/schemas/CommonProblem'
-          readOnly: true
-      description: A top-level object that encapsulates a Criteo API response for a single entity
     BalanceResponseV2:
       required:
       - name
@@ -679,27 +711,31 @@ components:
           description: Update time of the balance.
           format: date-time
       description: A Retail Media Balance used to determine the funds available for any or all campaigns in an account
-    ResourceOfBalanceCampaign202110:
+    BalanceCampaign202110PagedListResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/ResourceOfBalanceCampaign202110'
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          readOnly: true
+        metadata:
+          $ref: '#/components/schemas/PageMetadata'
+        warnings:
+          type: array
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          readOnly: true
+      description: Data model for a paged list of response resources
+    ResourceOfCreateBalanceV2:
       type: object
       properties:
         attributes:
-          $ref: '#/components/schemas/BalanceCampaign202110'
-        id:
-          type:
-          - string
-          - 'null'
-          description: Id of the entity
-        type:
-          type:
-          - string
-          - 'null'
-          description: Canonical type name of the entity
-      description: A class that represents a domain entity exposed by an API
-    ResourceOfAddFundsToBalanceV2:
-      type: object
-      properties:
-        attributes:
-          $ref: '#/components/schemas/AddFundsToBalanceV2'
+          $ref: '#/components/schemas/CreateBalanceV2'
         id:
           type: string
           description: Id of the entity
@@ -707,19 +743,6 @@ components:
           type: string
           description: Canonical type name of the entity
       description: A class that represents a domain entity exposed by an API
-    ChangeDatesOfBalanceV2:
-      type: object
-      properties:
-        endDate:
-          type: string
-          description: End date of the balance in the format YYYY-MM-DD.
-        memo:
-          type: string
-          description: Memo.
-        startDate:
-          type: string
-          description: Start date of the balance in the format YYYY-MM-DD.
-      description: An object that represents the available options to modify schedule of a balance.
     PageMetadata:
       required:
       - currentPageIndex
@@ -752,64 +775,24 @@ components:
           format: int64
       additionalProperties: false
       description: Metadata related to the current request
-    ResourceOfChangeDatesOfBalanceV2:
-      type: object
-      properties:
-        attributes:
-          $ref: '#/components/schemas/ChangeDatesOfBalanceV2'
-        id:
-          type: string
-          description: Id of the entity
-        type:
-          type: string
-          description: Canonical type name of the entity
-      description: A class that represents a domain entity exposed by an API
-    ResourceOfCreateBalanceV2:
-      type: object
-      properties:
-        attributes:
-          $ref: '#/components/schemas/CreateBalanceV2'
-        id:
-          type: string
-          description: Id of the entity
-        type:
-          type: string
-          description: Canonical type name of the entity
-      description: A class that represents a domain entity exposed by an API
-    PageOfBalanceHistoryChangeDataCaptureV1:
-      required:
-      - data
-      - meta
-      type: object
+    BalanceResponseV2Response:
+      type:
+      - object
+      - 'null'
       properties:
         data:
-          type: array
-          items:
-            $ref: '#/components/schemas/BalanceHistoryChangeDataCaptureV1'
-        meta:
-          $ref: '#/components/schemas/Metadata'
-      additionalProperties: false
-      description: A wrapper class to return a single page of items with metadata for offset and limit based paging.
-    BalanceCampaign202110PagedListResponse:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/ResourceOfBalanceCampaign202110'
+          $ref: '#/components/schemas/ResourceOfBalanceResponseV2'
         errors:
           type: array
           items:
             $ref: '#/components/schemas/CommonProblem'
           readOnly: true
-        metadata:
-          $ref: '#/components/schemas/PageMetadata'
         warnings:
           type: array
           items:
             $ref: '#/components/schemas/CommonProblem'
           readOnly: true
-      description: Data model for a paged list of response resources
+      description: A top-level object that encapsulates a Criteo API response for a single entity
     ChangeDetailsV1:
       type: object
       properties:
@@ -830,48 +813,65 @@ components:
           description: Previous value of a property of the insertion order.
       additionalProperties: false
       description: Change details of a property of the balance.
-    UpdateBalanceModelV2Request:
+    CreateBalanceV2Request:
       type: object
       properties:
         data:
-          $ref: '#/components/schemas/ResourceOfUpdateBalanceModelV2'
+          $ref: '#/components/schemas/ResourceOfCreateBalanceV2'
       description: A top-level object that encapsulates a Criteo API request for a single entity
-    AddFundsToBalanceV2:
-      required:
-      - deltaAmount
+    ResourceOfUpdateBalanceModelV2:
       type: object
       properties:
-        deltaAmount:
-          type: number
-          description: Amount of billable funds to be added / decreased allotted to the balance.
-          format: double
-        memo:
+        attributes:
+          $ref: '#/components/schemas/UpdateBalanceModelV2'
+        id:
           type: string
-          description: Memo
-        poNumber:
+          description: Id of the entity
+        type:
           type: string
-          description: Purchase Order number.
-      description: An object that represents the available options of adding funds to a balance.
-    BalanceResponseV2PagedListResponse:
+          description: Canonical type name of the entity
+      description: A class that represents a domain entity exposed by an API
+    ResourceOfChangeDatesOfBalanceV2:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/ChangeDatesOfBalanceV2'
+        id:
+          type: string
+          description: Id of the entity
+        type:
+          type: string
+          description: Canonical type name of the entity
+      description: A class that represents a domain entity exposed by an API
+    ChangeDatesOfBalanceV2Request:
       type: object
       properties:
         data:
-          type: array
-          items:
-            $ref: '#/components/schemas/ResourceOfBalanceResponseV2'
-        errors:
-          type: array
-          items:
-            $ref: '#/components/schemas/CommonProblem'
-          readOnly: true
-        metadata:
-          $ref: '#/components/schemas/PageMetadata'
-        warnings:
-          type: array
-          items:
-            $ref: '#/components/schemas/CommonProblem'
-          readOnly: true
-      description: Data model for a paged list of response resources
+          $ref: '#/components/schemas/ResourceOfChangeDatesOfBalanceV2'
+      description: A top-level object that encapsulates a Criteo API request for a single entity
+    Metadata:
+      required:
+      - limit
+      - offset
+      type:
+      - object
+      - 'null'
+      properties:
+        count:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        limit:
+          type: integer
+          description: The number of elements to be returned.
+          format: int32
+        offset:
+          type: integer
+          description: The (zero-based) starting offset in the collection.
+          format: int32
+      additionalProperties: false
+      description: Metadata related to the current request.
   securitySchemes:
     oauth:
       type: oauth2

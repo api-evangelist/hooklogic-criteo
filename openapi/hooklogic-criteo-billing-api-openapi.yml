@@ -108,25 +108,6 @@ components:
           description: Type of the resource.
       additionalProperties: false
       description: A domain entity exposed by the API, identified by a unique id.
-    ValueResourceInputPartnerBillingReportRequestV1:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/ValueResourcePartnerBillingReportRequestV1'
-      additionalProperties: false
-      description: A top-level object that encapsulates a Criteo API request for a single value object.
-    ValueResourcePartnerBillingReportRequestV1:
-      type: object
-      properties:
-        attributes:
-          $ref: '#/components/schemas/PartnerBillingReportRequestV1'
-        type:
-          type:
-          - string
-          - 'null'
-          description: Type of the resource.
-      additionalProperties: false
-      description: A value resource exposed by the API.
     EntityResourceOutcomePartnerBillingReportStatusV1:
       type: object
       properties:
@@ -246,6 +227,25 @@ components:
           format: date
       additionalProperties: false
       description: The request object of a Partner Billing Report.
+    ValueResourcePartnerBillingReportRequestV1:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/PartnerBillingReportRequestV1'
+        type:
+          type:
+          - string
+          - 'null'
+          description: Type of the resource.
+      additionalProperties: false
+      description: A value resource exposed by the API.
+    ValueResourceInputPartnerBillingReportRequestV1:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/ValueResourcePartnerBillingReportRequestV1'
+      additionalProperties: false
+      description: A top-level object that encapsulates a Criteo API request for a single value object.
     PartnerBillingReportStatusV1:
       required:
       - createdAt
