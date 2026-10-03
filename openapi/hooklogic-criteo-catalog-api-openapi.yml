@@ -70,6 +70,26 @@ paths:
         - RetailMedia_Catalog_Manage
 components:
   schemas:
+    BatchStoreInventoryDeleteRequest:
+      required:
+      - data
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/DeleteEntry'
+      description: Batch to plan removals in Store inventory
+    BatchStoreInventoryRequest:
+      required:
+      - data
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/InsertEntry'
+      description: Batch to be stored in Store inventories
     StoreInventoryDelete:
       required:
       - batchId
@@ -87,39 +107,19 @@ components:
           type: string
           description: Identifies the store, for the customer
       description: References a store inventory to be deleted. See StoreInventoryUpsert
-    BatchStoreInventoryRequest:
-      required:
-      - data
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/InsertEntry'
-      description: Batch to be stored in Store inventories
-    BatchStoreInventoryDeleteRequest:
-      required:
-      - data
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/DeleteEntry'
-      description: Batch to plan removals in Store inventory
-    DeleteEntry:
+    InsertEntry:
       required:
       - attributes
       - type
       type: object
       properties:
         attributes:
-          $ref: '#/components/schemas/StoreInventoryDelete'
+          $ref: '#/components/schemas/StoreInventoryUpsert'
         type:
           enum:
-          - Delete
+          - Upsert
           type: string
-      description: Defines a reference to inventory
+      description: Defines a pack of inventories
     StoreInventoryUpsert:
       required:
       - availability
@@ -153,19 +153,19 @@ components:
           type: string
           description: Identifies the store, for the customer
       description: Defines a store inventory to be upserted. Inspired from google spec.See https://developers.google.com/shopping-content/reference/rest/v2.1/localinventory/custombatch#LocalinventoryCustomBatchRequestEntry
-    InsertEntry:
+    DeleteEntry:
       required:
       - attributes
       - type
       type: object
       properties:
         attributes:
-          $ref: '#/components/schemas/StoreInventoryUpsert'
+          $ref: '#/components/schemas/StoreInventoryDelete'
         type:
           enum:
-          - Upsert
+          - Delete
           type: string
-      description: Defines a pack of inventories
+      description: Defines a reference to inventory
   securitySchemes:
     oauth:
       type: oauth2
