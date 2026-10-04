@@ -45,6 +45,9 @@ x-lineage: HookLogic acquired by Criteo (2016); product line is now Criteo Retai
 specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-08-13'
+x-docs-platform: mintlify
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-10-03
 tags:
 - Company
 - Commerce
