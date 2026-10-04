@@ -89,6 +89,37 @@ paths:
         - RetailMedia_Billing_Read
 components:
   schemas:
+    EntityResourcePartnerBillingReportStatusV1:
+      type:
+      - object
+      - 'null'
+      properties:
+        attributes:
+          $ref: '#/components/schemas/PartnerBillingReportStatusV1'
+        id:
+          type:
+          - string
+          - 'null'
+          description: Unique id of the entity.
+        type:
+          type:
+          - string
+          - 'null'
+          description: Type of the resource.
+      additionalProperties: false
+      description: A domain entity exposed by the API, identified by a unique id.
+    ValueResourcePartnerBillingReportRequestV1:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/PartnerBillingReportRequestV1'
+        type:
+          type:
+          - string
+          - 'null'
+          description: Type of the resource.
+      additionalProperties: false
+      description: A value resource exposed by the API.
     EntityResourceOutcomePartnerBillingReportStatusV1:
       type: object
       properties:
@@ -112,6 +143,33 @@ components:
           readOnly: true
       additionalProperties: false
       description: A top-level object that encapsulates a Criteo API response for a single entity.
+    PartnerBillingReportStatusV1:
+      required:
+      - createdAt
+      - status
+      type:
+      - object
+      - 'null'
+      properties:
+        createdAt:
+          type: string
+          description: The date when the report request is created.
+          format: date-time
+        errorMessage:
+          type:
+          - string
+          - 'null'
+          description: Possible error message along with the status.
+        status:
+          enum:
+          - pending
+          - success
+          - failed
+          - expired
+          type: string
+          description: Status of the report.
+      additionalProperties: false
+      description: Status info of a Partner Billing Report.
     PartnerBillingReportRequestV1:
       required:
       - endDate
@@ -208,64 +266,6 @@ components:
           description: The problem's category.
       additionalProperties: false
       description: Common problem object.
-    EntityResourcePartnerBillingReportStatusV1:
-      type:
-      - object
-      - 'null'
-      properties:
-        attributes:
-          $ref: '#/components/schemas/PartnerBillingReportStatusV1'
-        id:
-          type:
-          - string
-          - 'null'
-          description: Unique id of the entity.
-        type:
-          type:
-          - string
-          - 'null'
-          description: Type of the resource.
-      additionalProperties: false
-      description: A domain entity exposed by the API, identified by a unique id.
-    PartnerBillingReportStatusV1:
-      required:
-      - createdAt
-      - status
-      type:
-      - object
-      - 'null'
-      properties:
-        createdAt:
-          type: string
-          description: The date when the report request is created.
-          format: date-time
-        errorMessage:
-          type:
-          - string
-          - 'null'
-          description: Possible error message along with the status.
-        status:
-          enum:
-          - pending
-          - success
-          - failed
-          - expired
-          type: string
-          description: Status of the report.
-      additionalProperties: false
-      description: Status info of a Partner Billing Report.
-    ValueResourcePartnerBillingReportRequestV1:
-      type: object
-      properties:
-        attributes:
-          $ref: '#/components/schemas/PartnerBillingReportRequestV1'
-        type:
-          type:
-          - string
-          - 'null'
-          description: Type of the resource.
-      additionalProperties: false
-      description: A value resource exposed by the API.
     ValueResourceInputPartnerBillingReportRequestV1:
       type: object
       properties:
