@@ -1,0 +1,12 @@
+{
+ "url": "https://api.criteo.com/2026-07/retailmedia/open-api-specifications.json",
+ "requested_url": "https://api.criteo.com/2026-07/retailmedia/open-api-specifications.json",
+ "status": 200,
+ "content_type": "application/octet-stream",
+ "bytes": 552360,
+ "sha256": "db4c39e1019334a43a7bf8bb0809f4ec0434aa45b98083c6b51de2ac79eaf418",
+ "fetched_at": "2026-10-04",
+ "fetched_by": "APIEvangelist-Harvest/1.0 (+https://apievangelist.com)",
+ "match": "equivalent",
+ "note": "Re-fetched from the provider by verify-openapi-sources.py; the provider's current document describes the same operations (Jaccard 0.941), but the bytes differ, so the archive is an earlier or reformatted copy."
+}
