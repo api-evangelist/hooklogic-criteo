@@ -389,48 +389,70 @@ paths:
         - RetailMedia_Accounts_Read
 components:
   schemas:
-    ExternalRetailMediaSeller:
-      required:
-      - retailerId
-      - sellerId
-      type:
-      - object
-      - 'null'
-      properties:
-        retailerId:
-          type: integer
-          description: the retailer id
-          format: int32
-        sellerId:
-          type: string
-          description: the seller id
-      additionalProperties: false
-      description: used to define the exact seller linked with an account
-    ValueResourceInputBrandIdSearchRequest:
+    ValueResourceOfRetailMediaSeller:
       type: object
       properties:
-        data:
-          $ref: '#/components/schemas/ValueResourceBrandIdSearchRequest'
-      description: A top-level object that encapsulates a Criteo API request for a single value objects.
-    SellerSearchResult:
-      type:
-      - object
-      - 'null'
-      properties:
-        accountId:
+        attributes:
+          $ref: '#/components/schemas/ExternalRetailMediaSeller'
+        type:
           type:
           - string
           - 'null'
-          description: the id for the account
-        sellers:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/RetailMediaSeller'
-          description: the details for mapped sellers for the account
+          description: Type of the resource.
       additionalProperties: false
-      description: holds an AccountId and the mapped seller information for that account
+      description: A value resource exposed by the API.
+    DemandManagedFee:
+      required:
+      - rate
+      type:
+      - object
+      - 'null'
+      properties:
+        rate:
+          maximum: 1
+          minimum: 0
+          type: number
+          description: decimal fee rate between 0 and 1
+          format: double
+      additionalProperties: false
+      description: settings for DSP fees
+    ValueResourceInputOfSellerSearch:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/ValueResourceOfSellerSearch'
+      additionalProperties: false
+      description: A top-level object that encapsulates a Criteo API request for a single value object.
+    SellerSearch:
+      required:
+      - accountIds
+      type: object
+      properties:
+        accountIds:
+          maxItems: 25
+          type: array
+          items:
+            type: string
+          description: list of accounts to return seller information for. max length of 25
+        includeDetails:
+          type: boolean
+          description: 'whether to include additional fields beyond the sellerId and retailerId in the response.
+
+            May improve performance when set to false.'
+          default: false
+      additionalProperties: false
+      description: request body for the seller search endpoint
+    PrivateMarketFees:
+      type:
+      - object
+      - 'null'
+      properties:
+        demandManaged:
+          $ref: '#/components/schemas/DemandManagedFee'
+        managedService:
+          $ref: '#/components/schemas/ManagedServiceFee'
+      additionalProperties: false
+      description: fees for a private market account
     Metadata:
       required:
       - limit
@@ -454,53 +476,39 @@ components:
           format: int32
       additionalProperties: false
       description: Metadata related to the current request.
-    SellerSearch:
-      required:
-      - accountIds
+    RetailMediaSeller:
       type: object
       properties:
-        accountIds:
-          maxItems: 25
-          type: array
-          items:
-            type: string
-          description: list of accounts to return seller information for. max length of 25
-        includeDetails:
-          type: boolean
-          description: 'whether to include additional fields beyond the sellerId and retailerId in the response.
-
-            May improve performance when set to false.'
-          default: false
-      additionalProperties: false
-      description: request body for the seller search endpoint
-    PrivateMarketAccountFees:
-      type:
-      - object
-      - 'null'
-      properties:
-        accountId:
+        name:
           type:
           - string
           - 'null'
-          description: The account Id
-        fees:
-          $ref: '#/components/schemas/PrivateMarketFees'
+          description: seller name
+        retailerId:
+          type:
+          - integer
+          - 'null'
+          description: the retailer id
+          format: int32
+        sellerId:
+          type:
+          - string
+          - 'null'
+          description: the seller id
       additionalProperties: false
-      description: The Fees for a Specific private market account
-    ValueResourceInputOfSellerSearch:
+      description: used to define the exact seller linked with an account
+    ValueResourceOfSellerSearch:
       type: object
       properties:
-        data:
-          $ref: '#/components/schemas/ValueResourceOfSellerSearch'
+        attributes:
+          $ref: '#/components/schemas/SellerSearch'
+        type:
+          type:
+          - string
+          - 'null'
+          description: Type of the resource.
       additionalProperties: false
-      description: A top-level object that encapsulates a Criteo API request for a single value object.
-    ValueResourceInputAccountFeesUpdateRequest:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/ValueResourceAccountFeesUpdateRequest'
-      additionalProperties: false
-      description: A top-level object that encapsulates a Criteo API request for a single value object.
+      description: A value resource exposed by the API.
     PagingOffsetLimitMetadata:
       required:
       - limit
@@ -523,163 +531,17 @@ components:
           description: The (zero-based) starting offset in the collection.
           format: int32
       description: Metadata for paging data.
-    ValueResourceInputOfRetailMediaBrandAccountCreation:
+    ExternalRetailMediaBrandAccountCreation:
       type: object
       properties:
-        data:
-          $ref: '#/components/schemas/ValueResourceOfRetailMediaBrandAccountCreation'
-      additionalProperties: false
-      description: A top-level object that encapsulates a Criteo API request for a single value object.
-    CommonError:
-      type: object
-      properties:
-        code:
+        brands:
           type:
-          - string
+          - array
           - 'null'
-          description: (REQUIRED) A machine-readable unique error code, expressed as a string value. The format used must be kebab-case.
-        detail:
-          type:
-          - string
-          - 'null'
-          description: (RECOMMENDED) A human-readable explanation specific to this occurrence of the problem.
-        instance:
-          type:
-          - string
-          - 'null'
-          description: (REQUIRED) A URI reference that identifies the specific occurrence of the problem.
-        source:
-          type:
-          - object
-          - 'null'
-          additionalProperties:
-            type: string
-          description: (OPTIONAL) A machine-readable structure to reference to the exact location(s) causing the error(s)
-        stackTrace:
-          type:
-          - string
-          - 'null'
-          description: (NEVER IN PRODUCTION) A human-readable stacktrace produced by the implementation technology
-        title:
-          type:
-          - string
-          - 'null'
-          description: (RECOMMENDED) A short, human-readable summary of the problem type.
-        traceId:
-          type:
-          - string
-          - 'null'
-          description: (REQUIRED) The Correlation ID provided by the Gateway. It is also a unique identifier for this particular occurrence of the problem.
-        type:
-          enum:
-          - unknown
-          - access-control
-          - authentication
-          - authorization
-          - availability
-          - deprecation
-          - quota
-          - validation
-          type:
-          - string
-          - 'null'
-          description: (REQUIRED) The classification of the error.
-      additionalProperties: false
-      description: A JSON:API Common error structure
-    BrandIdSearchRequest:
-      required:
-      - retailerIds
-      type: object
-      properties:
-        brandType:
-          enum:
-          - uc
-          - retailer
-          - all
-          type: string
-          description: 'The type of brand, primarily where this brand belongs: UC, Retailer or All (both)'
-        name:
-          type:
-          - string
-          - 'null'
-          description: The name of the brand(s) to be searched
-        retailerIds:
-          minItems: 1
-          type: array
           items:
             type: integer
-            format: int32
-          description: IDs of the retailers we want to limit the search to
-      description: An object that represents the request of BrandIdSearch endpoint.
-    SdkApiRestCommonProblem:
-      type: object
-      properties:
-        code:
-          type:
-          - string
-          - 'null'
-          description: A machine-readable error code, expressed as a string value.
-        detail:
-          type:
-          - string
-          - 'null'
-          description: A human-readable explanation specific to this occurrence of the problem.
-        instance:
-          type:
-          - string
-          - 'null'
-          description: A URI that identifies the specific occurrence of the problem.
-        source:
-          type:
-          - object
-          - 'null'
-          additionalProperties:
-            type: string
-          description: A machine-readable structure to reference to the exact location(s) causing the error(s).
-        stackTrace:
-          type:
-          - string
-          - 'null'
-          description: ''
-        title:
-          type:
-          - string
-          - 'null'
-          description: A short human-readable description of the problem type.
-        traceId:
-          type:
-          - string
-          - 'null'
-          description: The request correlation ID this problem comes from.
-        type:
-          enum:
-          - unknown
-          - access-control
-          - authentication
-          - authorization
-          - availability
-          - deprecation
-          - quota
-          - validation
-          type:
-          - string
-          - 'null'
-          description: The problem's category.
-      additionalProperties: false
-      description: Common problem object.
-    GrantConsentModelValueResource:
-      type: object
-      properties:
-        attributes:
-          $ref: '#/components/schemas/GrantConsentModel'
-        type:
-          type: string
-      description: A top-level object that encapsulates a Criteo API response for a single value
-    ExternalRetailMediaSellerAccountCreation:
-      required:
-      - sellers
-      type: object
-      properties:
+            format: int64
+          description: list of brands to link to the new account
         companyName:
           type:
           - string
@@ -695,305 +557,8 @@ components:
           - string
           - 'null'
           description: On behalf entity name of ads for the Digital Services Act
-        sellers:
-          type: array
-          items:
-            $ref: '#/components/schemas/ExternalRetailMediaSeller'
-          description: list of sellers to associate to the new account
       additionalProperties: false
       description: the initial set up and configuration options for a new private market demand brand account
-    ValueResourceInputOfRetailMediaBrands:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/ValueResourceOfRetailMediaBrands'
-      additionalProperties: false
-      description: A top-level object that encapsulates a Criteo API request for a single value object.
-    ValueResourceAccountFeesSearchRequest:
-      type: object
-      properties:
-        attributes:
-          $ref: '#/components/schemas/AccountFeesSearchRequest'
-        type:
-          type:
-          - string
-          - 'null'
-          description: Type of the resource.
-      additionalProperties: false
-      description: A value resource exposed by the API.
-    JsonApiBodyWithIdOfInt64AndAccountAndAccount:
-      required:
-      - id
-      - type
-      type: object
-      properties:
-        attributes:
-          $ref: '#/components/schemas/ExternalAccount'
-        id:
-          type: string
-          format: long-id
-        type:
-          type: string
-      additionalProperties: false
-      description: 'A JSON:API wrapper class to format a <typeparamref name="TAttributes" /> with external Id, Type, and
-
-        Attributes properties'
-    ValueResourceCollectionOutcomeOfSellerSearchResult:
-      type: object
-      properties:
-        data:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/ValueResourceOfSellerSearchResult'
-        errors:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/SdkApiRestCommonProblem'
-          description: Errors that occured during this call.
-          readOnly: true
-        warnings:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/SdkApiRestCommonProblem'
-          description: Warnings that occured during this call.
-          readOnly: true
-      additionalProperties: false
-      description: A top-level object that encapsulates a Criteo API response for several value objects.
-    ValueResourceAccountFeesUpdateRequest:
-      type: object
-      properties:
-        attributes:
-          $ref: '#/components/schemas/AccountFeesUpdateRequest'
-        type:
-          type:
-          - string
-          - 'null'
-          description: Type of the resource.
-      additionalProperties: false
-      description: A value resource exposed by the API.
-    EntityResourceOutcomeOfRetailMediaAccount:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/EntityResourceOfRetailMediaAccount'
-        errors:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/SdkApiRestCommonProblem'
-          description: Errors that occured during this call.
-          readOnly: true
-        warnings:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/SdkApiRestCommonProblem'
-          description: Warnings that occured during this call.
-          readOnly: true
-      additionalProperties: false
-      description: A top-level object that encapsulates a Criteo API response for a single entity.
-    AccountFeesUpdateRequest:
-      required:
-      - accountIds
-      - fees
-      type: object
-      properties:
-        accountIds:
-          maxItems: 25
-          minItems: 1
-          type: array
-          items:
-            type: string
-          description: accounts to update
-        fees:
-          $ref: '#/components/schemas/PrivateMarketFees'
-      additionalProperties: false
-      description: request body to set provided fees for the provided accounts
-    ManagedServiceFee:
-      required:
-      - onsiteDisplayEnabled
-      - onsiteSponsoredProductsEnabled
-      - rate
-      type:
-      - object
-      - 'null'
-      properties:
-        onsiteDisplayEnabled:
-          type: boolean
-          description: whether fee is enabled for display campaigns
-        onsiteSponsoredProductsEnabled:
-          type: boolean
-          description: whether fee is enabled for sponsored product campaigns
-        rate:
-          maximum: 1
-          minimum: 0
-          type: number
-          description: decimal fee rate between 0 and 1
-          format: double
-      additionalProperties: false
-      description: settings for managed service fees
-    PrivateMarketFees:
-      type:
-      - object
-      - 'null'
-      properties:
-        demandManaged:
-          $ref: '#/components/schemas/DemandManagedFee'
-        managedService:
-          $ref: '#/components/schemas/ManagedServiceFee'
-      additionalProperties: false
-      description: fees for a private market account
-    EntityResourceCollectionOutcomeBrandIdSearchResultPagingOffsetLimitMetadata:
-      type: object
-      properties:
-        data:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/EntityResourceBrandIdSearchResult'
-        errors:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/SdkApiRestCommonProblem'
-          description: Errors that occured during this call.
-          readOnly: true
-        metadata:
-          $ref: '#/components/schemas/PagingOffsetLimitMetadata'
-        warnings:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/SdkApiRestCommonProblem'
-          description: Warnings that occured during this call.
-          readOnly: true
-      description: A top-level object that encapsulates a Criteo API response for several entities and metadata.
-    PageMetadata:
-      required:
-      - currentPageIndex
-      - currentPageSize
-      type: object
-      properties:
-        currentPageIndex:
-          type: integer
-          format: int32
-        currentPageSize:
-          type: integer
-          format: int32
-        nextPage:
-          type:
-          - string
-          - 'null'
-        previousPage:
-          type:
-          - string
-          - 'null'
-        totalItemsAcrossAllPages:
-          type:
-          - integer
-          - 'null'
-          format: int64
-        totalPages:
-          type:
-          - integer
-          - 'null'
-          format: int64
-      additionalProperties: false
-      description: Metadata related to the current request
-    ValueResourceCollectionInputOfRetailMediaSeller:
-      type: object
-      properties:
-        data:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/ValueResourceOfRetailMediaSeller'
-      additionalProperties: false
-      description: A top-level object that encapsulates a Criteo API request for several value objects.
-    EntityResourceCollectionOutcomeOfRetailMediaChildAccountAndMetadata:
-      type: object
-      properties:
-        data:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/EntityResourceOfRetailMediaChildAccount'
-        errors:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/SdkApiRestCommonProblem'
-          description: Errors that occured during this call.
-          readOnly: true
-        metadata:
-          $ref: '#/components/schemas/Metadata'
-        warnings:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/SdkApiRestCommonProblem'
-          description: Warnings that occured during this call.
-          readOnly: true
-      additionalProperties: false
-      description: A top-level object that encapsulates a Criteo API response for several entities and metadata.
-    BrandIdSearchResult:
-      required:
-      - brandType
-      - id
-      - name
-      - retailerIds
-      type:
-      - object
-      - 'null'
-      properties:
-        brandType:
-          type: string
-          description: The type of the brand
-        id:
-          type: string
-          description: The brand id
-        name:
-          type: string
-          description: The name of the brand
-        retailerIds:
-          type: array
-          items:
-            type: integer
-            format: int32
-          description: The retailer ids associated to the brand
-      description: An object that represents the result from a brand ID search.
-    EntityResourceOfRetailMediaChildAccount:
-      type: object
-      properties:
-        attributes:
-          $ref: '#/components/schemas/ExternalRetailMediaChildAccount'
-        id:
-          type:
-          - string
-          - 'null'
-          description: Unique id of the entity.
-        type:
-          type:
-          - string
-          - 'null'
-          description: Type of the resource.
-      additionalProperties: false
-      description: A domain entity exposed by the API, identified by a unique id.
     ValueResourceCollectionOutcomeOfRetailMediaSeller:
       type: object
       properties:
@@ -1021,13 +586,18 @@ components:
           readOnly: true
       additionalProperties: false
       description: A top-level object that encapsulates a Criteo API response for several value objects.
-    EntityResourceOfRetailMediaAccount:
-      type:
-      - object
-      - 'null'
+    ValueResourceInputOfRetailMediaBrands:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/ValueResourceOfRetailMediaBrands'
+      additionalProperties: false
+      description: A top-level object that encapsulates a Criteo API request for a single value object.
+    EntityResourceOfRetailMediaChildAccount:
+      type: object
       properties:
         attributes:
-          $ref: '#/components/schemas/ExternalRetailMediaAccount'
+          $ref: '#/components/schemas/ExternalRetailMediaChildAccount'
         id:
           type:
           - string
@@ -1040,42 +610,57 @@ components:
           description: Type of the resource.
       additionalProperties: false
       description: A domain entity exposed by the API, identified by a unique id.
-    ValueResourceOfSellerSearch:
+    ValueResourceInputAccountFeesUpdateRequest:
       type: object
       properties:
-        attributes:
-          $ref: '#/components/schemas/SellerSearch'
-        type:
-          type:
-          - string
-          - 'null'
-          description: Type of the resource.
+        data:
+          $ref: '#/components/schemas/ValueResourceAccountFeesUpdateRequest'
       additionalProperties: false
-      description: A value resource exposed by the API.
-    ValueResourcePrivateMarketAccountFees:
+      description: A top-level object that encapsulates a Criteo API request for a single value object.
+    GrantConsentModel:
+      required:
+      - callbackUrl
+      - clientId
       type: object
       properties:
-        attributes:
-          $ref: '#/components/schemas/PrivateMarketAccountFees'
-        type:
-          type:
-          - string
-          - 'null'
-          description: Type of the resource.
+        callbackState:
+          type: string
+        callbackUrl:
+          type: string
+        clientId:
+          type: string
+      description: An object that represents the required (ClientId and CallbackUrl) and optional (CallbackState) parameters when granting consents on behalf of a Private Market demand account
+    ValueResourceInputBrandIdSearchRequest:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/ValueResourceBrandIdSearchRequest'
+      description: A top-level object that encapsulates a Criteo API request for a single value objects.
+    ExternalRetailMediaBrands:
+      required:
+      - brandIds
+      type:
+      - object
+      - 'null'
+      properties:
+        brandIds:
+          type: array
+          items:
+            type: integer
+            format: int64
       additionalProperties: false
-      description: A value resource exposed by the API.
-    AccountFeesSearchRequest:
+      description: A collection of brand ids
+    ValueResourceCollectionInputOfRetailMediaSeller:
       type: object
       properties:
-        accountIds:
+        data:
           type:
           - array
           - 'null'
           items:
-            type: string
-          description: Account Ids to return fees
+            $ref: '#/components/schemas/ValueResourceOfRetailMediaSeller'
       additionalProperties: false
-      description: the request body for account fees search
+      description: A top-level object that encapsulates a Criteo API request for several value objects.
     ExternalRetailMediaAccount:
       type:
       - object
@@ -1138,6 +723,155 @@ components:
           description: Type for the account
       additionalProperties: false
       description: The details for a newly created account
+    ValueResourceOfRetailMediaBrandAccountCreation:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/ExternalRetailMediaBrandAccountCreation'
+        type:
+          type:
+          - string
+          - 'null'
+          description: Type of the resource.
+      additionalProperties: false
+      description: A value resource exposed by the API.
+    ValueResourceOfSellerSearchResult:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/SellerSearchResult'
+        type:
+          type:
+          - string
+          - 'null'
+          description: Type of the resource.
+      additionalProperties: false
+      description: A value resource exposed by the API.
+    ValueResourceInputAccountFeesSearchRequest:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/ValueResourceAccountFeesSearchRequest'
+      additionalProperties: false
+      description: A top-level object that encapsulates a Criteo API request for a single value object.
+    ExternalRetailMediaChildAccount:
+      type:
+      - object
+      - 'null'
+      properties:
+        companyName:
+          type:
+          - string
+          - 'null'
+          description: Paying entity name of ads for the Digital Services Act
+        countryIds:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+          description: list of countries associated with the account
+        currencyId:
+          type:
+          - string
+          - 'null'
+          description: the currency for the account
+        name:
+          type:
+          - string
+          - 'null'
+          description: account name
+        onBehalfCompanyName:
+          type:
+          - string
+          - 'null'
+          description: On behalf entity name of ads for the Digital Services Act
+        subType:
+          enum:
+          - Unknown
+          - Brand
+          - Seller
+          type:
+          - string
+          - 'null'
+          description: subtype for the account
+        timeZone:
+          type:
+          - string
+          - 'null'
+          description: the timezone for the account
+        type:
+          enum:
+          - Unknown
+          - Supply
+          - Demand
+          type:
+          - string
+          - 'null'
+          description: Type for the account
+      additionalProperties: false
+      description: The details for a newly created account
+    JsonApiBodyWithIdOfInt64AndAccountAndAccount:
+      required:
+      - id
+      - type
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/ExternalAccount'
+        id:
+          type: string
+          format: long-id
+        type:
+          type: string
+      additionalProperties: false
+      description: 'A JSON:API wrapper class to format a <typeparamref name="TAttributes" /> with external Id, Type, and
+
+        Attributes properties'
+    EntityResourceCollectionOutcomeBrandIdSearchResultPagingOffsetLimitMetadata:
+      type: object
+      properties:
+        data:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/EntityResourceBrandIdSearchResult'
+        errors:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/SdkApiRestCommonProblem'
+          description: Errors that occured during this call.
+          readOnly: true
+        metadata:
+          $ref: '#/components/schemas/PagingOffsetLimitMetadata'
+        warnings:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/SdkApiRestCommonProblem'
+          description: Warnings that occured during this call.
+          readOnly: true
+      description: A top-level object that encapsulates a Criteo API response for several entities and metadata.
+    EntityResourceBrandIdSearchResult:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/BrandIdSearchResult'
+        id:
+          type:
+          - string
+          - 'null'
+          description: Unique id of the entity.
+        type:
+          type:
+          - string
+          - 'null'
+          description: Type of the resource.
+      description: A domain entity exposed by the API, identified by a unique id.
     JsonApiPageResponseOfAccount:
       required:
       - data
@@ -1220,11 +954,11 @@ components:
           description: (REQUIRED) The classification of the error.
       additionalProperties: false
       description: A JSON:API Base common warning
-    ValueResourceOfSellerSearchResult:
+    ValueResourcePrivateMarketAccountFees:
       type: object
       properties:
         attributes:
-          $ref: '#/components/schemas/SellerSearchResult'
+          $ref: '#/components/schemas/PrivateMarketAccountFees'
         type:
           type:
           - string
@@ -1232,82 +966,6 @@ components:
           description: Type of the resource.
       additionalProperties: false
       description: A value resource exposed by the API.
-    ValueResourceOfRetailMediaSeller:
-      type: object
-      properties:
-        attributes:
-          $ref: '#/components/schemas/ExternalRetailMediaSeller'
-        type:
-          type:
-          - string
-          - 'null'
-          description: Type of the resource.
-      additionalProperties: false
-      description: A value resource exposed by the API.
-    ExternalRetailMediaChildAccount:
-      type:
-      - object
-      - 'null'
-      properties:
-        companyName:
-          type:
-          - string
-          - 'null'
-          description: Paying entity name of ads for the Digital Services Act
-        countryIds:
-          type:
-          - array
-          - 'null'
-          items:
-            type: string
-          description: list of countries associated with the account
-        currencyId:
-          type:
-          - string
-          - 'null'
-          description: the currency for the account
-        name:
-          type:
-          - string
-          - 'null'
-          description: account name
-        onBehalfCompanyName:
-          type:
-          - string
-          - 'null'
-          description: On behalf entity name of ads for the Digital Services Act
-        subType:
-          enum:
-          - Unknown
-          - Brand
-          - Seller
-          type:
-          - string
-          - 'null'
-          description: subtype for the account
-        timeZone:
-          type:
-          - string
-          - 'null'
-          description: the timezone for the account
-        type:
-          enum:
-          - Unknown
-          - Supply
-          - Demand
-          type:
-          - string
-          - 'null'
-          description: Type for the account
-      additionalProperties: false
-      description: The details for a newly created account
-    ValueResourceInputOfRetailMediaSellerAccountCreation:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/ValueResourceOfRetailMediaSellerAccountCreation'
-      additionalProperties: false
-      description: A top-level object that encapsulates a Criteo API request for a single value object.
     ExternalAccount:
       required:
       - countries
@@ -1360,102 +1018,49 @@ components:
           type: string
       additionalProperties: false
       description: A Retail Media Account used to launch campaigns and line items
-    DemandManagedFee:
+    GrantConsentInput:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/GrantConsentModelValueResource'
+      description: An object that encapsulates GrantConsentModel
+    PageMetadata:
       required:
-      - rate
-      type:
-      - object
-      - 'null'
-      properties:
-        rate:
-          maximum: 1
-          minimum: 0
-          type: number
-          description: decimal fee rate between 0 and 1
-          format: double
-      additionalProperties: false
-      description: settings for DSP fees
-    ValueResourceOfRetailMediaSellerAccountCreation:
+      - currentPageIndex
+      - currentPageSize
       type: object
       properties:
-        attributes:
-          $ref: '#/components/schemas/ExternalRetailMediaSellerAccountCreation'
-        type:
+        currentPageIndex:
+          type: integer
+          format: int32
+        currentPageSize:
+          type: integer
+          format: int32
+        nextPage:
           type:
           - string
           - 'null'
-          description: Type of the resource.
-      additionalProperties: false
-      description: A value resource exposed by the API.
-    ValueResourceOfRetailMediaBrandAccountCreation:
-      type: object
-      properties:
-        attributes:
-          $ref: '#/components/schemas/ExternalRetailMediaBrandAccountCreation'
-        type:
+        previousPage:
           type:
           - string
           - 'null'
-          description: Type of the resource.
-      additionalProperties: false
-      description: A value resource exposed by the API.
-    ValueResourceBrandIdSearchRequest:
-      type: object
-      properties:
-        attributes:
-          $ref: '#/components/schemas/BrandIdSearchRequest'
-        type:
-          type:
-          - string
-          - 'null'
-          description: Type of the resource.
-      description: A value resource exposed by the API.
-    RetailMediaSeller:
-      type: object
-      properties:
-        name:
-          type:
-          - string
-          - 'null'
-          description: seller name
-        retailerId:
+        totalItemsAcrossAllPages:
           type:
           - integer
           - 'null'
-          description: the retailer id
-          format: int32
-        sellerId:
+          format: int64
+        totalPages:
           type:
-          - string
+          - integer
           - 'null'
-          description: the seller id
+          format: int64
       additionalProperties: false
-      description: used to define the exact seller linked with an account
-    ExternalRetailMediaBrands:
+      description: Metadata related to the current request
+    ExternalRetailMediaSellerAccountCreation:
       required:
-      - brandIds
-      type:
-      - object
-      - 'null'
-      properties:
-        brandIds:
-          type: array
-          items:
-            type: integer
-            format: int64
-      additionalProperties: false
-      description: A collection of brand ids
-    ExternalRetailMediaBrandAccountCreation:
+      - sellers
       type: object
       properties:
-        brands:
-          type:
-          - array
-          - 'null'
-          items:
-            type: integer
-            format: int64
-          description: list of brands to link to the new account
         companyName:
           type:
           - string
@@ -1471,28 +1076,29 @@ components:
           - string
           - 'null'
           description: On behalf entity name of ads for the Digital Services Act
+        sellers:
+          type: array
+          items:
+            $ref: '#/components/schemas/ExternalRetailMediaSeller'
+          description: list of sellers to associate to the new account
       additionalProperties: false
       description: the initial set up and configuration options for a new private market demand brand account
-    GrantConsentModel:
-      required:
-      - callbackUrl
-      - clientId
+    ValueResourceBrandIdSearchRequest:
       type: object
       properties:
-        callbackState:
-          type: string
-        callbackUrl:
-          type: string
-        clientId:
-          type: string
-      description: An object that represents the required (ClientId and CallbackUrl) and optional (CallbackState) parameters when granting consents on behalf of a Private Market demand account
-    ValueResourceOfRetailMediaBrands:
-      type:
-      - object
-      - 'null'
+        attributes:
+          $ref: '#/components/schemas/BrandIdSearchRequest'
+        type:
+          type:
+          - string
+          - 'null'
+          description: Type of the resource.
+      description: A value resource exposed by the API.
+    ValueResourceOfRetailMediaSellerAccountCreation:
+      type: object
       properties:
         attributes:
-          $ref: '#/components/schemas/ExternalRetailMediaBrands'
+          $ref: '#/components/schemas/ExternalRetailMediaSellerAccountCreation'
         type:
           type:
           - string
@@ -1500,28 +1106,62 @@ components:
           description: Type of the resource.
       additionalProperties: false
       description: A value resource exposed by the API.
-    EntityResourceBrandIdSearchResult:
+    CommonError:
       type: object
       properties:
-        attributes:
-          $ref: '#/components/schemas/BrandIdSearchResult'
-        id:
+        code:
           type:
           - string
           - 'null'
-          description: Unique id of the entity.
+          description: (REQUIRED) A machine-readable unique error code, expressed as a string value. The format used must be kebab-case.
+        detail:
+          type:
+          - string
+          - 'null'
+          description: (RECOMMENDED) A human-readable explanation specific to this occurrence of the problem.
+        instance:
+          type:
+          - string
+          - 'null'
+          description: (REQUIRED) A URI reference that identifies the specific occurrence of the problem.
+        source:
+          type:
+          - object
+          - 'null'
+          additionalProperties:
+            type: string
+          description: (OPTIONAL) A machine-readable structure to reference to the exact location(s) causing the error(s)
+        stackTrace:
+          type:
+          - string
+          - 'null'
+          description: (NEVER IN PRODUCTION) A human-readable stacktrace produced by the implementation technology
+        title:
+          type:
+          - string
+          - 'null'
+          description: (RECOMMENDED) A short, human-readable summary of the problem type.
+        traceId:
+          type:
+          - string
+          - 'null'
+          description: (REQUIRED) The Correlation ID provided by the Gateway. It is also a unique identifier for this particular occurrence of the problem.
         type:
+          enum:
+          - unknown
+          - access-control
+          - authentication
+          - authorization
+          - availability
+          - deprecation
+          - quota
+          - validation
           type:
           - string
           - 'null'
-          description: Type of the resource.
-      description: A domain entity exposed by the API, identified by a unique id.
-    GrantConsentInput:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/GrantConsentModelValueResource'
-      description: An object that encapsulates GrantConsentModel
+          description: (REQUIRED) The classification of the error.
+      additionalProperties: false
+      description: A JSON:API Common error structure
     ValueResourceOutcomeOfRetailMediaBrands:
       type: object
       properties:
@@ -1545,11 +1185,60 @@ components:
           readOnly: true
       additionalProperties: false
       description: A top-level object that encapsulates a Criteo API response for a single value object.
-    ValueResourceInputAccountFeesSearchRequest:
+    EntityResourceOutcomeOfRetailMediaAccount:
       type: object
       properties:
         data:
-          $ref: '#/components/schemas/ValueResourceAccountFeesSearchRequest'
+          $ref: '#/components/schemas/EntityResourceOfRetailMediaAccount'
+        errors:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/SdkApiRestCommonProblem'
+          description: Errors that occured during this call.
+          readOnly: true
+        warnings:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/SdkApiRestCommonProblem'
+          description: Warnings that occured during this call.
+          readOnly: true
+      additionalProperties: false
+      description: A top-level object that encapsulates a Criteo API response for a single entity.
+    BrandIdSearchResult:
+      required:
+      - brandType
+      - id
+      - name
+      - retailerIds
+      type:
+      - object
+      - 'null'
+      properties:
+        brandType:
+          type: string
+          description: The type of the brand
+        id:
+          type: string
+          description: The brand id
+        name:
+          type: string
+          description: The name of the brand
+        retailerIds:
+          type: array
+          items:
+            type: integer
+            format: int32
+          description: The retailer ids associated to the brand
+      description: An object that represents the result from a brand ID search.
+    ValueResourceInputOfRetailMediaSellerAccountCreation:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/ValueResourceOfRetailMediaSellerAccountCreation'
       additionalProperties: false
       description: A top-level object that encapsulates a Criteo API request for a single value object.
     ValueResourceCollectionOutcomePrivateMarketAccountFeesAndMetadata:
@@ -1581,6 +1270,317 @@ components:
           readOnly: true
       additionalProperties: false
       description: A top-level object that encapsulates a Criteo API response for several value objects and metadata.
+    ValueResourceOfRetailMediaBrands:
+      type:
+      - object
+      - 'null'
+      properties:
+        attributes:
+          $ref: '#/components/schemas/ExternalRetailMediaBrands'
+        type:
+          type:
+          - string
+          - 'null'
+          description: Type of the resource.
+      additionalProperties: false
+      description: A value resource exposed by the API.
+    GrantConsentModelValueResource:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/GrantConsentModel'
+        type:
+          type: string
+      description: A top-level object that encapsulates a Criteo API response for a single value
+    ValueResourceCollectionOutcomeOfSellerSearchResult:
+      type: object
+      properties:
+        data:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/ValueResourceOfSellerSearchResult'
+        errors:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/SdkApiRestCommonProblem'
+          description: Errors that occured during this call.
+          readOnly: true
+        warnings:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/SdkApiRestCommonProblem'
+          description: Warnings that occured during this call.
+          readOnly: true
+      additionalProperties: false
+      description: A top-level object that encapsulates a Criteo API response for several value objects.
+    SellerSearchResult:
+      type:
+      - object
+      - 'null'
+      properties:
+        accountId:
+          type:
+          - string
+          - 'null'
+          description: the id for the account
+        sellers:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/RetailMediaSeller'
+          description: the details for mapped sellers for the account
+      additionalProperties: false
+      description: holds an AccountId and the mapped seller information for that account
+    ValueResourceAccountFeesSearchRequest:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/AccountFeesSearchRequest'
+        type:
+          type:
+          - string
+          - 'null'
+          description: Type of the resource.
+      additionalProperties: false
+      description: A value resource exposed by the API.
+    ManagedServiceFee:
+      required:
+      - onsiteDisplayEnabled
+      - onsiteSponsoredProductsEnabled
+      - rate
+      type:
+      - object
+      - 'null'
+      properties:
+        onsiteDisplayEnabled:
+          type: boolean
+          description: whether fee is enabled for display campaigns
+        onsiteSponsoredProductsEnabled:
+          type: boolean
+          description: whether fee is enabled for sponsored product campaigns
+        rate:
+          maximum: 1
+          minimum: 0
+          type: number
+          description: decimal fee rate between 0 and 1
+          format: double
+      additionalProperties: false
+      description: settings for managed service fees
+    PrivateMarketAccountFees:
+      type:
+      - object
+      - 'null'
+      properties:
+        accountId:
+          type:
+          - string
+          - 'null'
+          description: The account Id
+        fees:
+          $ref: '#/components/schemas/PrivateMarketFees'
+      additionalProperties: false
+      description: The Fees for a Specific private market account
+    ExternalRetailMediaSeller:
+      required:
+      - retailerId
+      - sellerId
+      type:
+      - object
+      - 'null'
+      properties:
+        retailerId:
+          type: integer
+          description: the retailer id
+          format: int32
+        sellerId:
+          type: string
+          description: the seller id
+      additionalProperties: false
+      description: used to define the exact seller linked with an account
+    AccountFeesUpdateRequest:
+      required:
+      - accountIds
+      - fees
+      type: object
+      properties:
+        accountIds:
+          maxItems: 25
+          minItems: 1
+          type: array
+          items:
+            type: string
+          description: accounts to update
+        fees:
+          $ref: '#/components/schemas/PrivateMarketFees'
+      additionalProperties: false
+      description: request body to set provided fees for the provided accounts
+    EntityResourceOfRetailMediaAccount:
+      type:
+      - object
+      - 'null'
+      properties:
+        attributes:
+          $ref: '#/components/schemas/ExternalRetailMediaAccount'
+        id:
+          type:
+          - string
+          - 'null'
+          description: Unique id of the entity.
+        type:
+          type:
+          - string
+          - 'null'
+          description: Type of the resource.
+      additionalProperties: false
+      description: A domain entity exposed by the API, identified by a unique id.
+    ValueResourceInputOfRetailMediaBrandAccountCreation:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/ValueResourceOfRetailMediaBrandAccountCreation'
+      additionalProperties: false
+      description: A top-level object that encapsulates a Criteo API request for a single value object.
+    SdkApiRestCommonProblem:
+      type: object
+      properties:
+        code:
+          type:
+          - string
+          - 'null'
+          description: A machine-readable error code, expressed as a string value.
+        detail:
+          type:
+          - string
+          - 'null'
+          description: A human-readable explanation specific to this occurrence of the problem.
+        instance:
+          type:
+          - string
+          - 'null'
+          description: A URI that identifies the specific occurrence of the problem.
+        source:
+          type:
+          - object
+          - 'null'
+          additionalProperties:
+            type: string
+          description: A machine-readable structure to reference to the exact location(s) causing the error(s).
+        stackTrace:
+          type:
+          - string
+          - 'null'
+          description: ''
+        title:
+          type:
+          - string
+          - 'null'
+          description: A short human-readable description of the problem type.
+        traceId:
+          type:
+          - string
+          - 'null'
+          description: The request correlation ID this problem comes from.
+        type:
+          enum:
+          - unknown
+          - access-control
+          - authentication
+          - authorization
+          - availability
+          - deprecation
+          - quota
+          - validation
+          type:
+          - string
+          - 'null'
+          description: The problem's category.
+      additionalProperties: false
+      description: Common problem object.
+    EntityResourceCollectionOutcomeOfRetailMediaChildAccountAndMetadata:
+      type: object
+      properties:
+        data:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/EntityResourceOfRetailMediaChildAccount'
+        errors:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/SdkApiRestCommonProblem'
+          description: Errors that occured during this call.
+          readOnly: true
+        metadata:
+          $ref: '#/components/schemas/Metadata'
+        warnings:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/SdkApiRestCommonProblem'
+          description: Warnings that occured during this call.
+          readOnly: true
+      additionalProperties: false
+      description: A top-level object that encapsulates a Criteo API response for several entities and metadata.
+    AccountFeesSearchRequest:
+      type: object
+      properties:
+        accountIds:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+          description: Account Ids to return fees
+      additionalProperties: false
+      description: the request body for account fees search
+    ValueResourceAccountFeesUpdateRequest:
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/AccountFeesUpdateRequest'
+        type:
+          type:
+          - string
+          - 'null'
+          description: Type of the resource.
+      additionalProperties: false
+      description: A value resource exposed by the API.
+    BrandIdSearchRequest:
+      required:
+      - retailerIds
+      type: object
+      properties:
+        brandType:
+          enum:
+          - uc
+          - retailer
+          - all
+          type: string
+          description: 'The type of brand, primarily where this brand belongs: UC, Retailer or All (both)'
+        name:
+          type:
+          - string
+          - 'null'
+          description: The name of the brand(s) to be searched
+        retailerIds:
+          minItems: 1
+          type: array
+          items:
+            type: integer
+            format: int32
+          description: IDs of the retailers we want to limit the search to
+      description: An object that represents the request of BrandIdSearch endpoint.
   securitySchemes:
     oauth:
       type: oauth2

@@ -28,18 +28,6 @@ paths:
       - oauth: []
 components:
   schemas:
-    ApplicationSummaryModelResource:
-      type:
-      - object
-      - 'null'
-      properties:
-        attributes:
-          $ref: '#/components/schemas/ApplicationSummaryModel'
-        type:
-          type:
-          - string
-          - 'null'
-      description: A top-level object that encapsulates a Criteo API response for a single value
     CommonProblem:
       type: object
       properties:
@@ -99,26 +87,6 @@ components:
           - 'null'
           description: The problem's category.
       description: Common problem object.
-    ApplicationSummaryModelResponse:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/ApplicationSummaryModelResource'
-        errors:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/CommonProblem'
-          readOnly: true
-        warnings:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/CommonProblem'
-          readOnly: true
-      description: A top-level object that encapsulates a Criteo API response for a single value
     ApplicationSummaryModel:
       type:
       - object
@@ -147,6 +115,38 @@ components:
           - 'null'
           format: int32
       description: Used for the /me endpoint. Contains information about the currently authenticated application that we accept to give to our clients
+    ApplicationSummaryModelResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/ApplicationSummaryModelResource'
+        errors:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          readOnly: true
+        warnings:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          readOnly: true
+      description: A top-level object that encapsulates a Criteo API response for a single value
+    ApplicationSummaryModelResource:
+      type:
+      - object
+      - 'null'
+      properties:
+        attributes:
+          $ref: '#/components/schemas/ApplicationSummaryModel'
+        type:
+          type:
+          - string
+          - 'null'
+      description: A top-level object that encapsulates a Criteo API response for a single value
   securitySchemes:
     oauth:
       type: oauth2
