@@ -70,19 +70,16 @@ paths:
         - RetailMedia_Catalog_Manage
 components:
   schemas:
-    InsertEntry:
+    BatchStoreInventoryDeleteRequest:
       required:
-      - attributes
-      - type
+      - data
       type: object
       properties:
-        attributes:
-          $ref: '#/components/schemas/StoreInventoryUpsert'
-        type:
-          enum:
-          - Upsert
-          type: string
-      description: Defines a pack of inventories
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/DeleteEntry'
+      description: Batch to plan removals in Store inventory
     BatchStoreInventoryRequest:
       required:
       - data
@@ -93,6 +90,19 @@ components:
           items:
             $ref: '#/components/schemas/InsertEntry'
       description: Batch to be stored in Store inventories
+    DeleteEntry:
+      required:
+      - attributes
+      - type
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/StoreInventoryDelete'
+        type:
+          enum:
+          - Delete
+          type: string
+      description: Defines a reference to inventory
     StoreInventoryDelete:
       required:
       - batchId
@@ -110,6 +120,19 @@ components:
           type: string
           description: Identifies the store, for the customer
       description: References a store inventory to be deleted. See StoreInventoryUpsert
+    InsertEntry:
+      required:
+      - attributes
+      - type
+      type: object
+      properties:
+        attributes:
+          $ref: '#/components/schemas/StoreInventoryUpsert'
+        type:
+          enum:
+          - Upsert
+          type: string
+      description: Defines a pack of inventories
     StoreInventoryUpsert:
       required:
       - availability
@@ -143,40 +166,39 @@ components:
           type: string
           description: Identifies the store, for the customer
       description: Defines a store inventory to be upserted. Inspired from google spec.See https://developers.google.com/shopping-content/reference/rest/v2.1/localinventory/custombatch#LocalinventoryCustomBatchRequestEntry
-    BatchStoreInventoryDeleteRequest:
-      required:
-      - data
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/DeleteEntry'
-      description: Batch to plan removals in Store inventory
-    DeleteEntry:
-      required:
-      - attributes
-      - type
-      type: object
-      properties:
-        attributes:
-          $ref: '#/components/schemas/StoreInventoryDelete'
-        type:
-          enum:
-          - Delete
-          type: string
-      description: Defines a reference to inventory
   securitySchemes:
     oauth:
       type: oauth2
       flows:
         clientCredentials:
           tokenUrl: https://api.criteo.com/oauth2/token
-          scopes: {}
+          scopes:
+            RetailMedia_Accounts_Manage: Grants Manage access to the capabilities from the Accounts domain, for RetailMedia applications
+            RetailMedia_Accounts_Read: Grants Read access to the capabilities from the Accounts domain, for RetailMedia applications
+            RetailMedia_Analytics_Read: Grants Read access to the capabilities from the Analytics domain, for RetailMedia applications
+            RetailMedia_Audience_Manage: Grants Manage access to the capabilities from the Audience domain, for RetailMedia applications
+            RetailMedia_Audience_Read: Grants Read access to the capabilities from the Audience domain, for RetailMedia applications
+            RetailMedia_Balance_Manage: Grants Manage access to the capabilities from the Balance domain, for RetailMedia applications
+            RetailMedia_Balance_Read: Grants Read access to the capabilities from the Balance domain, for RetailMedia applications
+            RetailMedia_Billing_Read: Grants Read access to the capabilities from the Billing domain, for RetailMedia applications
+            RetailMedia_Campaign_Manage: Grants Manage access to the capabilities from the Campaign domain, for RetailMedia applications
+            RetailMedia_Campaign_Read: Grants Read access to the capabilities from the Campaign domain, for RetailMedia applications
+            RetailMedia_Catalog_Manage: Grants Manage access to the capabilities from the Catalog domain, for RetailMedia applications
         authorizationCode:
           authorizationUrl: https://api.criteo.com/oauth2
           tokenUrl: https://api.criteo.com/oauth2/token
-          scopes: {}
+          scopes:
+            RetailMedia_Accounts_Manage: Grants Manage access to the capabilities from the Accounts domain, for RetailMedia applications
+            RetailMedia_Accounts_Read: Grants Read access to the capabilities from the Accounts domain, for RetailMedia applications
+            RetailMedia_Analytics_Read: Grants Read access to the capabilities from the Analytics domain, for RetailMedia applications
+            RetailMedia_Audience_Manage: Grants Manage access to the capabilities from the Audience domain, for RetailMedia applications
+            RetailMedia_Audience_Read: Grants Read access to the capabilities from the Audience domain, for RetailMedia applications
+            RetailMedia_Balance_Manage: Grants Manage access to the capabilities from the Balance domain, for RetailMedia applications
+            RetailMedia_Balance_Read: Grants Read access to the capabilities from the Balance domain, for RetailMedia applications
+            RetailMedia_Billing_Read: Grants Read access to the capabilities from the Billing domain, for RetailMedia applications
+            RetailMedia_Campaign_Manage: Grants Manage access to the capabilities from the Campaign domain, for RetailMedia applications
+            RetailMedia_Campaign_Read: Grants Read access to the capabilities from the Campaign domain, for RetailMedia applications
+            RetailMedia_Catalog_Manage: Grants Manage access to the capabilities from the Catalog domain, for RetailMedia applications
 x-samples-languages:
 - java
 - python

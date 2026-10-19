@@ -115,6 +115,18 @@ components:
           - 'null'
           format: int32
       description: Used for the /me endpoint. Contains information about the currently authenticated application that we accept to give to our clients
+    ApplicationSummaryModelResource:
+      type:
+      - object
+      - 'null'
+      properties:
+        attributes:
+          $ref: '#/components/schemas/ApplicationSummaryModel'
+        type:
+          type:
+          - string
+          - 'null'
+      description: A top-level object that encapsulates a Criteo API response for a single value
     ApplicationSummaryModelResponse:
       type: object
       properties:
@@ -135,29 +147,39 @@ components:
             $ref: '#/components/schemas/CommonProblem'
           readOnly: true
       description: A top-level object that encapsulates a Criteo API response for a single value
-    ApplicationSummaryModelResource:
-      type:
-      - object
-      - 'null'
-      properties:
-        attributes:
-          $ref: '#/components/schemas/ApplicationSummaryModel'
-        type:
-          type:
-          - string
-          - 'null'
-      description: A top-level object that encapsulates a Criteo API response for a single value
   securitySchemes:
     oauth:
       type: oauth2
       flows:
         clientCredentials:
           tokenUrl: https://api.criteo.com/oauth2/token
-          scopes: {}
+          scopes:
+            RetailMedia_Accounts_Manage: Grants Manage access to the capabilities from the Accounts domain, for RetailMedia applications
+            RetailMedia_Accounts_Read: Grants Read access to the capabilities from the Accounts domain, for RetailMedia applications
+            RetailMedia_Analytics_Read: Grants Read access to the capabilities from the Analytics domain, for RetailMedia applications
+            RetailMedia_Audience_Manage: Grants Manage access to the capabilities from the Audience domain, for RetailMedia applications
+            RetailMedia_Audience_Read: Grants Read access to the capabilities from the Audience domain, for RetailMedia applications
+            RetailMedia_Balance_Manage: Grants Manage access to the capabilities from the Balance domain, for RetailMedia applications
+            RetailMedia_Balance_Read: Grants Read access to the capabilities from the Balance domain, for RetailMedia applications
+            RetailMedia_Billing_Read: Grants Read access to the capabilities from the Billing domain, for RetailMedia applications
+            RetailMedia_Campaign_Manage: Grants Manage access to the capabilities from the Campaign domain, for RetailMedia applications
+            RetailMedia_Campaign_Read: Grants Read access to the capabilities from the Campaign domain, for RetailMedia applications
+            RetailMedia_Catalog_Manage: Grants Manage access to the capabilities from the Catalog domain, for RetailMedia applications
         authorizationCode:
           authorizationUrl: https://api.criteo.com/oauth2
           tokenUrl: https://api.criteo.com/oauth2/token
-          scopes: {}
+          scopes:
+            RetailMedia_Accounts_Manage: Grants Manage access to the capabilities from the Accounts domain, for RetailMedia applications
+            RetailMedia_Accounts_Read: Grants Read access to the capabilities from the Accounts domain, for RetailMedia applications
+            RetailMedia_Analytics_Read: Grants Read access to the capabilities from the Analytics domain, for RetailMedia applications
+            RetailMedia_Audience_Manage: Grants Manage access to the capabilities from the Audience domain, for RetailMedia applications
+            RetailMedia_Audience_Read: Grants Read access to the capabilities from the Audience domain, for RetailMedia applications
+            RetailMedia_Balance_Manage: Grants Manage access to the capabilities from the Balance domain, for RetailMedia applications
+            RetailMedia_Balance_Read: Grants Read access to the capabilities from the Balance domain, for RetailMedia applications
+            RetailMedia_Billing_Read: Grants Read access to the capabilities from the Billing domain, for RetailMedia applications
+            RetailMedia_Campaign_Manage: Grants Manage access to the capabilities from the Campaign domain, for RetailMedia applications
+            RetailMedia_Campaign_Read: Grants Read access to the capabilities from the Campaign domain, for RetailMedia applications
+            RetailMedia_Catalog_Manage: Grants Manage access to the capabilities from the Catalog domain, for RetailMedia applications
 x-samples-languages:
 - java
 - python

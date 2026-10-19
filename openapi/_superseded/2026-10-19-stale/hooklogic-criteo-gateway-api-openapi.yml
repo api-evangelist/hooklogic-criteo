@@ -1,0 +1,168 @@
+openapi: 3.2.0
+info:
+  title: Criteo Gateway API
+  description: Criteo API - RetailMedia
+  version: 2026-07
+servers:
+- url: https://api.criteo.com
+security:
+- oauth: []
+tags:
+- name: Gateway
+paths:
+  /2026-07/retail-media/me:
+    get:
+      tags:
+      - Gateway
+      summary: /2026-07/retail-media/me
+      description: Get information about the currently logged application
+      operationId: GetCurrentApplication
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApplicationSummaryModelResponse'
+      security:
+      - oauth: []
+components:
+  schemas:
+    CommonProblem:
+      type: object
+      properties:
+        code:
+          type:
+          - string
+          - 'null'
+          description: A machine-readable error code, expressed as a string value.
+        detail:
+          type:
+          - string
+          - 'null'
+          description: A human-readable explanation specific to this occurrence of the problem
+        instance:
+          type:
+          - string
+          - 'null'
+          description: A URI that identifies the specific occurrence of the problem.
+        source:
+          type:
+          - object
+          - 'null'
+          additionalProperties:
+            type: string
+          description: A machine-readable structure to reference to the exact location(s) causing the error(s)
+        stackTrace:
+          type:
+          - string
+          - 'null'
+        title:
+          type:
+          - string
+          - 'null'
+          description: A short human-readable description of the problem type
+        traceId:
+          type:
+          - string
+          - 'null'
+          description: The request correlation ID this problem comes from.
+        traceIdentifier:
+          type:
+          - string
+          - 'null'
+          description: The request correlation ID this problem comes from. (deprecated, use traceId instead)
+        type:
+          enum:
+          - unknown
+          - access-control
+          - authentication
+          - authorization
+          - availability
+          - deprecation
+          - quota
+          - validation
+          type:
+          - string
+          - 'null'
+          description: The problem's category.
+      description: Common problem object.
+    ApplicationSummaryModel:
+      type:
+      - object
+      - 'null'
+      properties:
+        applicationId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        criteoService:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        name:
+          type:
+          - string
+          - 'null'
+        organizationId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+      description: Used for the /me endpoint. Contains information about the currently authenticated application that we accept to give to our clients
+    ApplicationSummaryModelResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/ApplicationSummaryModelResource'
+        errors:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          readOnly: true
+        warnings:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/CommonProblem'
+          readOnly: true
+      description: A top-level object that encapsulates a Criteo API response for a single value
+    ApplicationSummaryModelResource:
+      type:
+      - object
+      - 'null'
+      properties:
+        attributes:
+          $ref: '#/components/schemas/ApplicationSummaryModel'
+        type:
+          type:
+          - string
+          - 'null'
+      description: A top-level object that encapsulates a Criteo API response for a single value
+  securitySchemes:
+    oauth:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: https://api.criteo.com/oauth2/token
+          scopes: {}
+        authorizationCode:
+          authorizationUrl: https://api.criteo.com/oauth2
+          tokenUrl: https://api.criteo.com/oauth2/token
+          scopes: {}
+x-samples-languages:
+- java
+- python
+- php
+- csharp
+- javascript
+- curl
+- ruby
