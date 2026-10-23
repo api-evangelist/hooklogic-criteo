@@ -314,3 +314,9 @@ x-samples-languages:
 - javascript
 - curl
 - ruby
+x-provenance:
+  method: harvested
+  publisher: HookLogic (Criteo)
+  source: https://api.criteo.com/2026-07/retailmedia/open-api-specifications.json
+  note: split by refine-openapis from the provider's own published document, verified by fetch (openapi/_original/*.fetch.json);
+    stamped by stamp-openapi-provenance.py (roadmap#793)
